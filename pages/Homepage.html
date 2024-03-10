@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .container {
+            width: 100%;
+            background-color: #ffffff;
+        }
+        .custom-links {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 30px; 
+            margin-bottom: 10px;
+        }
+        .custom-links > .link {
+            color: black; 
+            text-decoration: none; 
+        }
+
+        .custom-links > .link:hover {
+            color: blue; 
+            text-decoration: underline; 
+            cursor: pointer; 
+        }
+
+        .link {
+            color: black; 
+            text-decoration: none; 
+        }
+        
+        .link:hover {
+            color: black; 
+            text-decoration: underline; 
+            cursor: pointer; 
+        }
+
+        .custom-footer{
+            background-color: #ffffff;
+            padding-top: 30px;
+            padding-bottom: 100px;
+        }
+
+        .custom-footer-column {
+            width: calc(100% / 5);
+        }
+
+        .custom-footer h6 {
+            font-weight: bold;
+            color: #676767;
+            margin-bottom: 15px;
+            margin-top: 15px;
+        }
+
+        .custom-footer p {
+            margin-bottom: 3px;
+        }
+
+        .custom-footer p a {
+            color: #676767;
+            font-size: small;
+        }
+
+        .custom-slide-one {
+            color: rgb(117, 86, 54);
+            padding: 30px;
+        }
+
+        .custom-slide-two {
+            color: rgb(30, 30, 138);
+            padding: 30px;
+        }
+
+        .custom-slide-three {
+            color: #ffffff;
+            padding: 30px;
+        }
+
+        .carousel {
+            margin-bottom: 50px;
+        }
+
+        .carousel-inner {
+            border-radius: 15px;
+        }
+        
+        .custom-slide-one > button {
+            color: rgb(117, 86, 54);
+            border-radius: 30px;
+            background-color: transparent;
+            padding: 10px;
+            border: 2px solid rgb(117, 86, 54);
+            /* transition: background-color 0.3s ease; */
+        }
+
+        /* #find-favorites-button:active {
+            background-color: black;
+            box-shadow: 50px 50px 50px rgba(210, 0, 0, 0.5);
+            transition: 0.7s;
+        } */
+
+        .custom-slide-two > button {
+            color: rgb(30, 30, 138);
+            border-radius: 30px;
+            background-color: transparent;
+            padding: 10px;
+            border: 2px solid rgb(30, 30, 138);
+            transition: background-color 0.3s ease;
+        }
+        .custom-slide-three > button {
+            color: #ffffff;
+            border-radius: 30px;
+            background-color: transparent;
+            padding: 10px;
+            border: 2px solid #ffffff;
+            transition: background-color 0.3s ease;
+        }
+
+
+        .custom-column {
+            width: calc(100% / 7);
+            text-align: center;
+        }
+
+        .custom-categories a {
+            text-underline-offset: 8px;
+        }
+
+        .custom-carousel-cards {
+            width: calc(100% / 4.5);
+        }
+
+        .custom-container {
+            color: rgb(255, 255, 255);
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        .custom-container > button {
+            color: #ffffff;
+            border-radius: 30px;
+            background-color: transparent;
+            padding: 10px;
+            border: 2px solid #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <hr>
+    <div class="container">
+    <div class="custom-links">
+        <a href="https://example.com" class="link" id="homeIcon">Home</a>
+        <a href="https://example.com" class="link" id="savedIcon">Saved</a>
+        <a href="https://example.com" class="link" id="electronicsIcon">Electronics</a>
+        <a href="https://example.com" class="link" id="motorIcon">Motors</a>
+        <a href="https://example.com" class="link" id="fashion">Fashion</a>
+        <a href="https://example.com" class="link" id="collectiblesIcon">Collectibles and Art</a>
+        <a href="https://example.com" class="link">Sports</a>
+        <a href="https://example.com" class="link">Health & Beauty</a>
+        <a href="https://example.com" class="link">Industrial equipment</a>
+        <a href="https://example.com" class="link">Home & Garden</a>
+        <a href="https://example.com" class="link">Deals</a>
+        <a href="https://example.com" class="link">Sell</a>
+    </div>
+
+    <div id="carouselExampleControls" class="carousel slide"  >
+        <div class="carousel-inner" >
+            <div class="carousel-item active">
+                <div class="d-block w-100 " style="background: url('../../images/1.png');" alt="First slide">
+                    <div class="col-lg-3 custom-slide-one">
+                        <h1>Discover a kaleidoscope of cards</h1>
+                        <h5>Build your collection of trading cards and collectible card games.</h5>
+                        <button type="button" class="" id="find-favorites-button">Find your favorites</button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="d-block w-100 " style="background: url('../../images/2.png');" alt="Second slide">
+                    <div class="col-lg-3 custom-slide-two">
+                        <h1>Find it. Fix it. Drive it.</h1>
+                        <h5>Save on a wide selection of parts on eBay.</h5>
+                        <button>Shop now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="d-block w-100 " style="background: url('../../images/3.png');" alt="Third slide">
+                    <div class="col-lg-3 custom-slide-three">
+                        <h1>What do your wheels say about your car?</h1>
+                        <h5>find the tires you need and more at prices you'll love.</h5>
+                        <button>Shop now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+    </div>
+    
+    <div>
+        <h3 href="https://example.com" class="link">Explore Popular Categories</h3>
+    </div>
+
+    <div class="row">
+        <div class="custom-categories custom-column">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+            <a href="https://example.com" class="link">Parts & accessories</a>
+            </div>
+        </div>
+        <div class="custom-categories custom-column">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+            <a href="https://example.com" class="link">Trading cards</a>
+            </div>
+        </div>
+        <div class="custom-categories custom-column">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+            <a href="https://example.com" class="link">Pre-loved luxury</a>
+            </div>
+        </div>
+        <div class="custom-categories custom-column">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+            <a href="https://example.com" class="link">Sneakers</a>
+            </div>
+        </div>
+        <div class="custom-categories custom-column">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+            <a href="https://example.com" class="link">Watches</a>
+            </div>
+        </div>
+        <div class="custom-categories custom-column">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+            <a href="https://example.com" class="link">Handbags</a>
+            </div>
+        </div>
+        <div class="custom-categories custom-column">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+            <a href="https://example.com" class="link">Start selling</a>
+            </div>
+        </div>
+    </div>
+
+    
+    <div>
+        <h3 href="https://example.com" class="link">Today's Deals-All With Frees Shipping</h3>
+    </div>
+
+    <div id="carouselExampleControlss" class="carousel slide" >
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="card-group">
+
+                    <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <a href="https://example.com" class="link">Start selling</a>
+                    </div>
+                    </div>
+
+                    <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <a href="https://example.com" class="link">Start selling</a>
+                    </div>
+                    </div>
+
+                    <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <a href="https://example.com" class="link">Start selling</a>
+                    </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card-group">
+
+                    <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <a href="https://example.com" class="link">Start selling</a>
+                    </div>
+                    </div>
+
+                    <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <a href="https://example.com" class="link">Start selling</a>
+                    </div>
+                    </div>
+
+                    <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <a href="https://example.com" class="link">Start selling</a>
+                    </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlss" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlss" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+        
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleControlss" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleControlss" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
+    </div>
+
+
+    <div class="container custom-container" style="background: url('../../images/3.png');">
+        <h1>It's all for the road</h1>
+        <p>Find the parts and accessories you need on eBay.</p>
+        <button>Explore offers</button>
+    </div>
+
+    </div>
+    <hr>
+    <div >
+        <div class="custom-footer container">
+            <div class=" row">
+                <div class="custom-footer-column">
+                    <h6 href="https://example.com" class="footer-heads link">Buy</h6>
+                    <p><a href="https://example.com" class="link">Registration</a></p>
+                    <p><a href="https://example.com" class="link">eBay Money Back Guarantee</a></p>
+                    <p><a href="https://example.com" class="link">Bidding & buying help</a></p>
+                    <p><a href="https://example.com" class="link">Stores</a></p>
+                </div>
+                <div class="custom-footer-column">
+                    <div>
+                        <h6 href="https://example.com" class="footer-heads link">Sell</h6>
+                        <p><a href="https://example.com" class="link">Start selling</a></p>
+                        <p><a href="https://example.com" class="link">Learn to sell</a></p>
+                        <p><a href="https://example.com" class="link">Affiliates</a></p>
+                    </div>
+                    <div>
+                        <h6 href="https://example.com" class="footer-heads link">Tools & apps</h6>
+                        <p><a href="https://example.com" class="link">Developers</a></p>
+                        <p><a href="https://example.com" class="link">Security center</a></p>
+                        <p><a href="https://example.com" class="link">Site map</a></p>
+                    </div>
+                </div>
+                <div class="custom-footer-column">
+                    <h6 href="https://example.com" class="footer-heads link">Stay connected</h6>
+                    <p><a href="https://example.com" class="link">eBay's Blogs</a></p>
+                    <p><a href="https://example.com" class="link">Facebook</a></p>
+                    <p><a href="https://example.com" class="link">Twitter</a></p>
+                </div>
+                <div class="custom-footer-column">
+                    <h6 href="https://example.com" class="footer-heads link">About eBay</h6>
+                    <p><a href="https://example.com" class="link">Company info</a></p>
+                    <p><a href="https://example.com" class="link">News</a></p>
+                    <p><a href="https://example.com" class="link">Investors</a></p>
+                    <p><a href="https://example.com" class="link">Careers</a></p>
+                    <p><a href="https://example.com" class="link">Government relations</a></p>
+                    <p><a href="https://example.com" class="link">Advertise with us</a></p>
+                    <p><a href="https://example.com" class="link">Policies</a></p>
+                    <p><a href="https://example.com" class="link">Verified Rights Owner (VeRO) Program</a></p>
+                </div>
+                <div class="custom-footer-column">
+                    <div>
+                        <h6 href="https://example.com" class="footer-heads link">Help & Contact</h6>
+                        <p><a href="https://example.com" class="link">Seller Information Center</a></p>
+                        <p><a href="https://example.com" class="link">Contact us</a></p>
+                    </div>
+                    <div>
+                        <h6 href="https://example.com" class="footer-heads link">Community</h6>
+                        <p><a href="https://example.com" class="link">Announcements</a></p>
+                        <p><a href="https://example.com" class="link">Discussion boards</a></p>
+                        <p><a href="https://example.com" class="link">eBay Giving Works</a></p>
+                    </div>
+                    <div>
+                        <h6 class="footer-heads link">eBay Sites</h6>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+    
+    </script>
+</body>
+</html>
