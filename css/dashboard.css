@@ -1,0 +1,66 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.fs-7 {
+	font-size: 0.875rem;
+}
+
+a {
+	text-decoration: none;
+}
+
+button {
+	background: none;
+	border: none;
+}
+
+.ebay-navi-btns a {
+	color: #707070;
+	transition: 0.3s;
+	position: relative;
+}
+
+.ebay-navi-btns a::before {
+	content: '';
+	display: block;
+	width: 0;
+	height: 2px;
+	background-color: #707070;
+	border-radius: 6px;
+	position: absolute;
+	top: calc(100% + 8px);
+	left: 0;
+	transition: 0.6s;
+}
+
+.ebay-navi-btns a:hover::before {
+	width: 100%;
+}
+
+.ebay-navi-btns a:hover {
+	color: #191919;
+}
+
+.ebay-navi-btns a.active {
+	color: #191919;
+}
+
+.ebay-navi-btns a.active::before {
+	color: #191919;
+	width: 100%;
+}
+
+i {
+	transition: 0.6s;
+}
+
+.navigation-list li.active {
+	background-color: #e5e5e5;
+	text-decoration: underline;
+	text-decoration-thickness: 2px;
+}
