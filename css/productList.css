@@ -1,0 +1,18 @@
+.filterBtn {
+    background-color: #f7f7f7 !important;
+    border-color: transparent !important;
+}
+
+.filterBtn:hover, .filterBtn:focus {
+    background-color: #E5E5E5 !important;
+}
+
+.colorOptions {
+    height: 25px;
+    width: 25px;
+}
+
+.filter-section {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
