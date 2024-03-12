@@ -15,4 +15,5 @@
 .filter-section {
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
+    border-radius: 0;
 }
