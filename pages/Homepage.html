@@ -5,175 +5,399 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <style>
-        .container {
-            width: 100%;
-            background-color: #ffffff;
-        }
-        .custom-links {
-            display: flex;
-            justify-content: space-between;
-            padding: 0 30px; 
-            margin-bottom: 10px;
-        }
-        .custom-links > .link {
-            color: black; 
-            text-decoration: none; 
-        }
-
-        .custom-links > .link:hover {
-            color: blue; 
-            text-decoration: underline; 
-            cursor: pointer; 
-        }
-
-        .link {
-            color: black; 
-            text-decoration: none; 
-        }
-        
-        .link:hover {
-            color: black; 
-            text-decoration: underline; 
-            cursor: pointer; 
-        }
-
-        .custom-footer{
-            background-color: #ffffff;
-            padding-top: 30px;
-            padding-bottom: 100px;
-        }
-
-        .custom-footer-column {
-            width: calc(100% / 5);
-        }
-
-        .custom-footer h6 {
-            font-weight: bold;
-            color: #676767;
-            margin-bottom: 15px;
-            margin-top: 15px;
-        }
-
-        .custom-footer p {
-            margin-bottom: 3px;
-        }
-
-        .custom-footer p a {
-            color: #676767;
-            font-size: small;
-        }
-
-        .custom-slide-one {
-            color: rgb(117, 86, 54);
-            padding: 30px;
-        }
-
-        .custom-slide-two {
-            color: rgb(30, 30, 138);
-            padding: 30px;
-        }
-
-        .custom-slide-three {
-            color: #ffffff;
-            padding: 30px;
-        }
-
-        .carousel {
-            margin-bottom: 50px;
-        }
-
-        .carousel-inner {
-            border-radius: 15px;
-        }
-        
-        .custom-slide-one > button {
-            color: rgb(117, 86, 54);
-            border-radius: 30px;
-            background-color: transparent;
-            padding: 10px;
-            border: 2px solid rgb(117, 86, 54);
-            /* transition: background-color 0.3s ease; */
-        }
-
-        /* #find-favorites-button:active {
-            background-color: black;
-            box-shadow: 50px 50px 50px rgba(210, 0, 0, 0.5);
-            transition: 0.7s;
-        } */
-
-        .custom-slide-two > button {
-            color: rgb(30, 30, 138);
-            border-radius: 30px;
-            background-color: transparent;
-            padding: 10px;
-            border: 2px solid rgb(30, 30, 138);
-            transition: background-color 0.3s ease;
-        }
-        .custom-slide-three > button {
-            color: #ffffff;
-            border-radius: 30px;
-            background-color: transparent;
-            padding: 10px;
-            border: 2px solid #ffffff;
-            transition: background-color 0.3s ease;
-        }
-
-
-        .custom-column {
-            width: calc(100% / 7);
-            text-align: center;
-        }
-
-        .custom-categories a {
-            text-underline-offset: 8px;
-        }
-
-        .custom-carousel-cards {
-            width: calc(100% / 4.5);
-        }
-
-        .custom-container {
-            color: rgb(255, 255, 255);
-            padding: 30px;
-            border-radius: 15px;
-        }
-
-        .custom-container > button {
-            color: #ffffff;
-            border-radius: 30px;
-            background-color: transparent;
-            padding: 10px;
-            border: 2px solid #ffffff;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/Homepage.css">
 </head>
 <body>
     <hr>
     <div class="container">
     <div class="custom-links">
-        <a href="https://example.com" class="link" id="homeIcon">Home</a>
-        <a href="https://example.com" class="link" id="savedIcon">Saved</a>
-        <a href="https://example.com" class="link" id="electronicsIcon">Electronics</a>
-        <a href="https://example.com" class="link" id="motorIcon">Motors</a>
-        <a href="https://example.com" class="link" id="fashion">Fashion</a>
-        <a href="https://example.com" class="link" id="collectiblesIcon">Collectibles and Art</a>
-        <a href="https://example.com" class="link">Sports</a>
-        <a href="https://example.com" class="link">Health & Beauty</a>
-        <a href="https://example.com" class="link">Industrial equipment</a>
-        <a href="https://example.com" class="link">Home & Garden</a>
-        <a href="https://example.com" class="link">Deals</a>
-        <a href="https://example.com" class="link">Sell</a>
+        <div class="btn-group dropdown">
+                <div>
+                    <a type="" class="btn link" style="text-underline-offset: 8px; text-decoration: underline;">
+                        Home
+                    </a>
+                </div>
+
+                <div class="innerdropdown" onmouseover="showDropdownLinks('savedIcon' , true)" onmouseout="showDropdownLinks('savedIcon' , false)">
+                    
+                    <button type="button" class="btn link"  data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="25" height="25">
+                            <path fill="pink" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                        Saved
+                    </button>
+                    <ul class="dropdown-menu" id="savedIcon">
+                        
+                    </ul>
+                </div>
+
+                <div class="innerdropdown" onmouseover="showDropdownLinks('electronicsIcon' , true)" onmouseleave="showDropdownLinks('electronicsIcon' , false)">
+                    <button type="button" class="btn link"  data-bs-toggle="dropdown" aria-expanded="false">
+                        Electronics
+                    </button>
+                    <ul class="dropdown-menu" id="electronicsIcon" style="display: none;" onmouseleave="hideDropdownLinks('electronicsIcon')">
+                        <div class="custom-cont">
+                            <div class="row" style="padding: 20px; font-size: small;">
+                                <div class=" col-lg-6" >
+                                    <h6>Most popular categories</h6>
+                                    <hr>
+                                    <p><a href="https://example.com" class="link">Smartphones</a></p>
+                                    <p><a href="https://example.com" class="link">Video games and consoles</a></p>
+                                    <p><a href="https://example.com" class="link">Computers and tables</a></p>
+                                    <p><a href="https://example.com" class="link">Cameras and photos</a></p>
+                                    <p><a href="https://example.com" class="link">Camera drones</a></p>
+                                    <p><a href="https://example.com" class="link">Refurbished</a></p>
+                                    <p><a href="https://example.com" class="link">Smart home</a></p>
+                                </div>
+                                
+                                <div class=" col-lg-6">
+                                    <h6>More categories</h6>
+                                    <hr>
+                                    <p><a href="https://example.com" class="link">Apple</a></p>
+                                    <p><a href="https://example.com" class="link">Samsung</a></p>
+                                    <p><a href="https://example.com" class="link">Portable audio and headphones</a></p>
+                                    <p><a href="https://example.com" class="link">Emerging brands</a></p>
+                                    <p><a href="https://example.com" class="link">Smart watches</a></p>
+                                    <p><a href="https://example.com" class="link">Deals</a></p>
+                                    <p><a href="https://example.com" class="link">Sell on eBay</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="innerdropdown" onmouseover="showDropdownLinks('motorIcon' , true)" onmouseleave="showDropdownLinks('motorIcon' , false)">
+                    <button type="button" class="btn link"  data-bs-toggle="dropdown" aria-expanded="false">
+                        Motors
+                    </button>
+                    <ul class="dropdown-menu" id="motorIcon" style="display: none;" onmouseleave="hideDropdownLinks('motorIcon')">
+                        <div class="custom-cont">
+
+                            <div class="row" style="padding: 20px; font-size: small;">
+                                <div class=" col-lg-6" >
+                                    <h6>Most popular categories</h6>
+                                    <hr>
+                                    <p><a href="https://example.com" class="link">Smartphones</a></p>
+                                    <p><a href="https://example.com" class="link">Video games and consoles</a></p>
+                                    <p><a href="https://example.com" class="link">Computers and tables</a></p>
+                                    <p><a href="https://example.com" class="link">Cameras and photos</a></p>
+                                    <p><a href="https://example.com" class="link">Camera drones</a></p>
+                                    <p><a href="https://example.com" class="link">Refurbished</a></p>
+                                    <p><a href="https://example.com" class="link">Smart home</a></p>
+                                </div>
+                                
+                                <div class=" col-lg-6">
+                                    <h6>More categories</h6>
+                                    <hr>
+                                    <p><a href="https://example.com" class="link">Apple</a></p>
+                                    <p><a href="https://example.com" class="link">Samsung</a></p>
+                                    <p><a href="https://example.com" class="link">Portable audio and headphones</a></p>
+                                    <p><a href="https://example.com" class="link">Emerging brands</a></p>
+                                    <p><a href="https://example.com" class="link">Smart watches</a></p>
+                                    <p><a href="https://example.com" class="link">Deals</a></p>
+                                    <p><a href="https://example.com" class="link">Sell on eBay</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="innerdropdown" onmouseover="showDropdownLinks('fashionIcon' , true)" onmouseout="showDropdownLinks('fashionIcon' , false)">
+                    <button type="button" class="btn link"  data-bs-toggle="dropdown" aria-expanded="false">
+                        Fashion
+                    </button>
+                    <ul class="dropdown-menu" id="fashionIcon" style="display: none;" onmouseleave="hideDropdownLinks('fashionIcon')">
+                        <div class="custom-cont">
+                            <div class="row" style="padding: 20px; font-size: small;">
+                                <div class=" col-lg-6" >
+                                <h6>Most popular categories</h6>
+                                <hr>
+                                <p><a href="https://example.com" class="link">Smartphones</a></p>
+                                <p><a href="https://example.com" class="link">Video games and consoles</a></p>
+                                <p><a href="https://example.com" class="link">Computers and tables</a></p>
+                                <p><a href="https://example.com" class="link">Cameras and photos</a></p>
+                                <p><a href="https://example.com" class="link">Camera drones</a></p>
+                                <p><a href="https://example.com" class="link">Refurbished</a></p>
+                                <p><a href="https://example.com" class="link">Smart home</a></p>
+                            </div>
+
+                            <div class=" col-lg-6">
+                                <h6>More categories</h6>
+                                <hr>
+                                <p><a href="https://example.com" class="link">Apple</a></p>
+                                <p><a href="https://example.com" class="link">Samsung</a></p>
+                                <p><a href="https://example.com" class="link">Portable audio and headphones</a></p>
+                                <p><a href="https://example.com" class="link">Emerging brands</a></p>
+                                <p><a href="https://example.com" class="link">Smart watches</a></p>
+                                <p><a href="https://example.com" class="link">Deals</a></p>
+                                <p><a href="https://example.com" class="link">Sell on eBay</a></p>
+                            </div>
+                        </div>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="innerdropdown" onmouseover="showDropdownLinks('collectiblesIcon' , true)" onmouseout="showDropdownLinks('collectiblesIcon' , false)">
+                    <button type="button" class="btn link"  data-bs-toggle="dropdown" aria-expanded="false">
+                        Collectibles and Art
+                    </button>
+                    <ul class="dropdown-menu" id="collectiblesIcon" style="display: none;" onmouseleave="hideDropdownLinks('collectiblesIcon')">
+                        <div class="custom-cont">
+                            <div class="row" style="padding: 20px; font-size: small;">
+                                <div class=" col-lg-6" >
+                                    <h6>Most popular categories</h6>
+                                    <hr>
+                                    <p><a href="https://example.com" class="link">Smartphones</a></p>
+                                    <p><a href="https://example.com" class="link">Video games and consoles</a></p>
+                                    <p><a href="https://example.com" class="link">Computers and tables</a></p>
+                                    <p><a href="https://example.com" class="link">Cameras and photos</a></p>
+                                    <p><a href="https://example.com" class="link">Camera drones</a></p>
+                                    <p><a href="https://example.com" class="link">Refurbished</a></p>
+                                    <p><a href="https://example.com" class="link">Smart home</a></p>
+                                </div>
+                                
+                                <div class=" col-lg-6">
+                                    <h6>More categories</h6>
+                                    <hr>
+                                    <p><a href="https://example.com" class="link">Apple</a></p>
+                                    <p><a href="https://example.com" class="link">Samsung</a></p>
+                                    <p><a href="https://example.com" class="link">Portable audio and headphones</a></p>
+                                    <p><a href="https://example.com" class="link">Emerging brands</a></p>
+                                    <p><a href="https://example.com" class="link">Smart watches</a></p>
+                                    <p><a href="https://example.com" class="link">Deals</a></p>
+                                    <p><a href="https://example.com" class="link">Sell on eBay</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="innerdropdown" onmouseover="showDropdownLinks('sportsIcon' , true)" onmouseout="showDropdownLinks('sportsIcon' , false)">
+                    <button type="button" class="btn link"  data-bs-toggle="dropdown" aria-expanded="false">
+                        Sports
+                    </button>
+                    <ul class="dropdown-menu" id="sportsIcon" style="display: none;" onmouseleave="hideDropdownLinks('sportsIcon')">
+                        <div class="custom-cont">
+
+                            <div class="row" style="padding: 20px; font-size: small;">
+                                <div class=" col-lg-6" >
+                                <h6>Most popular categories</h6>
+                                <hr>
+                                <p><a href="https://example.com" class="link">Smartphones</a></p>
+                                <p><a href="https://example.com" class="link">Video games and consoles</a></p>
+                                <p><a href="https://example.com" class="link">Computers and tables</a></p>
+                                <p><a href="https://example.com" class="link">Cameras and photos</a></p>
+                                <p><a href="https://example.com" class="link">Camera drones</a></p>
+                                <p><a href="https://example.com" class="link">Refurbished</a></p>
+                                <p><a href="https://example.com" class="link">Smart home</a></p>
+                            </div>
+
+                            <div class=" col-lg-6">
+                                <h6>More categories</h6>
+                                <hr>
+                                <p><a href="https://example.com" class="link">Apple</a></p>
+                                <p><a href="https://example.com" class="link">Samsung</a></p>
+                                <p><a href="https://example.com" class="link">Portable audio and headphones</a></p>
+                                <p><a href="https://example.com" class="link">Emerging brands</a></p>
+                                <p><a href="https://example.com" class="link">Smart watches</a></p>
+                                <p><a href="https://example.com" class="link">Deals</a></p>
+                                <p><a href="https://example.com" class="link">Sell on eBay</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    </ul>
+                </div>
+
+                <div class="innerdropdown" onmouseover="showDropdownLinks('healthIcon' , true)" onmouseout="showDropdownLinks('healthIcon' , false)">
+                    <button type="button" class="btn link"  data-bs-toggle="dropdown" aria-expanded="false">
+                        Health & Beauty
+                    </button>
+                    <ul class="dropdown-menu" id="healthIcon" style="display: none;" onmouseleave="hideDropdownLinks('healthIcon')">
+                        <div class="custom-cont">
+                            <div class="row" style="padding: 20px; font-size: small;">
+                                <div class=" col-lg-6" >
+                                    <h6>Most popular categories</h6>
+                                    <hr>
+                                    <p><a href="https://example.com" class="link">Smartphones</a></p>
+                                    <p><a href="https://example.com" class="link">Video games and consoles</a></p>
+                                    <p><a href="https://example.com" class="link">Computers and tables</a></p>
+                                    <p><a href="https://example.com" class="link">Cameras and photos</a></p>
+                                    <p><a href="https://example.com" class="link">Camera drones</a></p>
+                                    <p><a href="https://example.com" class="link">Refurbished</a></p>
+                                    <p><a href="https://example.com" class="link">Smart home</a></p>
+                                </div>
+                                
+                                <div class=" col-lg-6">
+                                    <h6>More categories</h6>
+                                    <hr>
+                                    <p><a href="https://example.com" class="link">Apple</a></p>
+                                    <p><a href="https://example.com" class="link">Samsung</a></p>
+                                    <p><a href="https://example.com" class="link">Portable audio and headphones</a></p>
+                                    <p><a href="https://example.com" class="link">Emerging brands</a></p>
+                                    <p><a href="https://example.com" class="link">Smart watches</a></p>
+                                    <p><a href="https://example.com" class="link">Deals</a></p>
+                                    <p><a href="https://example.com" class="link">Sell on eBay</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="innerdropdown" onmouseover="showDropdownLinks('industrialIcon' , true)" onmouseout="showDropdownLinks('industrialIcon' , false)">
+                    <button type="button" class="btn link"  data-bs-toggle="dropdown" aria-expanded="false">
+                        Industrial equipment
+                    </button>
+                    <ul class="dropdown-menu" id="industrialIcon" style="display: none;" onmouseleave="hideDropdownLinks('industrialIcon')">
+                        <div class="custom-cont">
+
+                            <div class="row" style="padding: 20px; font-size: small;">
+                                <div class=" col-lg-6" >
+                                    <h6>Most popular categories</h6>
+                                    <hr>
+                                    <p><a href="https://example.com" class="link">Smartphones</a></p>
+                                    <p><a href="https://example.com" class="link">Video games and consoles</a></p>
+                                    <p><a href="https://example.com" class="link">Computers and tables</a></p>
+                                    <p><a href="https://example.com" class="link">Cameras and photos</a></p>
+                                    <p><a href="https://example.com" class="link">Camera drones</a></p>
+                                    <p><a href="https://example.com" class="link">Refurbished</a></p>
+                                    <p><a href="https://example.com" class="link">Smart home</a></p>
+                                </div>
+                                
+                                <div class=" col-lg-6">
+                                    <h6>More categories</h6>
+                                    <hr>
+                                    <p><a href="https://example.com" class="link">Apple</a></p>
+                                    <p><a href="https://example.com" class="link">Samsung</a></p>
+                                    <p><a href="https://example.com" class="link">Portable audio and headphones</a></p>
+                                    <p><a href="https://example.com" class="link">Emerging brands</a></p>
+                                    <p><a href="https://example.com" class="link">Smart watches</a></p>
+                                    <p><a href="https://example.com" class="link">Deals</a></p>
+                                    <p><a href="https://example.com" class="link">Sell on eBay</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="innerdropdown" onmouseover="showDropdownLinks('homeGardenIcon' , true)" onmouseout="showDropdownLinks('homeGardenIcon' , false)">
+                    <button type="button" class="btn link"  data-bs-toggle="dropdown" aria-expanded="false">
+                        Home & Garden
+                    </button>
+                    <ul class="dropdown-menu" id="homeGardenIcon" style="display: none;" onmouseleave="hideDropdownLinks('homeGardenIcon')">
+                        <div class="custom-cont">
+
+                            <div class="row" style="padding: 20px; font-size: small;">
+                                <div class=" col-lg-6" >
+                                <h6>Most popular categories</h6>
+                                <hr>
+                                <p><a href="https://example.com" class="link">Smartphones</a></p>
+                                <p><a href="https://example.com" class="link">Video games and consoles</a></p>
+                                <p><a href="https://example.com" class="link">Computers and tables</a></p>
+                                <p><a href="https://example.com" class="link">Cameras and photos</a></p>
+                                <p><a href="https://example.com" class="link">Camera drones</a></p>
+                                <p><a href="https://example.com" class="link">Refurbished</a></p>
+                                <p><a href="https://example.com" class="link">Smart home</a></p>
+                            </div>
+
+                            <div class=" col-lg-6">
+                                <h6>More categories</h6>
+                                <hr>
+                                <p><a href="https://example.com" class="link">Apple</a></p>
+                                <p><a href="https://example.com" class="link">Samsung</a></p>
+                                <p><a href="https://example.com" class="link">Portable audio and headphones</a></p>
+                                <p><a href="https://example.com" class="link">Emerging brands</a></p>
+                                <p><a href="https://example.com" class="link">Smart watches</a></p>
+                                <p><a href="https://example.com" class="link">Deals</a></p>
+                                <p><a href="https://example.com" class="link">Sell on eBay</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    </ul>
+                </div>
+
+                <div class="innerdropdown" onmouseover="showDropdownLinks('dealsIcon' , true)" onmouseout="showDropdownLinks('dealsIcon' , false)">
+                    <button type="button" class="btn link"  data-bs-toggle="dropdown" aria-expanded="false">
+                        Deals
+                    </button>
+                    <ul class="dropdown-menu" id="dealsIcon" style="display: none;" onmouseleave="hideDropdownLinks('dealsIcon')">
+                        <div class="custom-cont">
+
+                            <div class="row" style="padding: 20px; font-size: small;">
+                                <div class=" col-lg-6" >
+                                <h6>Most popular categories</h6>
+                                <hr>
+                                <p><a href="https://example.com" class="link">Smartphones</a></p>
+                                <p><a href="https://example.com" class="link">Video games and consoles</a></p>
+                                <p><a href="https://example.com" class="link">Computers and tables</a></p>
+                                <p><a href="https://example.com" class="link">Cameras and photos</a></p>
+                                <p><a href="https://example.com" class="link">Camera drones</a></p>
+                                <p><a href="https://example.com" class="link">Refurbished</a></p>
+                                <p><a href="https://example.com" class="link">Smart home</a></p>
+                            </div>
+
+                            <div class=" col-lg-6">
+                                <h6>More categories</h6>
+                                <hr>
+                                <p><a href="https://example.com" class="link">Apple</a></p>
+                                <p><a href="https://example.com" class="link">Samsung</a></p>
+                                <p><a href="https://example.com" class="link">Portable audio and headphones</a></p>
+                                <p><a href="https://example.com" class="link">Emerging brands</a></p>
+                                <p><a href="https://example.com" class="link">Smart watches</a></p>
+                                <p><a href="https://example.com" class="link">Deals</a></p>
+                                <p><a href="https://example.com" class="link">Sell on eBay</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    </ul>
+                </div>
+
+                <div class="innerdropdown" onmouseover="showDropdownLinks('sellIcon' , true)" onmouseout="showDropdownLinks('sellIcon' , false)">
+                    <button type="button" class="btn link"  data-bs-toggle="dropdown" aria-expanded="false">
+                        Sell
+                    </button>
+                    <ul class="dropdown-menu" id="sellIcon" style="display: none;" onmouseleave="hideDropdownLinks('sellIcon')">
+                        <div class="custom-cont">
+
+                            <div class="row" style="padding: 20px; font-size: small;">
+                                <div class=" col-lg-6" >
+                                    <h6>Most popular categories</h6>
+                                <hr>
+                                <p><a href="https://example.com" class="link">Smartphones</a></p>
+                                <p><a href="https://example.com" class="link">Video games and consoles</a></p>
+                                <p><a href="https://example.com" class="link">Computers and tables</a></p>
+                                <p><a href="https://example.com" class="link">Cameras and photos</a></p>
+                                <p><a href="https://example.com" class="link">Camera drones</a></p>
+                                <p><a href="https://example.com" class="link">Refurbished</a></p>
+                                <p><a href="https://example.com" class="link">Smart home</a></p>
+                            </div>
+
+                            <div class=" col-lg-6">
+                                <h6>More categories</h6>
+                                <hr>
+                                <p><a href="https://example.com" class="link">Apple</a></p>
+                                <p><a href="https://example.com" class="link">Samsung</a></p>
+                                <p><a href="https://example.com" class="link">Portable audio and headphones</a></p>
+                                <p><a href="https://example.com" class="link">Emerging brands</a></p>
+                                <p><a href="https://example.com" class="link">Smart watches</a></p>
+                                <p><a href="https://example.com" class="link">Deals</a></p>
+                                <p><a href="https://example.com" class="link">Sell on eBay</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    </ul>
+                </div>
+        </div>
     </div>
 
-    <div id="carouselExampleControls" class="carousel slide"  >
+    <div id="carouselExampleControls" class="carousel slide"  data-bs-ride="carousel">
         <div class="carousel-inner" >
             <div class="carousel-item active">
                 <div class="d-block w-100 " style="background: url('../../images/1.png');" alt="First slide">
                     <div class="col-lg-3 custom-slide-one">
                         <h1>Discover a kaleidoscope of cards</h1>
                         <h5>Build your collection of trading cards and collectible card games.</h5>
-                        <button type="button" class="" id="find-favorites-button">Find your favorites</button>
+                        <button type="button" onmouseover="buttonHover(true)" onmouseout="buttonHover(false)">Find your favorites</button>  
+                        <!-- --------------------------------------------------------------------------------> 
                     </div>
                 </div>
             </div>
@@ -182,7 +406,7 @@
                     <div class="col-lg-3 custom-slide-two">
                         <h1>Find it. Fix it. Drive it.</h1>
                         <h5>Save on a wide selection of parts on eBay.</h5>
-                        <button>Shop now</button>
+                        <button type="button" onmouseover="buttonHover(true)" onmouseout="buttonHover(false)">Shop now</button>
                     </div>
                 </div>
             </div>
@@ -191,7 +415,7 @@
                     <div class="col-lg-3 custom-slide-three">
                         <h1>What do your wheels say about your car?</h1>
                         <h5>find the tires you need and more at prices you'll love.</h5>
-                        <button>Shop now</button>
+                        <button type="button" onmouseover="buttonHover(true)" onmouseout="buttonHover(false)">Shop now</button>
                     </div>
                 </div>
             </div>
@@ -332,7 +556,11 @@
     <div class="container custom-container" style="background: url('../../images/3.png');">
         <h1>It's all for the road</h1>
         <p>Find the parts and accessories you need on eBay.</p>
-        <button>Explore offers</button>
+        <button type="button" style="background-color: transparent; color: #ffffff; border: 1px solid #ffffff; transition: background-color 0.3s ease, color 0.3s ease;" 
+            onmouseover="this.style.backgroundColor='white'; this.style.color='transparent';" 
+            onmouseout="this.style.backgroundColor='transparent'; this.style.color='#ffffff';">
+            Explore offers
+        </button>
     </div>
 
     </div>
@@ -392,7 +620,15 @@
                     </div>
                     <div>
                         <h6 class="footer-heads link">eBay Sites</h6>
-
+                        <div class="btn-group dropdown" onmouseover="languages('countryDropdown',true)" onmouseout="languages('countryDropdown',false)">
+                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                Language
+                            </button>
+                            <ul class="dropdown-menu" id="countryDropdown">
+                                
+                            </ul>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -400,8 +636,6 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script>
-    
-    </script>
+    <script src="../js/Homepage.js"></script>
 </body>
 </html>
