@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/checkout.css">
+    <title>eBay | Checkout</title>
+</head>
+<body>
+    <!-- start checkout section -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 logo-container">
+                <img src="../Assets/800px-Ebay_2012_(logo).svg.png.crdownload" alt="ebay" style="width: 150px;; height: 150px;;">
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="section checkout-section">
+                    <h4 class="card-title mt-0 text-center mb-4 section-title">CHECKOUT</h4>
+                    <form id="checkOutSubmit">
+                        <fieldset>
+                            <legend>Personal Info</legend>
+                            <div class="form-group">
+                                <input type="text" class="form-control checkout-input" id="fullName" name="fullName" placeholder="Full Name (e.g. Paul Joe)*" pattern="^[A-Za-z]{3,16}([ ]{1}[A-Za-z]{3,16})*$" required>
+                                <p class="nameValidation" style="display: none;">Please Enter a Valid Name. Special Characters Not Allowed</p>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" class="form-control checkout-input" id="phoneNumber" name="phoneNumber" placeholder="Phone Number*" pattern="^0?1[0-9]{9}$" required>
+                                <p class="telValidation" style="display: none;">Please Enter Your Tel in this Format 01xxxxxxxxx</p>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Address</legend>
+                            <div class="form-group">
+                                <input type="text" class="form-control checkout-input" id="city" name="city" placeholder="City*" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control checkout-input" id="country" name="country" placeholder="Country*" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control checkout-input" id="region" name="region" placeholder="Region*" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control checkout-input" id="postalCode" name="postalCode" placeholder="Postal Code*" required>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Payment Method</legend>
+                            <div class="row justify-content-center">
+                                <div class="col-md-3 col-sm-6 payment-icon">
+                                    <img src="../assets/visa-icon.svg" alt="visa">
+                                </div>
+                                <div class="col-md-3 col-sm-6 payment-icon">
+                                    <img src="../assets/maestro-icon.svg" alt="maestro">
+                                </div>
+                                <div class="col-md-3 col-sm-6 payment-icon">
+                                    <img src="../assets/paypal-icon.svg" alt="paypal">
+                                </div>
+                                <div class="col-md-3 col-sm-6 payment-icon">
+                                    <img src="../assets/gpay-icon.svg" alt="gpay">
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="row justify-content-between mt-4">
+                            <div class="col-auto">
+                                <a href="/pages/CartPage.html" class="back"><i class="bx bx-left-arrow-alt"></i> Back to Cart</a>
+                            </div>
+                            <div class="col-auto">
+                                <button type="submit" class="showbtn col-auto fw-bold px-lg-5 p-1 py-3 text-light">Proceed to Payment <i class="bx bx-right-arrow-alt"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Of checkout section -->
+</body>
+</html>

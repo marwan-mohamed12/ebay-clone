@@ -1,0 +1,116 @@
+@import url(./root.css);
+body {
+  font-family: var(--ff-montserrat);
+  font-weight: var(--fw-regular);
+  color: var(--clr-neutral-dark-grayish-blue);
+  font-size: 0.89rem;
+  background-color: var(--clr-primary-cream);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Start Of Checkout section  */
+.checkout-input,
+.visa-input {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.checkout-input:focus,
+.visa-input:focus {
+  border-color: var(--primary-color);
+}
+.payment-icon {
+  border: 1px solid var(--primary-color);
+  cursor: pointer;
+}
+.payment-icon img {
+  width: 30px;
+  height: 30px;
+}
+.form-control {
+  border-radius: 4px;
+}
+.payment-icon img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.showbtn {
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+}
+.showbtn:hover {
+  background-color: #0056b3;
+}
+/* Added style for logo */
+.logo-container {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 200px ;
+  width: 200px;
+  
+}
+.logo-container img {
+  max-width: 100%;
+  height: auto;
+}
+.back {
+  cursor: pointer;
+  color: var(--primary-color);
+}
+.back i {
+  margin-right: 5px;
+}
+.checkout-section {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 30px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.checkout-section h4 {
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.telValidation,
+.nameValidation {
+  display: none;
+  font-size: x-small;
+}
+input[type="text"]:focus + .nameValidation {
+  display: block;
+}
+input[type="tel"]:focus + .telValidation {
+  display: block;
+}
+input[type="text"]:valid + .nameValidation {
+  display: none;
+}
+input[type="tel"]:valid + .telValidation {
+  display: none;
+}
+/* End Of Checkout Section  */
+
+/* Start Of Cart section  */
+.cart-section {
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 30px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.cart-section h5 {
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+/* End Of Cart Section  */
