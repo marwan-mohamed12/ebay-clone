@@ -84,9 +84,27 @@ function hideDropdownLinks(elementID){
     hiddenContent.style.display = 'none';
 }
 
-function buttonHover(state){
+// function buttonHover(elementID, state) {
+//     let button = document.getElementById(elementID);
+//     if (button) {
+//         if (state) {
+//             switch (elementID){
+//                 case 'firstSlideBtn':
+//                     button.style.backgroundColor ='brown';
+//                     break;
+//                 case 'secondSlideBtn':
+//                     button.style.backgroundColor ='blue';
+//                     break;
+//                 case 'thirdSlideBtn':
+//                     button.style.backgroundColor ='white';
+//                     break;
+//             }
+//         } else {
+//             button.style.backgroundColor = 'transparent';
+//         }
+//     }
+// }
 
-}
 
 
 $.ajax({
@@ -112,4 +130,17 @@ $.ajax({
     error: function(xhr, status, error) {
         console.error('Error fetching countries:', error);
     }
+});
+
+
+const cardGroup = document.getElementById('cardGroup');
+
+cardGroup.addEventListener('wheel', (event) => {
+    event.preventDefault(); // Prevent default scroll behavior
+
+    // Calculate the new scroll position based on wheel direction
+    cardGroup.scrollLeft += event.deltaY;
+
+    // Optionally, you can add additional logic to snap to each card
+    // For example, you can calculate the width of each card and snap to it
 });

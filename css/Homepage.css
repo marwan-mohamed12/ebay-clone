@@ -21,10 +21,10 @@
 }
 
 .dropdown-menu {
-    width: 1100px;
+    width: 1200px;
     position: fixed;
     left: 50%;
-    top: 80px;
+    top: 71px;
     transform: translateX(-50%);
     background-color: #ffffff;
     
@@ -83,45 +83,104 @@
 }
 
 .carousel {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .carousel-inner {
     border-radius: 15px;
 }
 
-.custom-slide-one > button {
+.carousel-item {
+    height: 280px;
+}
+
+.custom-slide-one > #firstSlideBtn{
+    margin-top: 10px;
+    margin-left: 140px;
     color: rgb(117, 86, 54);
     border-radius: 30px;
     background-color: transparent;
     padding: 10px;
     border: 2px solid rgb(117, 86, 54);
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* #find-favorites-button:active {
-    background-color: black;
-    box-shadow: 50px 50px 50px rgba(210, 0, 0, 0.5);
-    transition: 0.7s;
-} */
+.custom-slide-one > #firstSlideBtn:hover {
+    background-color: rgb(117, 86, 54);
+    color: rgb(244, 187, 15);
+    font-size: medium;
+}
 
-.custom-slide-two > button {
+.custom-slide-two > #secondSlideBtn {
+    margin-top: 10px;
+    margin-left: 150px;
     color: rgb(30, 30, 138);
     border-radius: 30px;
     background-color: transparent;
     padding: 10px;
     border: 2px solid rgb(30, 30, 138);
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s, color 0.3s;
 }
-.custom-slide-three > button {
+
+.custom-slide-two > #secondSlideBtn:hover {
+    color: rgb(80, 209, 211);
+    background-color: rgb(30, 30, 138);
+    font-size: medium;
+}
+
+.custom-slide-three > #thirdSlideBtn {
+    margin-top: 10px;
+    margin-left: 170px;
     color: #ffffff;
     border-radius: 30px;
     background-color: transparent;
     padding: 10px;
     border: 2px solid #ffffff;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s, color 0.3s;
 }
 
+.custom-slide-three > #thirdSlideBtn:hover{
+    color: rgba(245, 181, 117, 0.82);
+    background-color: #ffffff;
+    font-size: medium;
+}
+
+.custom-header{
+    margin-bottom: 25px;
+    margin-top: 25px;
+    }
+
+.card-img-top{
+    width: 180px;
+    height: 150px;        
+}
+
+
+
+.card {
+    width: 275px;
+    height: 350px; 
+    margin-left: 20px;
+}
+
+.custom-image-background {
+    width: 250px;
+    height: 250px;
+    background-color: #676767;
+    border-radius: 15px;
+    /* top: 35%; 
+    left: 50%;  */
+    
+    
+}
+
+/* image-size */
+.custom-card { 
+    width: 220px;
+    height: 250px; 
+    
+    margin-left: 15px;
+}
 
 .custom-column {
     width: calc(100% / 7);
