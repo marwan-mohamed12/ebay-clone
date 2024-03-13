@@ -131,16 +131,3 @@ $.ajax({
         console.error('Error fetching countries:', error);
     }
 });
-
-
-const cardGroup = document.getElementById('cardGroup');
-
-cardGroup.addEventListener('wheel', (event) => {
-    event.preventDefault(); // Prevent default scroll behavior
-
-    // Calculate the new scroll position based on wheel direction
-    cardGroup.scrollLeft += event.deltaY;
-
-    // Optionally, you can add additional logic to snap to each card
-    // For example, you can calculate the width of each card and snap to it
-});
