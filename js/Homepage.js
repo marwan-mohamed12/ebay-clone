@@ -48,10 +48,10 @@ function showDropdownLinks(elementID, expand) {
                             hiddenContent.style.display = 'block';
                             break;
 
-            case 'dealsIcon'      :
-                            hiddenContent = document.getElementById('dealsIcon');
-                            hiddenContent.style.display = 'block';
-                            break;
+            // case 'dealsIcon'      :
+            //                 hiddenContent = document.getElementById('dealsIcon');
+            //                 hiddenContent.style.display = 'block';
+            //                 break;
                             
             case 'sellIcon'      :
                             hiddenContent = document.getElementById('sellIcon');
