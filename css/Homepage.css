@@ -22,9 +22,9 @@
 
 .dropdown-menu {
     width: 1200px;
-    position: fixed;
+    position: absolute;
     left: 50%;
-    top: 71px;
+    top: 40px;
     transform: translateX(-50%);
     background-color: #ffffff;
     
@@ -140,7 +140,7 @@
 }
 
 .custom-slide-three > #thirdSlideBtn:hover{
-    color: rgba(245, 181, 117, 0.82);
+    color: rgb(0, 0, 0);
     background-color: #ffffff;
     font-size: medium;
 }
@@ -207,4 +207,8 @@
     background-color: transparent;
     padding: 10px;
     border: 2px solid #ffffff;
+}
+
+.heart {
+    fill:"#fffffff4";
 }

@@ -1,12 +1,12 @@
-
 function showDropdownLinks(elementID, expand) {
 
     let hiddenContent;
     if (expand) {
         switch (elementID) {
-            // case 'savedIcon'      : 
-            //                 document.getElementById('electronicsIcon').innerHTML =``;
-            //                 break;
+            case 'savedIcon'      : 
+                            hiddenContent = document.getElementById('savedIcon');
+                            hiddenContent.style.display = 'block';
+                            break;
 
             case 'electronicsIcon':
                             hiddenContent = document.getElementById('electronicsIcon');
@@ -121,13 +121,71 @@ $.ajax({
         let dropdownMenu = $('#countryDropdown');
         topCountries.forEach(country => {
             let listItem = $('<li>').appendTo(dropdownMenu);
-            $('<a>').addClass('dropdown-item')
-                    .attr('href', '#')
-                    .html(`<img src="${country.flags.png}" alt="${country.name.common}"> ${country.name.common}`)
-                    .appendTo(listItem);
+            let link = $('<a>').addClass('dropdown-item').attr('href', '#').appendTo(listItem);
+            $('<img>').attr('src', country.flags.png).css({'width': '100px', 'height': '100px'}).appendTo(link);
+            $('<span>').text(country.name.common).appendTo(link);
         });
     },
     error: function(xhr, status, error) {
         console.error('Error fetching countries:', error);
     }
 });
+
+
+function saveItem(elementId, elementImgId, elementInfoId) {
+    
+    let elementImage = document.getElementById(elementImgId).getAttribute('src');
+    let elementInfo = document.getElementById(elementInfoId).innerText;
+    let savedItems = document.getElementById('savedIcon');
+
+    
+    let existingItem = savedItems.querySelector(`#${elementId}-data`);
+
+    if (!existingItem) {
+        
+
+        let imgElement = document.createElement('img');
+        imgElement.setAttribute('src', elementImage);
+        imgElement.setAttribute('alt', '');
+        imgElement.setAttribute('style', 'width: 100px; height: 100px; display: inline-block;');
+        imgElement.setAttribute('href', '#');
+
+        let infoElement = document.createElement('p');
+        infoElement.innerText = elementInfo;
+        infoElement.setAttribute('style', 'display: inline-block;');
+
+        let block = document.createElement('div');
+        block.setAttribute('class', 'row');
+        block.setAttribute('id', `${elementId}-data`);
+
+        block.appendChild(imgElement);
+        block.appendChild(infoElement);
+
+        document.getElementById("savedIcon").appendChild(block);
+    } else {
+
+
+        existingItem.remove();
+
+
+    }
+    
+}
+
+function heartFunction(elementId, elementImgId, elementInfoId) {
+    let heart = document.getElementById(elementId);
+    let flag = saveItem(elementId, elementImgId, elementInfoId);
+
+    if (heart.querySelector('path').getAttribute('fill') == '#fffffff4' &&  flag!=1 ) {
+        heart.querySelector('path').setAttribute('fill', '#ff0000bd');
+        
+
+    } else {
+        heart.querySelector('path').setAttribute('fill', '#fffffff4');
+        
+    }
+    
+    
+
+}
+
