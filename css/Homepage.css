@@ -1,7 +1,59 @@
+.custom-nav{
+    font-size: 12px;
+}
+
+.nav-spacing{
+    margin-left: 540px;
+}
+.custom-nav a,span {
+    padding-top: 7px;
+}
+
+.custom-hr {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.ebay-logo {
+    width: 110px;
+    height: 50px;
+    margin-left: 70px;
+}
+
+.custom-category-button{
+    font-size: small;
+    font-weight: 500;
+    color: #676767;
+    padding: 0px;
+    margin-left: 95px;
+    
+}
+
+.search-input {
+        padding-left: 30px; /* Adjust according to the width of your SVG */
+        background-image: url('../Assets/images/search.svg');
+        background-repeat: no-repeat;
+        background-position: 5px center; /* Adjust according to your icon's alignment */
+        background-size: 20px 20px; /* Adjust according to your icon's size */
+    }
+
 .container {
     width: 100%;
     background-color: #ffffff;
 }
+
+.home-link{
+    text-underline-offset: 8px;
+    text-decoration: underline;
+}
+
+.save-button{
+    overflow-y: auto;
+    padding: 20px;
+    font-size: small;
+    display: none;
+}
+
 .custom-links {
     display: flex;
     justify-content: space-between;
@@ -20,15 +72,45 @@
     border-color: #a2a2a2;
 }
 
-.dropdown-menu {
-    width: 1200px;
+.innerdropdown > .custom-dropdown-menu {
+    width: 1310px;
     position: absolute;
     left: 50%;
     top: 40px;
     transform: translateX(-50%);
     background-color: #ffffff;
-    
+    height: 300px;
+    display: none;
+    border-radius: 20px;
 }
+
+.custom-style-dropdown{
+    padding: 20px; 
+    font-size: small;
+}
+
+.custom-style-dropdown p {
+    margin-bottom: 13px;
+    line-height: 1.2;
+}
+
+.language-container {
+    position: fixed;
+    top: 60%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 300px; /* Set the desired height */
+    overflow-y: auto; /* Enable vertical scrollbar if content exceeds height */
+    background-color: white; /* Adjust as needed */
+    border: 1px solid #ccc; /* Adjust border styles as needed */
+    padding: 20px; /* Adjust padding as needed */
+    z-index: 999; /* Ensure it's above other elements */
+    display: none;
+}
+
+
+
 
 .link {
     color: black; 
@@ -69,18 +151,42 @@
 
 .custom-slide-one {
     color: rgb(117, 86, 54);
+    background-color: #face27;
+}
+
+.custom-slide-one> .col-lg-3{
     padding: 30px;
 }
 
 .custom-slide-two {
     color: rgb(30, 30, 138);
+    background-color: #c4e3fa;
+}
+
+.custom-slide-two> .col-lg-3{
     padding: 30px;
+}
+
+.custom-slide-two img{
+    width: 800px;
+    height: 300px;
 }
 
 .custom-slide-three {
     color: #ffffff;
     padding: 30px;
+    
 }
+
+.custom-slide-three-image{
+    background: url('../Assets/images/3.png');
+}
+
+.carousel-control-prev,
+.carousel-control-next{
+    width: 10%;
+}
+
 
 .carousel {
     margin-bottom: 30px;
@@ -94,9 +200,9 @@
     height: 280px;
 }
 
-.custom-slide-one > #firstSlideBtn{
+.custom-slide-one> .col-lg-3 > #firstSlideBtn{
     margin-top: 10px;
-    margin-left: 140px;
+    margin-left: 100px;
     color: rgb(117, 86, 54);
     border-radius: 30px;
     background-color: transparent;
@@ -105,13 +211,13 @@
     transition: background-color 0.3s, color 0.3s;
 }
 
-.custom-slide-one > #firstSlideBtn:hover {
+.custom-slide-one > .col-lg-3 > #firstSlideBtn:hover {
     background-color: rgb(117, 86, 54);
-    color: rgb(244, 187, 15);
+    color: #face27;
     font-size: medium;
 }
 
-.custom-slide-two > #secondSlideBtn {
+.custom-slide-two > .col-lg-3 >#secondSlideBtn {
     margin-top: 10px;
     margin-left: 150px;
     color: rgb(30, 30, 138);
@@ -120,10 +226,11 @@
     padding: 10px;
     border: 2px solid rgb(30, 30, 138);
     transition: background-color 0.3s, color 0.3s;
+    margin-bottom: 35px;
 }
 
-.custom-slide-two > #secondSlideBtn:hover {
-    color: rgb(80, 209, 211);
+.custom-slide-two > .col-lg-3 > #secondSlideBtn:hover {
+    color: #c4e3fa;
     background-color: rgb(30, 30, 138);
     font-size: medium;
 }
@@ -148,7 +255,12 @@
 .custom-header{
     margin-bottom: 25px;
     margin-top: 25px;
+    display: inline;
     }
+
+.custom-see-all{
+    text-align: end;
+}
 
 .card-img-top{
     width: 180px;
@@ -159,7 +271,7 @@
 
 .card {
     width: 275px;
-    height: 350px; 
+    height: 380px; 
     margin-left: 20px;
 }
 
@@ -209,6 +321,28 @@
     border: 2px solid #ffffff;
 }
 
-.heart {
-    fill:"#fffffff4";
+.cards-container{
+    overflow-x: hidden;
+    height: 400px; 
+    margin-bottom: 25px;
 }
+
+.cards-container:hover {
+    overflow-x: auto;
+}
+
+
+
+.footer {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    
+    .footer {
+    display: block;
+    
+}
+
+}
+
