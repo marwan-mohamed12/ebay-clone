@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // If user is found, store email in session storage and redirect
     if (user) {
       sessionStorage.setItem("email", email);
-      window.location.href = "/pages/password-entry.html";
+      window.location.href = "../pages/password-entry.html";
     } else {
       // If user is not found, display error message
       displayError(emailError, "We couldn't find this eBay account.");

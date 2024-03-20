@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (user && user.password === password) {
       // Redirect to home page if user exists and password matches
-      window.location.href = "/pages/Homepage.html";
+      window.location.href = "../pages/Homepage.html";
     } else {
       // Display error message if user does not exist or password is incorrect
       displayErrorMessage("Oops, that's not a match.");
