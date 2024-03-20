@@ -1,39 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/checkout.css" />
-    <title>ebay | Your Cart</title>
-</head>
-<body>
-    <!-- Start Of Cart section -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 logo-container">
-                <img src="../Assets/800px-Ebay_2012_(logo).svg.png.crdownload" alt="ebay" style="width: 150px;; height: 150px;;">
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="section cart-section mt-0">
-                    <h5 class="card-title mt-0 text-center my-4">YOUR ORDER</h5>
-                    <hr />
-                    <div class="product-card-container">
-                        <!-- Product cards will be dynamically added here -->
-                    </div>
-                    <div class="d-flex justify-content-between mt-4 align-self-end">
-                        <p id="backbtn" class="back"><i class="bx bx-left-arrow-alt"></i>Back to shop</p>
-                        <div class="d-flex justify-content-end align-items-center mb-5">
-                            <a href="/pages/CheckoutPage.html" class="showbtn col-auto fw-bold px-lg-5 p-1 py-3 text-light">Checkout<i class="bx bx-right-arrow-alt"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eBay shopping cart</title>
+    <link rel="stylesheet" href="../css/cart.css" />
+    <link rel="Icon" href="https://pages.ebay.com/favicon.ico"/>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <!-- The header will be here -->
+    <header></header>
+
+    <!-- Just a divider -->
+    <div class="row">
+      <div class="divider">
+        <hr />
+      </div>
     </div>
-    <!-- End Of Cart Section -->
-</body>
+
+    <!-- the container which contain the content of the page -->
+    <div class="container">
+      <div class="row statement bg-primary">
+        <div class="col-1">
+            <img class="danger" src="../Assets/danger.png">
+        </div>
+        <div class="col-11">
+            <p>
+                You have more than one currency in your cart, so you'll complete
+                checkout for each currency separately.
+              </p>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <!-- the left side of the container -->
+        <div class="col-7 leftSide">
+          <h1 class="heading">Shopping cart</h1>
+          <div class="left" id="cartData">
+            <!-- There will be the fetched data from json file  -->
+          </div>
+        </div>
+
+        <div class="col-1"></div>
+        <!-- the right side of the container -->
+        <div class="col-4 rightSide">
+          <div class="row quatity">
+            <div class="col-8">
+              <p>Items (<span id="realQty"></span>)</p>
+            </div>
+            <div class="col-4 text-right">
+              <p id="realP"></p>
+            </div>
+          </div>
+
+          <div class="row shipping">
+            <div class="col-8">
+              <p>Shipping</p>
+            </div>
+            <div class="col-4 text-right">
+              <p id="shipCharge"></p>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="row subTotal">
+            <div class="col-8">
+              <p>Subtotal</p>
+            </div>
+            <div class="col-4 text-right">
+              <p id="totalAmount"></p>
+            </div>
+          </div>
+
+          <div class="checkoutButton">
+            <button
+              class="btn btn-primary mb-2 rounded-pill py-2 " id="go-to-checkout-btn"
+            >
+              Go to checkout
+            </button>
+            <p>
+              Purchase protected by <a href="#">eBay Money Back Guarantee</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- The footer will be here -->
+    <footer></footer>
+    <script src="../js/cart.js"></script>
+  </body>
 </html>
