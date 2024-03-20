@@ -3,20 +3,103 @@ import fetchProducts from './fetch.js';
 
 // ------------------- Variables & Nodes -------------------
 const categoryBtnsContainer = document.querySelector('[data-category-btns]');
-const productContainer = document.querySelector('[data-products-container]');
 
 // ------------------- Functions ---------------------------
 
-async function displayPage() {
+export default async function displayPage() {
 	const products = await fetchProducts();
-	displayCategoryBtns(products);
-	displayProducts(products);
+	const returnedData = watchlistTemplate(products);
+	// addCategoryBtnsFunctionality(products);
+	return returnedData;
 }
-displayPage();
+const watchlistTemplate = function (products) {
+	return `
+						<div class="row w-100 align-items-center justify-content-end">
+							<div class="col-6">
+								<h2 class="h4 m-0 fw-bold">My eBay - Watchlist</h2>
+							</div>
+							<div class="col-6 text-end">
+								<form class="d-flex form-floating justify-content-end">
+									<div class="form-floating me-3">
+										<input
+											type="email"
+											class="form-control"
+											id="floatingInput"
+											placeholder="name@example.com"
+										/>
+										<label for="floatingInput" class="fs-7">Search your Watchlist</label>
+									</div>
+									<button class="btn btn-primary" type="submit">Search</button>
+								</form>
+							</div>
+						</div>
+						<div class="row mt-3">
+							<div class="col-md-12">
+								<div class="d-flex justify-content-between align-items-center">
+									<div class="form-check d-flex gap-3 align-items-center">
+										<input class="form-check-input" type="checkbox" id="addToCustomList" />
+										<button type="button" class="btn btn-primary btn-sm rounded-5 px-3">
+											Add to custom List
+										</button>
+										<button type="button" class="btn btn-outline-primary btn-sm rounded-5 px-3">
+											Delete
+										</button>
+									</div>
+									<div class="btn-group">
+										<div class="dropdown">
+											<button
+												class="btn btn-sm dropdown-toggle"
+												type="button"
+												id="dropdownStatus"
+												data-bs-toggle="dropdown"
+												aria-expanded="false"
+											>
+												Status: All <span>(1)</span>
+											</button>
+											<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownStatus">
+												<li>
+													<a class="dropdown-item" href="#">Active <span>(1)</span></a>
+												</li>
+											</ul>
+										</div>
+										<div class="dropdown">
+											<button
+												class="btn btn-sm dropdown-toggle"
+												type="button"
+												id="dropdownSort"
+												data-bs-toggle="dropdown"
+												aria-expanded="false"
+											>
+												Sort: Ending soonest
+											</button>
+											<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownSort">
+												<li><a class="dropdown-item" href="#">Ending soonest</a></li>
+												<li><a class="dropdown-item" href="#">Newest</a></li>
+												<li><a class="dropdown-item" href="#">Oldest</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div
+							class="d-flex flex-wrap gap-3 mt-3 py-3 px-4 border-top border-bottom justify-content-start overflow-x"
+							data-category-btns
+						>
+
+              ${displayCategoryBtns(products)}
+            </div>
+
+						<div data-products-container>
+              ${displayProducts(products)}
+            </div>
+					
+`;
+};
 
 function displayCategoryBtns(products) {
 	let categoriesCount = new Map();
-	categoriesCount.set('All Categories', products.length);
+	categoriesCount.set('all categories', products.length);
 	products.forEach(({ category }) => {
 		categoriesCount.set(category, (categoriesCount.get(category) || 0) + 1);
 	});
@@ -28,21 +111,23 @@ function displayCategoryBtns(products) {
 			return watchlistCategoryBtn(category, count);
 		})
 		.join('');
-
-	categoryBtnsContainer.innerHTML = categoriesBtns;
+	return categoriesBtns;
+	// categoryBtnsContainer.innerHTML = categoriesBtns;
 }
 
 const watchlistCategoryBtn = (category, count) => {
 	return `
-		<button class="btn btn-sm px-3 btn-outline-secondary rounded-5 fs-8" type="button">
+		<button class="btn btn-sm px-3 btn-outline-secondary rounded-5 fs-8 text-capitalize" type="button" data-category="${category}">
         ${category} <span>(${count})</span>
 		</button>
 	`;
 };
 
-async function displayProducts(products) {
+function displayProducts(products) {
 	const productsList = products.map((product) => watchlistProductTemplate(product)).join('');
-	productContainer.innerHTML = productsList;
+	// productContainer.innerHTML = productsList;
+
+	return productsList;
 }
 
 const watchlistProductTemplate = ({
@@ -51,7 +136,7 @@ const watchlistProductTemplate = ({
 	thumbnail,
 	price,
 	discountPercentage,
-	shippingPrice,
+	shippingPrice = 10.0,
 	time = new Date(2024, 3, 6, 10, 49),
 	seller = 'thewatchoutlet- user ID (3272)',
 	sellerFeedback = '100% positive feedback',
@@ -67,11 +152,10 @@ const watchlistProductTemplate = ({
 	});
 	return `<div class="d-flex gap-3 align-items-start border-bottom py-3">
 							<div class="me-2 align-self-center">
-								<input class="form-check-input" type="checkbox" id="addToCustomList" data-watchlist-checkbox>
+								<input role="button" class="form-check-input" type="checkbox" id="addToCustomList" data-watchlist-checkbox>
 							</div>
-							<div class="col-2">
-                <img src="${thumbnail}" alt="Product Image" class="img-fluid rounded-start border border-2 border-secondary border-opacity-25">
-                
+              <div class="col-2 align-self-center" style="height: 150px;"> 
+                <img src="${thumbnail}" alt="Product Image" class="img-fluid rounded-start border border-2 border-secondary border-opacity-25 object-cover w-100 h-100">
 							</div>
 							<div class="">
 								<div class="">
@@ -134,4 +218,9 @@ const watchlistProductTemplate = ({
 						</div>
 `;
 };
+
+displayPage();
 // ------------------- Event Listeners ---------------------
+
+// ------------------- Export ---------------------
+export { displayProducts };
