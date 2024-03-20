@@ -1,30 +1,35 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<title>My eBay - Summary</title>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!-- Favicon -->
-		<link rel="shortcut icon" type="image/x-icon" href="../Assets/favicon.ico" />
-		<!-- Bootstrap CSS -->
-		<link href="../css/bootstrap.css" rel="stylesheet" />
-		<!-- Bootstrap Icons CSS -->
-		<link href="../css/bootstrap-icons.css" rel="stylesheet" />
-		<!-- Style CSS -->
-		<link href="../css/dashboard.css" rel="stylesheet" />
-		<script src="../js/bootstrap.js" defer></script>
-		<!-- App JS -->
-		<script src="../js/templateInjection.js" defer></script>
-		<script src="../js/dashboard.js" defer></script>
-	</head>
-	<body style="font-family: Arial, Helvetica, sans-serif">
-		<!-- Start Header -->
-		<header></header>
-		<!--  Start Main -->
-		<main>
-			<div class="container">
-				<!-- Start Main Section -->
-				<section class="mt-3" data-sidebar>
+// ------------------- Variables & Nodes -------------------
+
+const mainContainer = document.querySelector('main > .container');
+const sideBarContainer = document.querySelector('[data-sidebar]');
+const headerTemplate = `
+				<!-- Start eBay Header -->
+				<div class="d-flex justify-content-between align-items-center mb-3">
+					<h1 class="fw-bold m-0 h3">My eBay</h1>
+					<a href="#" class="fs-7 text-decoration-underline">Tell us what you think</a>
+				</div>
+				<!-- Start Navigation Buttons -->
+				<div class="border-bottom d-flex justify-content-between align-items-center">
+					<!-- Buttons -->
+					<ul
+						class="d-flex gap-5 col-12 col-md-5 justify-content-center justify-content-md-start align-items-center ebay-navi-btns list-unstyled mb-1"
+					>
+						<li><a href="#" class="active">Activity</a></li>
+						<li><a href="#">Messages</a></li>
+						<li><a href="#">Account</a></li>
+					</ul>
+					<!-- User Details  -->
+					<div class="d-none d-md-block">
+						<a href="#">User Name</a>
+						<span>(<a href="#"> 0 </a> )</span>
+						<button type="button" class="" data-bookmark-btn>
+							<i class="bi bi-bookmark" data-bookmark-icon></i>
+						</button>
+					</div>
+				</div>
+`;
+
+const sideBarTemplate = `
 					<!-- Start Navigation  -->
 					<div class="col-3 col-xl-2">
 						<nav class="navbar navbar-expand-md">
@@ -140,10 +145,10 @@
 							</div>
 						</nav>
 					</div>
-				</section>
-			</div>
-		</main>
-		<!-- Start Footer -->
-		<footer></footer>
-	</body>
-</html>
+`;
+
+// ------------------- Functions ---------------------------
+
+// ------------------- Event Listeners ---------------------
+mainContainer.insertAdjacentHTML('afterbegin', headerTemplate);
+sideBarContainer.insertAdjacentHTML('afterbegin', sideBarTemplate);

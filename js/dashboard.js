@@ -14,4 +14,6 @@ function changeIconColor() {
 
 // ---------------- Event Listeners ------------------
 
-bookmarkBtn.addEventListener('click', changeIconColor);
+document.addEventListener('DOMContentLoaded', () => {
+	bookmarkBtn.addEventListener('click', changeIconColor);
+});
