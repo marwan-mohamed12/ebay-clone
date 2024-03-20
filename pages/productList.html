@@ -37,7 +37,7 @@
     </header>
     <!--  End Header -->
 
-    <nav class="container mt-2" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <nav class="container-fluid mt-4 mb-4" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">Products List</li>
@@ -56,7 +56,7 @@
                         aria-expanded="false">
                         Brand
                     </button>
-                    <ul class="dropdown-menu"></ul>
+                    <ul class="dropdown-menu" id="brandFilter"></ul>
                 </div>
                 <!-- Filter Brand Btn -->
 
@@ -66,7 +66,7 @@
                         aria-expanded="false">
                         Color
                     </button>
-                    <ul class="dropdown-menu"></ul>
+                    <ul class="dropdown-menu" id="colorFilter"></ul>
                 </div>
                 <!-- Filter Color Btn -->
 
@@ -76,12 +76,12 @@
                         aria-expanded="false">
                         Price
                     </button>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu" id="priceFilter">
                         <li>
                             <a class="dropdown-item" href="#">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
+                                    <input class="form-check-input" type="checkbox" value="under" id="under">
+                                    <label class="form-check-label" for="under">
                                         Under $110.00
                                     </label>
                                 </div>
@@ -90,8 +90,8 @@
                         <li>
                             <a class="dropdown-item" href="#">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
+                                    <input class="form-check-input" type="checkbox" value="inBetween" id="inBetween">
+                                    <label class="form-check-label" for="inBetween">
                                         $110.00 to $180.00
                                     </label>
                                 </div>
@@ -100,8 +100,8 @@
                         <li>
                             <a class="dropdown-item" href="#">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
+                                    <input class="form-check-input" type="checkbox" value="above" id="above">
+                                    <label class="form-check-label" for="above">
                                         Over $180.00
                                     </label>
                                 </div>
@@ -117,7 +117,7 @@
                         aria-expanded="false">
                         Condition
                     </button>
-                    <ul class="dropdown-menu"></ul>
+                    <ul class="dropdown-menu" id="conditionFilter"></ul>
                 </div>
                 <!-- Filter Condition Btn -->
 
@@ -127,12 +127,12 @@
                         aria-expanded="false">
                         Sort
                     </button>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu" id="sortFilter">
                         <li>
                             <a class="dropdown-item" href="#">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
+                                    <input class="form-check-input" type="checkbox" value="Name (A-Z)" id="sortAsc">
+                                    <label class="form-check-label" for="sortAsc">
                                         Name (A-Z)
                                     </label>
                                 </div>
@@ -141,8 +141,8 @@
                         <li>
                             <a class="dropdown-item" href="#">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
+                                    <input class="form-check-input" type="checkbox" value="" id="sortDesc">
+                                    <label class="form-check-label" for="sortDesc">
                                         Name (Z-A)
                                     </label>
                                 </div>
@@ -193,7 +193,7 @@
             </div>
 
             <!-- vertical Products -->
-            <section class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 py-4 productsContainer">
+            <section class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-4 productsContainer">
                 <!-- <div class="col">
                     <article class="card h-100">
                         <img src="https://i.ebayimg.com/thumbs/images/g/dzAAAOSwmRBhm1pr/s-l960.webp"
