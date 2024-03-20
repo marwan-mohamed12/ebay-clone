@@ -71,7 +71,7 @@ i {
 	transition: 0.6s;
 }
 
-.navigation-list li.active {
+.navigation-list a.active {
 	background-color: #e5e5e5;
 	text-decoration: underline;
 	text-decoration-thickness: 2px;
