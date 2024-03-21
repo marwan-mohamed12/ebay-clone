@@ -1,4 +1,8 @@
 // Function to fetch product data from JSON file
+import { Cart } from "../js/cart.js";
+
+document.addEventListener("DOMContentLoaded", function () {
+    const cartInstance = new Cart();
 async function fetchData() {
     try {
         const params = new URLSearchParams(window.location.search);
@@ -98,8 +102,23 @@ function updateProductDetails(product) {
           <button class="btn btn-outline-primary p-5 rounded-pill py-2"><i class="fa-regular fa-heart"></i> Add to watchlist</button>
       </div>
   `;
+  var addToCartBtn = document.createElement('button');
+    addToCartBtn.textContent = 'Add to Cart';
+    addToCartBtn.className = 'add-to-cart';
+
+    addToCartBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+        window.location.href = "./CartPage.html";
+        cartInstance.addItem(product);
+    });
+
+
 }
+
+    
+
+
 
 // Fetch data and initialize
 fetchData();
-
+});
