@@ -4,7 +4,7 @@ async function fetchProducts() {
 	try {
 		const params = new URLSearchParams(window.location.search);
 		const category = params.get('category');
-		const response = await fetch('../utils/products.json');
+		const response = await fetch('../data.json');
 		const data = await response.json();
 		products = data.products.filter((prod) => prod.category == category);
 		const unfilteredProducts = [...products];
@@ -157,7 +157,7 @@ const createProductElement = (id, name, price, shipping, watching, isSponsored, 
 	productElement.innerHTML = `
 		<a href="Product.html?id=${id}" class="text-decoration-none text-reset">
 			<article class="card h-100">
-				<img src="${imageUrl}" class="card-img-top img-thumbnail" alt="${name}">
+				<img src="${imageUrl[0]}" class="card-img-top img-thumbnail" alt="${name}">
 				<div class="card-body">
 					<h5 class="card-title">${name}</h5>
 					<div class="card-text">
@@ -182,7 +182,7 @@ const createHorizontalProduct = (id, name, price, shipping, watching, isSponsore
 	productElement.innerHTML = `
 		<div class="row g-0">
 			<div class="col-4">
-				<img src="${imageUrl}"
+				<img src="${imageUrl[0]}"
 					class="img-fluid rounded-start" alt="${name}" />
 			</div>
 			<div class="col-8">
