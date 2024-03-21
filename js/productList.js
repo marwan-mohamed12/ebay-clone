@@ -2,9 +2,11 @@ let products = [];
 
 async function fetchProducts() {
 	try {
+		const params = new URLSearchParams(window.location.search);
+		const category = params.get('category');
 		const response = await fetch('../utils/products.json');
 		const data = await response.json();
-		products = data.products;
+		products = data.products.filter((prod) => prod.category == category);
 		const unfilteredProducts = [...products];
 		getFiltersData();
 		renderProducts();
@@ -153,18 +155,20 @@ const createProductElement = (id, name, price, shipping, watching, isSponsored, 
 	productElement.id = id;
 
 	productElement.innerHTML = `
-    <article class="card h-100">
-        <img src="${imageUrl}" class="card-img-top img-thumbnail" alt="${name}">
-        <div class="card-body">
-            <h5 class="card-title">${name}</h5>
-            <div class="card-text">
-                <span class="d-block mb-1 fw-bold">$${price}</span>
-                <span class="d-block mb-1 text-muted d-block">${shipping ? "$" + shipping : 'Free shipping'}</span>
-                <span class="d-block mb-1 text-danger">${watching} watching</span>
-                <p class="mt-2 mb-0 text-muted">${isSponsored ? 'SPONSORED' : ''}</p>
-            </div>
-        </div>
-    </article>
+		<a href="Product.html?id=${id}" class="text-decoration-none text-reset">
+			<article class="card h-100">
+				<img src="${imageUrl}" class="card-img-top img-thumbnail" alt="${name}">
+				<div class="card-body">
+					<h5 class="card-title">${name}</h5>
+					<div class="card-text">
+						<span class="d-block mb-1 fw-bold">$${price}</span>
+						<span class="d-block mb-1 text-muted d-block">${shipping ? "$" + shipping : 'Free shipping'}</span>
+						<span class="d-block mb-1 text-danger">${watching} watching</span>
+						<p class="mt-2 mb-0 text-muted">${isSponsored ? 'SPONSORED' : ''}</p>
+					</div>
+				</div>
+			</article>
+		</a>
   `;
 
 	return productElement;
