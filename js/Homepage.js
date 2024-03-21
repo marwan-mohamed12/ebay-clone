@@ -3,66 +3,66 @@ function showDropdownLinks(elementID, expand) {
     let hiddenContent;
     if (expand) {
         switch (elementID) {
-            case 'savedIcon'      : 
-                                let content = document.getElementById('savedIcon');
-                                console.log("flag");
-                            if (count){
+            case 'savedIcon':
+                let content = document.getElementById('savedIcon');
+                console.log("flag");
+                if (count) {
 
-                                hiddenContent = document.getElementById('savedIcon');
-                                hiddenContent.style.display = 'block';
-                            }
-                            break;
+                    hiddenContent = document.getElementById('savedIcon');
+                    hiddenContent.style.display = 'block';
+                }
+                break;
 
             case 'electronicsIcon':
-                            hiddenContent = document.getElementById('electronicsIcon');
-                            hiddenContent.style.display = 'block';
-                            break;
+                hiddenContent = document.getElementById('electronicsIcon');
+                hiddenContent.style.display = 'block';
+                break;
 
-            case 'motorIcon'      :
-                            hiddenContent = document.getElementById('motorIcon');
-                            hiddenContent.style.display = 'block';
-                            break;
+            case 'motorIcon':
+                hiddenContent = document.getElementById('motorIcon');
+                hiddenContent.style.display = 'block';
+                break;
 
-            case 'fashionIcon'      :
-                            hiddenContent = document.getElementById('fashionIcon');
-                            hiddenContent.style.display = 'block';
-                            break;
-                        
-            case 'collectiblesIcon'      :
-                            hiddenContent = document.getElementById('collectiblesIcon');
-                            hiddenContent.style.display = 'block';
-                            break;
+            case 'fashionIcon':
+                hiddenContent = document.getElementById('fashionIcon');
+                hiddenContent.style.display = 'block';
+                break;
 
-            case 'sportsIcon'      :
-                            hiddenContent = document.getElementById('sportsIcon');
-                            hiddenContent.style.display = 'block';
-                            break;
-                        
-            case 'healthIcon'      :
-                            hiddenContent = document.getElementById('healthIcon');
-                            hiddenContent.style.display = 'block';
-                            break;
+            case 'collectiblesIcon':
+                hiddenContent = document.getElementById('collectiblesIcon');
+                hiddenContent.style.display = 'block';
+                break;
 
-            case 'industrialIcon'      :
-                            hiddenContent = document.getElementById('industrialIcon');
-                            hiddenContent.style.display = 'block';
-                            break;
+            case 'sportsIcon':
+                hiddenContent = document.getElementById('sportsIcon');
+                hiddenContent.style.display = 'block';
+                break;
 
-            case 'homeGardenIcon'      :
-                            hiddenContent = document.getElementById('homeGardenIcon');
-                            hiddenContent.style.display = 'block';
-                            break;
+            case 'healthIcon':
+                hiddenContent = document.getElementById('healthIcon');
+                hiddenContent.style.display = 'block';
+                break;
+
+            case 'industrialIcon':
+                hiddenContent = document.getElementById('industrialIcon');
+                hiddenContent.style.display = 'block';
+                break;
+
+            case 'homeGardenIcon':
+                hiddenContent = document.getElementById('homeGardenIcon');
+                hiddenContent.style.display = 'block';
+                break;
 
             // case 'dealsIcon'      :
             //                 hiddenContent = document.getElementById('dealsIcon');
             //                 hiddenContent.style.display = 'block';
             //                 break;
-                            
-            case 'sellIcon'      :
-                            hiddenContent = document.getElementById('sellIcon');
-                            hiddenContent.style.display = 'block';
-                            break;
-            
+
+            case 'sellIcon':
+                hiddenContent = document.getElementById('sellIcon');
+                hiddenContent.style.display = 'block';
+                break;
+
             // case 'countryDropdown'      :
             //                 hiddenContent = document.getElementById('countryDropdown');
             //                 hiddenContent.style.display = 'block';
@@ -71,19 +71,19 @@ function showDropdownLinks(elementID, expand) {
 
     } else {
         let hiddenContent = document.getElementById(elementID);
-            hiddenContent.style.display = 'none';
+        hiddenContent.style.display = 'none';
 
     }
 }
 
-function languages( elementID, expand){
+function languages(elementID, expand) {
 
-    if(expand){
-    hiddenContent = document.getElementById('countryDropdown');
-    hiddenContent.style.display = 'block';
-    } else{
-    hiddenContent = document.getElementById('countryDropdown');
-    hiddenContent.style.display = 'none';
+    if (expand) {
+        hiddenContent = document.getElementById('countryDropdown');
+        hiddenContent.style.display = 'block';
+    } else {
+        hiddenContent = document.getElementById('countryDropdown');
+        hiddenContent.style.display = 'none';
     }
 }
 
@@ -118,10 +118,10 @@ function languages( elementID, expand){
 $.ajax({
     url: 'https://restcountries.com/v3.1/all',
     method: 'GET',
-    success: function(response) {
+    success: function (response) {
         // Sort countries by population (descending)
         response.sort((a, b) => b.population - a.population);
-        
+
         // Get the top 20 countries
         let topCountries = response.slice(0, 20);
 
@@ -138,32 +138,32 @@ $.ajax({
             column.forEach(country => {
                 let listItem = $('<li>').appendTo(list);
                 let link = $('<a>').addClass('dropdown-item').attr('href', '#').appendTo(listItem);
-                $('<img>').attr('src', country.flags.png).css({'width': '50px', 'height': '50px'}).appendTo(link);
+                $('<img>').attr('src', country.flags.png).css({ 'width': '50px', 'height': '50px' }).appendTo(link);
                 $('<span>').text(country.name.common).appendTo(link);
             });
         });
-        
+
     },
-    error: function(xhr, status, error) {
+    error: function (xhr, status, error) {
         console.error('Error fetching countries:', error);
     }
 });
 
 
 
-let count=0; //number of items on savedIcon
+let count = 0; //number of items on savedIcon
 
 function saveItem(elementId, elementImgId, elementInfoId) {
-    
+
     let elementImage = document.getElementById(elementImgId).getAttribute('src');
     let elementInfo = document.getElementById(elementInfoId).innerText;
     let savedItems = document.getElementById('savedIcon');
 
-    
+
     let existingItem = savedItems.querySelector(`#${elementId}-data`);
 
     if (!existingItem) {
-        
+
 
         let imgElement = document.createElement('img');
         imgElement.setAttribute('src', elementImage);
@@ -192,7 +192,7 @@ function saveItem(elementId, elementImgId, elementInfoId) {
 
         count--;
     }
-    
+
 }
 
 
@@ -201,16 +201,16 @@ function heartFunction(elementId, elementImgId, elementInfoId) {
 
     saveItem(elementId, elementImgId, elementInfoId);
 
-    if (heart.querySelector('path').getAttribute('fill') == '#fffffff4' ) {
+    if (heart.querySelector('path').getAttribute('fill') == '#fffffff4') {
         heart.querySelector('path').setAttribute('fill', '#ff0000bd');
-        
+
 
     } else {
         heart.querySelector('path').setAttribute('fill', '#fffffff4');
-        
+
     }
-    
-    
+
+
 
 }
 
@@ -262,10 +262,10 @@ function heartFunction(elementId, elementImgId, elementInfoId) {
 //         description: "Product Description"
 //         // Add more details as needed
 //     };
-    
+
 //     // Convert to JSON
 //     var productJSON = JSON.stringify(product);
-    
+
 //     // Redirect to the next page with JSON data as a URL parameter
 //     window.location.href = "nextpage.html?product=" + encodeURIComponent(productJSON);
 
@@ -288,34 +288,34 @@ function heartFunction(elementId, elementImgId, elementInfoId) {
 
 function fetchFeaturedProductData(productId) {
     fetch('../data.json')
-    .then(response => response.json())
-    .then(data => {
-        
-        const product = data['featured products'].product.find(item => item.id === productId);
-        if (product) {
-        // console.log(product);
-        
-        window.location.href = `Product.html?id=${productId}`;
-        } else {
-        console.error('Product not found');
-        }
-    })
-    .catch(error => console.error('Error fetching product data:', error));
+        .then(response => response.json())
+        .then(data => {
+
+            const product = data['featured products'].product.find(item => item.id === productId);
+            if (product) {
+                // console.log(product);
+
+                window.location.href = `Product.html?id=${productId}`;
+            } else {
+                console.error('Product not found');
+            }
+        })
+        .catch(error => console.error('Error fetching product data:', error));
 }
 
 function fetchCategory(categoryId) {
-    fetch('../data.json')
-    .then(response => response.json())
-    .then(data => {
-        
-        const category = data['categories'].category.find(item => item.id === categoryId);
-        if (category) {
-        // console.log(category.name);
-        
-        window.location.href = `productList.html?category=${category.name}`;
-        } else {
-        console.error('Category not found');
-        }
-    })
-    .catch(error => console.error('Error fetching Category data:', error));
+    fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+
+            const category = data['categories'].category.find(item => item.id === categoryId);
+            if (category) {
+                // console.log(category.name);
+
+                window.location.href = `productList.html?category=${category.name}`;
+            } else {
+                console.error('Category not found');
+            }
+        })
+        .catch(error => console.error('Error fetching Category data:', error));
 }
