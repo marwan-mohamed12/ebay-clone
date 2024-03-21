@@ -1,3 +1,219 @@
+ /*start header */
+.custom-nav{
+    font-size: 12px;
+}
+
+.nav-spacing{
+    margin-left: 540px;
+}
+.custom-nav a,span {
+    padding-top: 7px;
+}
+
+.custom-hr {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.ebay-logo {
+    width: 80px;
+    height: 30px;
+    margin-left: 100px;
+}
+
+.custom-category-button{
+    font-size: small;
+    font-weight: 500;
+    color: #676767;
+    padding: 0px;
+    margin-left: 95px;
+    
+}
+
+.search-input {
+        padding-left: 30px; 
+        background-image: url('../Assets/images/search.svg');
+        background-repeat: no-repeat;
+        background-position: 5px center;
+        background-size: 20px 20px; 
+    }
+
+.container {
+    width: 100%;
+    background-color: #ffffff;
+}
+
+
+
+
+
+.custom-links> .dropdown> .innerdropdown > .link:hover {
+    color: rgb(94, 94, 214); 
+    text-decoration: underline; 
+    cursor: pointer; 
+    border-color: #a2a2a2;
+}
+
+.innerdropdown > .custom-dropdown-menu {
+    width: 1310px;
+    position: absolute;
+    left: 50%;
+    top: 40px;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    height: 300px;
+    display: none;
+    border-radius: 20px;
+}
+
+.custom-style-dropdown{
+    padding: 20px; 
+    font-size: small;
+}
+
+
+
+.language-container {
+    position: fixed;
+    top: 60%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 300px;
+    overflow-y: auto; /* Enable vertical scrollbar if content exceeds height */
+    background-color: white; /* Adjust as needed */
+    border: 1px solid #ccc; /* Adjust border styles as needed */
+    padding: 20px; /* Adjust padding as needed */
+    z-index: 999; /* Ensure it's above other elements */
+    display: none;
+}
+
+
+
+
+.link {
+    color: black; 
+    text-decoration: none; 
+}
+
+.link:hover {
+    color: black; 
+    text-decoration: underline; 
+    cursor: pointer; 
+}
+
+.custom-footer{
+    background-color: #ffffff;
+    padding-top: 30px;
+    padding-bottom: 100px;
+}
+
+.custom-footer-column {
+    width: calc(100% / 5);
+}
+
+.custom-footer h6 {
+    font-weight: bold;
+    color: #676767;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.custom-footer p {
+    margin-bottom: 3px;
+}
+
+.custom-footer p a {
+    color: #676767;
+    font-size: small;
+}
+
+.custom-slide-one {
+    color: rgb(117, 86, 54);
+    background-color: #face27;
+}
+
+.custom-slide-one> .col-lg-3{
+    padding: 30px;
+}
+
+.custom-slide-two {
+    color: rgb(30, 30, 138);
+    background-color: #c4e3fa;
+}
+
+.custom-slide-two> .col-lg-3{
+    padding: 30px;
+}
+
+.custom-slide-two img{
+    width: 800px;
+    height: 300px;
+}
+
+.custom-slide-three {
+    color: #ffffff;
+    padding: 30px;
+    
+}
+
+.custom-slide-three-image{
+    background: url('../Assets/images/3.png');
+}
+
+.carousel-control-prev,
+.carousel-control-next{
+    width: 10%;
+}
+
+
+.carousel {
+    margin-bottom: 30px;
+}
+
+.carousel-inner {
+    border-radius: 15px;
+}
+
+.carousel-item {
+    height: 280px;
+}
+
+.custom-slide-one> .col-lg-3 > #firstSlideBtn{
+    margin-top: 10px;
+    margin-left: 100px;
+    color: rgb(117, 86, 54);
+    border-radius: 30px;
+    background-color: transparent;
+    padding: 10px;
+    border: 2px solid rgb(117, 86, 54);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.custom-slide-one > .col-lg-3 > #firstSlideBtn:hover {
+    background-color: rgb(117, 86, 54);
+    color: #face27;
+    font-size: medium;
+}
+
+
+.footer {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    
+    .footer {
+    display: block;
+    
+}
+
+}
+
+
+/*end header and footer */
+
+
 .carousel-inner{
     background-color: rgb(240, 240, 246);
     height: 600px;
@@ -7,6 +223,33 @@
     width: 100%;
     height: 100%;
 }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: black; 
+    border-radius: 50%; 
+    width: 40px; 
+    height: 40px; 
+    line-height: 40px; 
+    color: white; 
+    font-size: 24px; 
+    opacity: 0.7; 
+    transition: opacity 0.3s ease; 
+}
+
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    opacity: 1; 
+}
+
+.carousel-control-prev-icon:focus,
+.carousel-control-next-icon:focus {
+    outline: none; 
+    box-shadow: none; 
+}
+
+
 .carousel-item img{
     max-width: 100% !important;
     max-height: 100% !important;
