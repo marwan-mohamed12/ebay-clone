@@ -293,9 +293,9 @@ function fetchFeaturedProductData(productId) {
         
         const product = data['featured products'].product.find(item => item.id === productId);
         if (product) {
-        console.log(product);
+        // console.log(product);
         
-        // window.location.href = `next.html?productId=${productId}`;
+        window.location.href = `Product.html?id=${productId}`;
         } else {
         console.error('Product not found');
         }
@@ -310,7 +310,7 @@ function fetchCategory(categoryId) {
         
         const category = data['categories'].category.find(item => item.id === categoryId);
         if (category) {
-        console.log(category.name);
+        // console.log(category.name);
         
         window.location.href = `productList.html?category=${category.name}`;
         } else {
