@@ -252,25 +252,25 @@ function heartFunction(elementId, elementImgId, elementInfoId) {
 
 
 
-// <-------creating json------->
+// <------- sending data through url------->
 
-function sendProductDetails(){
+// function sendProductDetails(){
 
-    var product = {
-        name: "Product Name",
-        price: "$100",
-        description: "Product Description"
-        // Add more details as needed
-    };
+//     var product = {
+//         name: "Product Name",
+//         price: "$100",
+//         description: "Product Description"
+//         // Add more details as needed
+//     };
     
-    // Convert to JSON
-    var productJSON = JSON.stringify(product);
+//     // Convert to JSON
+//     var productJSON = JSON.stringify(product);
     
-    // Redirect to the next page with JSON data as a URL parameter
-    window.location.href = "nextpage.html?product=" + encodeURIComponent(productJSON);
+//     // Redirect to the next page with JSON data as a URL parameter
+//     window.location.href = "nextpage.html?product=" + encodeURIComponent(productJSON);
 
 
-//<---------the code that must be in the next page----------->
+// <---------the code that must be in the next page----------->
 //     var urlParams = new URLSearchParams(window.location.search);
 // var productJSON = urlParams.get('product');
 
@@ -284,4 +284,38 @@ function sendProductDetails(){
 //     document.getElementById('productDescription').innerText = product.description;
 //     // Display more details as needed
 // });
+// }
+
+function fetchFeaturedProductData(productId) {
+    fetch('../data.json')
+    .then(response => response.json())
+    .then(data => {
+        
+        const product = data['featured products'].product.find(item => item.id === productId);
+        if (product) {
+        console.log(product);
+        
+        // window.location.href = `next.html?productId=${productId}`;
+        } else {
+        console.error('Product not found');
+        }
+    })
+    .catch(error => console.error('Error fetching product data:', error));
+}
+
+function fetchCategory(categoryId) {
+    fetch('../data.json')
+    .then(response => response.json())
+    .then(data => {
+        
+        const category = data['categories'].category.find(item => item.id === categoryId);
+        if (category) {
+        console.log(category.name);
+        
+        window.location.href = `productList.html?category=${category.name}`;
+        } else {
+        console.error('Category not found');
+        }
+    })
+    .catch(error => console.error('Error fetching Category data:', error));
 }

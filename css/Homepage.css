@@ -15,9 +15,9 @@
 }
 
 .ebay-logo {
-    width: 110px;
-    height: 50px;
-    margin-left: 70px;
+    width: 80px;
+    height: 30px;
+    margin-left: 100px;
 }
 
 .custom-category-button{
@@ -237,7 +237,7 @@
 
 .custom-slide-three > #thirdSlideBtn {
     margin-top: 10px;
-    margin-left: 170px;
+    margin-left: 160px;
     color: #ffffff;
     border-radius: 30px;
     background-color: transparent;
