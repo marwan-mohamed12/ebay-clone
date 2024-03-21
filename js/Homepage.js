@@ -295,7 +295,7 @@ function fetchFeaturedProductData(productId) {
             if (product) {
                 // console.log(product);
 
-                window.location.href = `/pages/Product.html?id=${productId}`;
+                window.location.href = `/pages/ProductDetails.html?id=${productId}`;
             } else {
                 console.error('Product not found');
             }
