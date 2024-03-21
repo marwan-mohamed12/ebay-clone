@@ -1,116 +1,222 @@
-@import url(./root.css);
+.ebayLogo {
+  width: 150px; /* Set the width of the image to 100 pixels */
+  height: auto; /* Maintain the aspect ratio */
+}
+
+.checkout-heading {
+  margin-top: 40px;
+  font-size:larger;
+}
+
+
+.light-green-background {
+  background-color: rgb(153, 214, 216);
+  height: 50px;
+  font: bold;
+  color: black;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex; /* Enable flexbox */
+}
+
+.paymentMethod1 img {
+  width: 40px; /* Set the width of the images */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.paymentMethod2 img {
+  width: 70px; /* Set the width of the images */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.paymentMethod3 img {
+  width: 70px; /* Set the width of the images */
+  height: auto; /* Maintain aspect ratio */
+}
+
 body {
-  font-family: var(--ff-montserrat);
-  font-weight: var(--fw-regular);
-  color: var(--clr-neutral-dark-grayish-blue);
-  font-size: 0.89rem;
-  background-color: var(--clr-primary-cream);
-  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+/* Styling for the container */
+.container {
+  padding: 20px;
+  border-radius: 10px;
+ 
+}
+/* Styling for the header */
+.checkout-header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-}
-
-/* Start Of Checkout section  */
-.checkout-input,
-.visa-input {
-  outline: none !important;
-  box-shadow: none !important;
-}
-.checkout-input:focus,
-.visa-input:focus {
-  border-color: var(--primary-color);
-}
-.payment-icon {
-  border: 1px solid var(--primary-color);
-  cursor: pointer;
-}
-.payment-icon img {
-  width: 30px;
-  height: 30px;
-}
-.form-control {
-  border-radius: 4px;
-}
-.payment-icon img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-.showbtn {
-  background-color: #007bff;
-  border: none;
-  border-radius: 4px;
-  color: #fff;
-  cursor: pointer;
-  padding: 10px 20px;
-  transition: background-color 0.3s;
-}
-.showbtn:hover {
-  background-color: #0056b3;
-}
-/* Added style for logo */
-.logo-container {
-  text-align: center;
-  margin-bottom: 30px;
-  margin-top: 200px ;
-  width: 200px;
-  
-}
-.logo-container img {
-  max-width: 100%;
-  height: auto;
-}
-.back {
-  cursor: pointer;
-  color: var(--primary-color);
-}
-.back i {
-  margin-right: 5px;
-}
-.checkout-section {
-  width: 100%;
-  background-color: #fff;
-  border-radius: 6px;
-  padding: 30px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-.checkout-section h4 {
-  color: #333;
-  font-weight: bold;
-  margin-bottom: 30px;
-}
-
-.telValidation,
-.nameValidation {
-  display: none;
-  font-size: x-small;
-}
-input[type="text"]:focus + .nameValidation {
-  display: block;
-}
-input[type="tel"]:focus + .telValidation {
-  display: block;
-}
-input[type="text"]:valid + .nameValidation {
-  display: none;
-}
-input[type="tel"]:valid + .telValidation {
-  display: none;
-}
-/* End Of Checkout Section  */
-
-/* Start Of Cart section  */
-.cart-section {
-  background-color: #fff;
-  border-radius: 6px;
-  padding: 30px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-.cart-section h5 {
-  color: #333;
-  font-weight: bold;
   margin-bottom: 20px;
 }
-/* End Of Cart Section  */
+
+/* Heading styling */
+.checkout-heading {
+  font-size: 24px; /* Increase font size */
+  margin-bottom: 10px; /* Add some margin below the heading */
+}
+
+/* Link styling */
+a {
+  color: #007bff; /* Change link color */
+}
+
+/* Pay with section styling */
+.pay-with {
+  border: 1px solid #dadde0; /* Add border */
+  border-radius: 5px; /* Add border radius */
+  padding: 10px; /* Add padding */
+}
+
+/* Form styling */
+.form-container {
+  border: 1px solid #dadde0; /* Add border */
+  border-radius: 5px; /* Add border radius */
+  padding: 20px; /* Add padding */
+  font-size:small;
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  font-size: small;
+  color: #333; /* Text color */
+  appearance: none; /* Remove default arrow icon */
+  background-image: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000000' d='M5.636 9.172l6.364 6.364L18.364 9.172a.5.5 0 1 1 .708.708l-7.5 7.5a.5.5 0 0 1-.708 0l-7.5-7.5a.5.5 0 0 1 .708-.708z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  cursor: pointer;
+}
+
+select:hover {
+  border-color: #949799; /* Change border color on hover */
+}
+
+select:focus {
+  outline: none; /* Remove focus outline */
+  border-color: #007bff; /* Change border color on focus */
+}
+
+/* Input field styling */
+input[type="text"],
+input[type="tel"],
+input[type="submit"],
+input[type="button"] {
+  width: 100%; /* Make inputs full width */
+  padding: 8px; /* Add padding */
+  margin-bottom: 10px; /* Add margin */
+  border: 1px solid #ccc; /* Add border */
+  border-radius: 5px; /* Add border radius */
+}
+
+/* Submit button styling */
+input[type="submit"] {
+  background-color: #007bff; /* Change background color */
+  color: white; /* Change text color */
+  width: 20%;
+  cursor: pointer; /* Add pointer cursor */
+  border-radius: 20px;
+  font-size: larger;
+  font:bolder;
+  
+}
+
+/* Cancel button styling */
+input[type="button"] {
+  background-color: white; /* Change background color */
+  color: #007bff; /* Change text color */
+  cursor: pointer; /* Add pointer cursor */
+  width: 20%;
+  border-radius: 20px;
+  font-size: larger;
+  font:bolder;
+}
+
+.reviewCart{
+  border: 1px solid #dadde0; /* Add border */
+  border-radius: 5px; /* Add border radius */
+  padding: 20px; /* Add padding */
+  font-size:small;
+}
+
+.confrimCheckout{
+  border: 1px solid #dadde0; /* Add border */
+  border-radius: 5px; /* Add border radius */
+  padding: 20px; /* Add padding */
+  font-size:small;
+}
+
+.contain{
+  background-color: #e4e4e4;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 10px; 
+  margin-left: 100px;
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.center-button {
+  align-self: center;
+  margin-top: 10px; /* Optional: Add some top margin for spacing */
+}
+
+.shipping-info {
+  font-size:medium; /* Adjust the font size */
+}
+
+.card-form {
+  margin-top: 0;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+.card-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.card-form input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.card-form input[type="submit"] {
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Cancel button styling */
+.card-form input[type="button"] {
+  background-color: white; /* Change background color */
+  color: #007bff; /* Change text color */
+  cursor: pointer; /* Add pointer cursor */
+  width: 20%;
+  border-radius: 20px;
+  font-size: larger;
+  font:bolder;
+}
+
+.selected-option {
+  background-color: #007bff; /* Change this to your primary color */
+  color: #fff; /* Change this to the text color you want */
+}
