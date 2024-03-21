@@ -152,18 +152,91 @@
                 </div>
                 <!-- Filter Sort Btn -->
 
+                <!-- shipping Sort Btn -->
+                <div class="btn-group flex-grow-1 shipping" role="group">
+                    <button type="button" class="btn dropdown-toggle rounded-pill filterBtn" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Shipping
+                    </button>
+                    <ul class="dropdown-menu" id="shippingFilter">
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="0" id="freeShipping">
+                                    <label class="form-check-label" for="freeShipping">
+                                        Free shipping
+                                    </label>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="15" id="shipping15">
+                                    <label class="form-check-label" for="shipping15">
+                                        $15
+                                    </label>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="above" id="shippingAbove">
+                                    <label class="form-check-label" for="shippingAbove">
+                                        Above $15
+                                    </label>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- shipping Sort Btn -->
+
+                <!-- sponsored Sort Btn -->
+                <div class="btn-group flex-grow-1 sponsored" role="group">
+                    <button type="button" class="btn dropdown-toggle rounded-pill filterBtn" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Sponsored
+                    </button>
+                    <ul class="dropdown-menu" id="sponsoredFilter">
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="sponsored" id="sponsored">
+                                    <label class="form-check-label" for="sponsored">
+                                        Sponsored Only
+                                    </label>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="notSponsored"
+                                        id="notSponsored">
+                                    <label class="form-check-label" for="notSponsored">
+                                        Not Sponsored
+                                    </label>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- sponsored Sort Btn -->
+
                 <!-- Filter View Btn -->
                 <div class="btn-group flex-grow-1 view" role="group">
                     <button type="button" class="btn dropdown-toggle rounded-pill filterBtn" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         View
                     </button>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu" id="viewFilter">
                         <li>
                             <a class="dropdown-item" href="#">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
+                                    <input class="form-check-input" type="checkbox" value="grid" id="grid">
+                                    <label class="form-check-label" for="grid">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                             fill="currentColor" class="bi bi-grid" viewBox="0 0 16 16">
                                             <path
@@ -176,8 +249,8 @@
                         <li>
                             <a class="dropdown-item" href="#">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
+                                    <input class="form-check-input" type="checkbox" value="flex" id="flex">
+                                    <label class="form-check-label" for="flex">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                             fill="currentColor" class="bi bi-list-ul" viewBox="0 0 16 16">
                                             <path fill-rule="evenodd"
@@ -190,103 +263,26 @@
                     </ul>
                 </div>
                 <!-- Filter View Btn -->
+
+                <!-- Clear Filter Btn -->
+                <div class="btn-group flex-grow-1 view clearBtn" role="group">
+                    <button type="button" class="btn rounded-pill filterBtn">
+                        Clear Filters
+                    </button>
+                </div>
+                <!-- Clear Filter Btn -->
             </div>
 
             <!-- vertical Products -->
             <section class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-4 productsContainer">
-                <!-- <div class="col">
-                    <article class="card h-100">
-                        <img src="https://i.ebayimg.com/thumbs/images/g/dzAAAOSwmRBhm1pr/s-l960.webp"
-                            class="card-img-top img-thumbnail" alt="Pokemon VMAX Cards">
-                        <div class="card-body">
-                            <h5 class="card-title">Pokemon VMAX - Choose Your Card - All Available, Ultra Rare, Full Art
-                                Holo TCG</h5>
-                            <div class="card-text">
-                                <span class="fw-bold">$3.95 to $299.95</span>
-                                <span class="text-muted d-block">$27.65 shipping</span>
-                                <span class="text-danger d-block">57 watching</span>
-                                <p class="mt-2 mb-0 text-muted">SPONSRED</p>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                <div class="col">
-                    <article class="card h-100">
-                        <img src="https://i.ebayimg.com/thumbs/images/g/dzAAAOSwmRBhm1pr/s-l960.webp"
-                            class="card-img-top img-thumbnail" alt="Pokemon VMAX Cards">
-                        <div class="card-body">
-                            <h5 class="card-title">Pokemon VMAX - Choose Your Card - All Available, Ultra Rare, Full Art
-                                Holo TCG</h5>
-                            <div class="card-text">
-                                <span class="fw-bold">$3.95 to $299.95</span>
-                                <span class="text-muted d-block">$27.65 shipping</span>
-                                <span class="text-danger d-block">57 watching</span>
-                                <p class="mt-2 mb-0 text-muted">SPONSRED</p>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                <div class="col">
-                    <article class="card h-100">
-                        <img src="https://i.ebayimg.com/thumbs/images/g/dzAAAOSwmRBhm1pr/s-l960.webp"
-                            class="card-img-top img-thumbnail" alt="Pokemon VMAX Cards">
-                        <div class="card-body">
-                            <h5 class="card-title">Pokemon VMAX - Choose Your Card - All Available, Ultra Rare, Full Art
-                                Holo TCG</h5>
-                            <div class="card-text">
-                                <span class="fw-bold">$3.95 to $299.95</span>
-                                <span class="text-muted d-block">$27.65 shipping</span>
-                                <span class="text-danger d-block">57 watching</span>
-                                <p class="mt-2 mb-0 text-muted">SPONSRED</p>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                <div class="col">
-                    <article class="card h-100">
-                        <img src="https://i.ebayimg.com/thumbs/images/g/dzAAAOSwmRBhm1pr/s-l960.webp"
-                            class="card-img-top img-thumbnail" alt="Pokemon VMAX Cards">
-                        <div class="card-body">
-                            <h5 class="card-title">Pokemon VMAX - Choose Your Card - All Available, Ultra Rare, Full Art
-                                Holo TCG</h5>
-                            <div class="card-text">
-                                <span class="fw-bold">$3.95 to $299.95</span>
-                                <span class="text-muted d-block">$27.65 shipping</span>
-                                <span class="text-danger d-block">57 watching</span>
-                                <p class="mt-2 mb-0 text-muted">SPONSORED</p>
-                            </div>
-                        </div>
-                    </article>
-                </div> -->
             </section>
 
             <!-- Horizontal Card -->
-            <!-- <section class="row row-cols-1 py-4">
-                <div class="container my-4">
-                    <div class="card">
-                        <div class="row g-0">
-                            <div class="col-4">
-                                <img src="https://i.ebayimg.com/thumbs/images/g/V~oAAOSwCeRl8C40/s-l960.webp"
-                                    class="img-fluid rounded-start" alt="Nike Mens Air Max 97" />
-                            </div>
-                            <div class="col-8">
-                                <div class="card-body">
-                                    <h5 class="card-title fs-5 fs-lg-4">
-                                        Nike Mens Air Max 97 921826-005 Black Casual Shoes Sneakers Size
-                                        10
-                                    </h5>
-                                    <div class="card-text">
-                                        <span class="fw-bold fs-6 fs-lg-5">$3.95 to $299.95</span>
-                                        <span class="text-muted d-block small">$27.65 shipping</span>
-                                        <span class="text-danger d-block small">57 watching</span>
-                                        <p class="mt-2 mb-0 text-muted small">SPONSORED</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <section class="row row-cols-1 py-4">
+                <div class="container my-4 horizontalContainer d-none">
+
                 </div>
-            </section> -->
+            </section>
 
         </section>
     </main>
@@ -305,3 +301,14 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+<!-- <div class="card my-4">
+    
+</div> -->
