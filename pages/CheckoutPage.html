@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | eBay</title>
+    <link rel="stylesheet" href="../css/checkout.css" />
+    <link rel="Icon" href="https://pages.ebay.com/favicon.ico"/>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- the first row for the logo, heading and feedback -->
+        <div class="row">
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-3">
+                        <img class="ebayLogo"
+                    src="https://cached.imagescaler.hbpl.co.uk/resize/scaleWidth/743/cached.offlinehbpl.hbpl.co.uk/news/OMC/C4941228-0088-CE02-C297F73A64991AF9.jpg"
+                    alt="">
+                    </div>
+                    <div class="col-2 ">
+                        <h2 class="checkout-heading">Checkout</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2"></div>
+            <div class="col-4">
+                <p>How do you like our checkout? <a href="">Give us feedback</a></p>
+            </div>
+        </div>
+        <br>
+        <!-- the second row for the statement -->
+        <div class="row">
+            <p class="light-green-background">
+                New! You can split payment for this purchase across two cards.
+            </p>
+        </div>
+        <br>
+        <!-- the other row for the content for both left and right side -->
+        <!-- the begining of the payment options -->
+        <div class="row">
+            <div class="col-7">
+                <div class="row pay-with" id="pay-with">
+                    <div class="row">
+                        <h3>Pay with</h3>
+                        <p>You can split your payment for this order. <a href="#">Add Card</a></p>
+                    </div>
+                    <hr>
+                    <div class="row payment-options">
+                        <div class="paymentMethod1">
+                            <input type="radio" name="paymentMethod" class="radioButton" id="newCardOption">
+                            <label for="newCardOption"><b>Add new card</b></label>
+                            <div class="row">
+                                <div class="col-1">
+                                    <img src="../Assets/Visa.svg.webp" alt="">
+                                </div>
+                                <div class="col-1">
+                                    <img src="../Assets/mastercard-logo-01.png" alt="">
+                                </div>
+                                <div class="col-1">
+                                    <img src="../Assets/images.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row payment-options">
+                        <div class="paymentMethod2">
+                            <input type="radio" name="paymentMethod" class="radioButton">
+                            <b>PayPal</b>
+                            <img src="../Assets/paypal.png" alt="">       
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row payment-options">
+                        <div class="paymentMethod3">
+                            <input type="radio" name="paymentMethod" class="radioButton">
+                            <b>Google Pay</b>
+                            <img src="../Assets/GooglePay_Lockup.max-1200x1200-1.webp" alt="">       
+                        </div>
+                    </div>
+                </div>
+                <div class="row card-form" style="display: none;">
+                    <h3>Enter your new card info</h3>
+                    <p>Your payment is secure. Your card details will not be shared with sellers.</p>
+                    <form>
+                        <div class="row">
+                            <div class="col-5">
+                                <label for="cardNumber">Card number:</label>
+                                <input type="text" id="cardNumber" name="cardNumber"><br>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-5">
+                                <label for="expirationDate">Expiration date:</label>
+                                <input type="text" id="expirationDate" name="expirationDate">
+                            </div>
+                            <div class="col-5">
+                                <label for="securityCode">Security code:</label>
+                                <input type="text" id="securityCode" name="securityCode"><br>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-5">
+                                <label for="firstName">First name:</label>
+                                <input type="text" id="firstName" name="firstName">
+                            </div>
+                            <div class="col-5">
+                                <label for="lastName">Last name:</label>
+                                <input type="text" id="lastName" name="lastName"><br>
+                            </div>
+                        </div>
+    
+                        <input type="checkbox" id="rememberCard" name="rememberCard">
+                        <label for="rememberCard">Remember this card for future orders</label><br>
+
+                        <div class="row">
+                            <div class="col-5">
+                                <label for="billingAddress">Billing address:</label>
+                                <input type="text" id="billingAddress" name="billingAddress"><br>
+            
+                            </div>
+                        </div>
+    
+      
+                        <input class="btn btn-primary rounded-pill" type="submit" value="Save">
+                        <input class="btn rounded-pill" id="cancelButton" type="button" value="Cancel">
+                        
+                    </form>
+                </div>
+        <!-- the end of the payment options -->
+        <br>
+        <!-- the start of the form -->
+        <div class="row">
+            <div class="form-container">
+                <div class="col-4">
+                    <h3>Ship To</h3>
+                </div>
+                <form id="checkoutForm">
+                    <div class="row">
+                        <div class="col-8">
+                            <div class="form-group">
+                                <label for="country">Country or region</label>
+                                <select id="country" name="country">
+                                <option value="Egypt">Egypt</option>
+                                <option value="USA">USA</option>
+                                <option value="UK">UK</option>
+                                <option value="Iraq">Iraq</option>
+                                <!-- Add more options as needed -->
+                            </select>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="firstName">First name</label>
+                            <input type="text" id="firstName" name="firstName">
+                        </div>
+                        <div class="col-4">
+                            <label for="lastName">Last name</label>
+                            <input type="text" id="lastName" name="lastName">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="streetAddress">Street address</label>
+                            <input type="text" id="streetAddress" name="streetAddress">
+                        </div>
+                        <div class="col-4">
+                            <label for="streetAddress2">Street address 2 (optional)</label>
+                            <input type="text" id="streetAddress2" name="streetAddress2">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">
+                            <label for="city">City</label>
+                            <input type="text" id="city" name="city">
+                        </div>
+                        <div class="col-2">
+                            <label for="state">State/Province/Region</label>
+                            <input type="text" id="state" name="state">
+                        </div>
+                        <div class="col-2">
+                            <label for="zipCode">ZIP code</label>
+                            <input type="text" id="zipCode" name="zipCode">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="countryCode">Country Code</label>
+                            <select id="countryCode" name="countryCode">
+                                <option value="+20">Egypt (+20)</option>
+                                <option value="+1">USA (+1)</option>
+                                <option value="+44">UK (+44)</option>
+                                <!-- Add more options as needed -->
+                            </select>
+                        </div>
+                        <div class="col-4">
+                            <label for="phoneNumber">Phone number (required)</label>
+                            <input type="tel" id="phoneNumber" name="phoneNumber">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Save">
+                        <!-- <button id="cancelButton" type="button">Cancel</button> -->
+                        <input type="submit" value="Cancel" id="cancelButton">
+                        <input type="button" value="Edit" id="editButton" style="display: none;">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- the end of the form here -->
+        <br>
+        <!-- the start of review part -->
+        <div class="row">
+            <div class="reviewCart">
+                <h3>
+                    Review items and shipping
+                </h3>
+                <br>
+                <div id="reviewCart">
+                    <div id="review">
+                        <!-- Here, the data will be displayed -->
+                    </div>
+                </div>
+                </div>
+        </div>
+        <!-- the end of the review part -->
+
+    </div>
+    <!-- this is the start of the right side -->
+    <div class="col-5">
+        <div class="confrimCheckout" >
+            <div class="row">
+                <div class="col-8">
+                    <h5>Items (<span id="realQty"></span>)</h5>
+                  </div>
+                  <div class="col-4 text-right">
+                    <h5 id="realP"></h5>
+                  </div>
+            </div>
+            <div class="row shipping">
+                <div class="col-8">
+                  <h5>Shipping</h5>
+                </div>
+                <div class="col-4 text-right">
+                  <h5 id="shipCharge"></h5>
+                </div>
+              </div>
+              <hr>
+              <div class="row subTotal">
+                <div class="col-8">
+                  <h3>Order Total</h3>
+                </div>
+                <div class="col-4 text-right">
+                  <h3 id="totalAmount"></h3>
+                </div>
+              </div>
+              <div class="row contain">
+                <div class="col-9">
+                    <a>By confirming your order, you agree to the  </a>
+                    <a href="#">eBay International Shipping terms and conditions.</a>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <button id="confirm" type="button" class="btn btn-primary rounded-pill center-button">Confirm and Pay</button>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                    <p>Purchase protected by <a href="#">eBay Money Back Guarantee</a></p>
+                </div>
+        </div>
+        </div>
+        <!-- the end of the right side -->
+    </div>
+    <script src="../js/checkout.js"></script>
+</body>
+</html>

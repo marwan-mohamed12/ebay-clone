@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+.statement {
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+/* Targeting the image within the div with the class 'row statement bg-primary' */
+.row.statement.bg-primary img.danger {
+    width: 20px; /* Set the width of the image to 100 pixels */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+/* Targeting the column containing the icon */
+.row.statement.bg-primary .col-1 {
+    padding-right: 0; /* Remove right padding */
+}
+
+/* Targeting the column containing the text */
+.row.statement.bg-primary .col-11 {
+    padding-left: 0; /* Remove left padding */
+    margin: 0;
+}
+
+/* Targeting the image within the column */
+.row.statement.bg-primary .col-1 img.danger {
+    display: block; /* Ensure the image is displayed as a block element */
+    margin: 0; /* Remove any margin */
+    padding: 0; /* Remove any padding */
+}
+
+
+.leftSide {
+    width: 100%;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    padding-left: 20px; 
+    border: 1px solid rgb(235, 232, 232);
+    border-radius: 10px; /* Rounded corners */
+    flex: 7; /* Take up 70% of the container width */
+
+}
+
+  
+  
+  .rightSide {
+    flex: 5; /* Take up 30% of the container width */
+    border-left: 1px solid #dee2e6; /* Add a left border */
+    padding-left: 15px; /* Add padding to the left side */
+    height: 100%; /* Take up 100% of the height of the container */
+    overflow-y: auto; /* Add vertical scroll if content exceeds the height */
+    width: 60%;
+    border: 1px solid #ccc;
+    padding: 30px 5px 20px 5px;
+    background-color: #f5f5f5; /* Light gray background */
+    border-radius: 10px; 
+  }
+  
+
+
+.quatity, .shipping, .subTotal {
+    margin-bottom: 10px;
+}
+
+.row p {
+    margin: 0;
+}
+
+.totalAmount {
+    font-weight: bold;
+}
+
+.checkoutButton {
+    text-align: center; /* Center the button */
+}
+
+.checkoutButton button {
+    width: 80%; /* Adjust the width of the button */
+}
