@@ -9,87 +9,65 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-<!-- NavBar and search -->
-
-    <div class="container-fluid">
-        <div class="row">
-          <div class="col-1 ">
-            <div class="side-images">
-              <div class="inner mb-3"><img class="  img-side " src="../Assets/Main .png" alt=""></div>
-              <div class="inner mb-3 "><img class=" img-side  " src="../Assets/left_big_-removebg-preview.png" alt=""></div>
-              <div class="inner mb-3 "><img class=" img-side " src="../Assets/right_big_-removebg-preview.png" alt=""></div>
-              <div class="inner mb-3 "><img class=" img-side " src="../Assets/back_big_-removebg-preview.png" alt=""></div>
-             
-  
-          </div>
-          </div>
-          <div class="col-7">
-            <div id="carouselExampleFade" class="carousel slide carousel-fade">
-              <div class="carousel-inner" style="background-color: rgb(237, 237, 244); height: 600px; border-radius: 2%;">
-                <div class="carousel-item active">
-                  <img src="../Assets/Main .png" class="d-block w-100 img-main" alt="...">
-                </div>
-                <div class="carousel-item ">
-                  <img src="../Assets/back_big_-removebg-preview.png" class="d-block w-100 img-main" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="../Assets/right_big_-removebg-preview.png" class="d-block w-100 img-main" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="../Assets/left_big_-removebg-preview.png" class="d-block w-100 img-main" alt="...">
-                </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="product-info">
-              <h4 class="fs-4">NEW Samsung Galaxy S21 Ultra 5G SM-G998U 128GB GSM+CDMA Unlocked Black</h4>
-              <p>✈️2 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥</p>
-              
-            <div>
-              <h6 class="text-danger fw-bold"><i class="fa-solid fa-fire"></i> 30 watched in the last 24 hours</h6>
-              <p class="text-success" >Buy It Now+$37.56 shipping <br> from United States</p>
-            </div>  
-              <div class="price-section">
-                <h4 class="price fw-bold mt-2">US $349.00/ea </h4>
-                <div>
-
-                </div>
-                <p class="pt-2">Condition: <span class="fw-bolder">New</span></p>
-                <div class="quantity-box">
-                  <label  for="quantity">Quantity:</label>
-                  <input class="input-box" type="number" id="quantity" name="quantity" value="1" min="1">
-                  <label for="quantity"> <p class="text-danger fw-bold" >  Last One / 35 sold <i class="fa-solid fa-hourglass-end"></i></p></label>
-                 
-              </div>
-              </div>
-              <div class="actions">
-                
-                  <a href="https://signin.ebay.com/ws/eBayISAPI.dll?SignIn&ru=https%3A%2F%2Fcart.payments.ebay.com%2F">
-                    <button class="btn btn-primary active mb-2 rounded-pill py-2" type="button"> <span class="fw-bold">Buy It Now</span> </button>
-                  </a>
-                
-
-                <a href="https://signin.ebay.com/ws/eBayISAPI.dll?SignIn&ru=https%3A%2F%2Fcart.payments.ebay.com%2F">
-                <button class="btn btn-primary mb-2 rounded-pill py-2">Add to cart</button>
-                </a>
-                <button class="btn btn-outline-primary rounded-pill py-2"><i class="fa-regular fa-heart"></i> Add to watchlist</button>
-              </div>
-              
-            </div>
-          </div>
-          </div>
+  <header>
+    <nav class="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox=".1 .1 299.8 120.125" width="100">
+                    <path fill="#e53238"
+                        d="M38.867 26.309C17.721 26.309.1 35.279.1 62.345c0 21.442 11.849 34.944 39.312 34.944 32.326 0 34.398-21.294 34.398-21.294H58.147s-3.358 11.466-19.69 11.466c-13.302 0-22.869-8.986-22.869-21.58h59.861v-7.904c0-12.46-7.91-31.668-36.582-31.668zM38.32 36.41c12.662 0 21.294 7.757 21.294 19.383h-43.68c0-12.343 11.268-19.383 22.386-19.383z" />
+                    <path fill="#0064d2"
+                        d="M75.438.1v83.597c0 4.745-.339 11.408-.339 11.408h14.939s.537-4.785.537-9.159c0 0 7.381 11.548 27.451 11.548 21.134 0 35.49-14.674 35.49-35.695 0-19.557-13.186-35.286-35.456-35.286-20.854 0-27.334 11.261-27.334 11.261V.1H75.438zm38.766 36.753c14.352 0 23.479 10.652 23.479 24.946 0 15.328-10.541 25.355-23.376 25.355-15.318 0-23.581-11.961-23.581-25.219 0-12.354 7.414-25.082 23.478-25.082z" />
+                    <path fill="#f5af02"
+                        d="M190.645 26.309c-31.812 0-33.852 17.418-33.852 20.202h15.834s.83-10.169 16.926-10.169c10.459 0 18.564 4.788 18.564 13.991v3.276h-18.564c-24.645 0-37.674 7.21-37.674 21.841 0 14.398 12.038 22.232 28.307 22.232 22.172 0 29.314-12.251 29.314-12.251 0 4.873.375 9.675.375 9.675h14.076s-.545-5.952-.545-9.76V52.432c0-21.582-17.408-26.123-32.761-26.123zm17.472 37.128v4.368c0 5.697-3.516 19.861-24.212 19.861-11.333 0-16.192-5.656-16.192-12.217 0-11.935 16.363-12.012 40.404-12.012z" />
+                    <path fill="#86b817"
+                        d="M214.879 29.041h17.813l25.565 51.218 25.506-51.218H299.9l-46.459 91.184h-16.927l13.406-25.419-35.041-65.765z" />
+                </svg>
+            </a>
+            <form class="col-8 d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
         </div>
+    </nav>
+</header>
+<!--  End Header -->
+
+
+
+
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-1">
+            <div class="side-images">
+
+            </div>
+        </div>
+        <div class="col-7">
+            <div id="productCarousel" class="carousel slide carousel-fade">
+                <div class="carousel-inner mainImage"></div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <div class="col-4">
+            <div id="productDetails"></div>
+        </div>
+    </div>
+</div>
+
+   
+
+    <!-- Your Bootstrap and other JavaScript dependencies -->
     
-    <script src="../js/main.js"></script>   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>
+
