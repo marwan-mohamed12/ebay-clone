@@ -1,6 +1,7 @@
 // ---------------- Imports ------------------
-import displayPage, { displayProducts } from './displayWatchlistProducts.js';
 import fetchProducts from './fetch.js';
+import displayPage, { displayProducts } from './displayWatchlistProducts.js';
+import displayPurchasePage from './displayPurchaseProducts.js';
 
 // ---------------- Variables ------------------
 
@@ -9,8 +10,8 @@ const bookmarkIcon = document.querySelector('[data-bookmark-icon]');
 const naviBtns = document.querySelectorAll('[data-navi-btns] > li > a');
 const sidebarBtns = document.querySelectorAll('[data-sidebar]  li > button');
 const mainBody = document.querySelector('[data-main-body]');
-const watchlistBtn = document.querySelector('[data-sidebarShow="watchlist"]');
-const purchaseBtn = document.querySelector('[data-sidebarShow="purchase"]');
+// const watchlistBtn = document.querySelector('[data-sidebarShow="watchlist"]');
+// const purchaseBtn = document.querySelector('[data-sidebarShow="purchase"]');
 
 // ---------------- Functions ------------------
 
@@ -24,9 +25,18 @@ function changeActiveLink(e, arr) {
 	e.target.classList.add('active');
 }
 
-async function loadPage() {
-	const page = await displayPage();
+async function loadPage(isWatchlistActive = true) {
+	let page;
+
+	if (isWatchlistActive) {
+		page = await displayPage();
+	} else {
+		page = await displayPurchasePage();
+	}
 	mainBody.innerHTML = page;
+	if (mainBody.childElementCount < 2) {
+		mainBody.innerHTML = `<h1 class="text-center">No products in your ${isWatchlistActive ? 'Watchlist' : 'Purchase'}</h1>`;
+	}
 	addCategoryBtnsFunctionality();
 }
 
@@ -55,9 +65,12 @@ naviBtns.forEach((btn) => btn.addEventListener('click', (e) => changeActiveLink(
 sidebarBtns.forEach((btn) =>
 	btn.addEventListener('click', (e) => {
 		changeActiveLink(e, sidebarBtns);
-		e.target.dataset.sidebarShow === 'watchlist' ? loadPage() : (mainBody.innerHTML = `log`);
+		const isWatchlistActive = e.target.dataset.sidebarShow === 'watchlist' ? true : false;
+		loadPage(isWatchlistActive);
+
 		// TODO: Add functionality to load the purchase page
 	}),
 );
 
 // watchlistBtn.addEventListener('click', loadPage);
+// TODO: Add empty watchlist page

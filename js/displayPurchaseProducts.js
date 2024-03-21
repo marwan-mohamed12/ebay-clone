@@ -5,16 +5,16 @@ import fetchProducts from './fetch.js';
 
 // ------------------- Functions ---------------------------
 
-export default async function displayPage() {
+export default async function displayPurchasePage() {
 	const products = await fetchProducts();
-	const returnedData = watchlistTemplate(products);
+	const returnedData = purchaseTemplate(products);
 	return returnedData;
 }
-const watchlistTemplate = function (products) {
+const purchaseTemplate = function (products) {
 	return `
 						<div class="row w-100 align-items-center justify-content-end">
 							<div class="col-6">
-								<h2 class="h4 m-0 fw-bold">My eBay - Watchlist</h2>
+								<h2 class="h4 m-0 fw-bold">My eBay - Purchase</h2>
 							</div>
 							<div class="col-6 text-end">
 								<form class="d-flex form-floating justify-content-end">
@@ -31,57 +31,8 @@ const watchlistTemplate = function (products) {
 								</form>
 							</div>
 						</div>
-						<div class="row mt-3">
-							<div class="col-md-12">
-								<div class="d-flex justify-content-between align-items-center">
-									<div class="form-check d-flex gap-3 align-items-center">
-										<input class="form-check-input" type="checkbox" id="addToCustomList" />
-										<button type="button" class="btn btn-primary btn-sm rounded-5 px-3">
-											Add to custom List
-										</button>
-										<button type="button" class="btn btn-outline-primary btn-sm rounded-5 px-3">
-											Delete
-										</button>
-									</div>
-									<div class="btn-group">
-										<div class="dropdown">
-											<button
-												class="btn btn-sm dropdown-toggle"
-												type="button"
-												id="dropdownStatus"
-												data-bs-toggle="dropdown"
-												aria-expanded="false"
-											>
-												Status: All <span>(1)</span>
-											</button>
-											<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownStatus">
-												<li>
-													<a class="dropdown-item" href="#">Active <span>(1)</span></a>
-												</li>
-											</ul>
-										</div>
-										<div class="dropdown">
-											<button
-												class="btn btn-sm dropdown-toggle"
-												type="button"
-												id="dropdownSort"
-												data-bs-toggle="dropdown"
-												aria-expanded="false"
-											>
-												Sort: Ending soonest
-											</button>
-											<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownSort">
-												<li><a class="dropdown-item" href="#">Ending soonest</a></li>
-												<li><a class="dropdown-item" href="#">Newest</a></li>
-												<li><a class="dropdown-item" href="#">Oldest</a></li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
 						<div
-							class="d-flex flex-wrap gap-3 mt-3 py-3 px-4 border-top border-bottom justify-content-start overflow-x"
+							class="d-flex overflow-x-scroll gap-3 mt-3 py-3 px-4 border-top border-bottom justify-content-start overflow-x"
 							data-category-btns
 						>
 
@@ -95,28 +46,31 @@ const watchlistTemplate = function (products) {
 `;
 };
 
-function displayCategoryBtns(products) {
-	let categoriesCount = new Map();
-	categoriesCount.set('all categories', products.length);
-	products.forEach(({ category }) => {
-		categoriesCount.set(category, (categoriesCount.get(category) || 0) + 1);
-	});
+function displayCategoryBtns() {
+	let purchaseCategories = [
+		'all purchases',
+		'processing',
+		'unpaid items',
+		'returned & Cancelled',
+		'show hidden',
+		'shipped',
+		'Ready for feedback',
+		'Payment Failed',
+	];
 
-	categoriesCount = Array.from(categoriesCount.entries());
-
-	const categoriesBtns = categoriesCount
-		.map(([category, count]) => {
-			return watchlistCategoryBtn(category, count);
+	const categoriesBtns = purchaseCategories
+		.map((category) => {
+			return purchaseCategoryBtn(category);
 		})
 		.join('');
 	return categoriesBtns;
 	// categoryBtnsContainer.innerHTML = categoriesBtns;
 }
 
-const watchlistCategoryBtn = (category, count) => {
+const purchaseCategoryBtn = (category) => {
 	return `
-		<button class="btn btn-sm px-3 btn-outline-secondary rounded-5 fs-8 text-capitalize" type="button" data-category="${category}">
-        ${category} <span>(${count})</span>
+		<button class="btn btn-sm px-3 btn-outline-secondary rounded-5 fs-8 text-capitalize text-nowrap" type="button" data-category="${category}">
+        ${category} 
 		</button>
 	`;
 };
@@ -148,10 +102,7 @@ const watchlistProductTemplate = ({
 		hour: '2-digit',
 		minute: '2-digit',
 	});
-	return `<div class="d-flex gap-3 align-items-start border-bottom py-3">
-							<div class="me-2 align-self-center">
-								<input role="button" class="form-check-input" type="checkbox" id="addToCustomList" data-watchlist-checkbox>
-							</div>
+	return `<div class="d-flex gap-3 align-items-center justify-content-center border-bottom py-3">
               <div class="col-2 align-self-center" style="height: 150px;"> 
                 <img src="${thumbnail}" alt="Product Image" class="img-fluid rounded-start border border-2 border-secondary border-opacity-25 object-cover w-100 h-100">
 							</div>
@@ -193,26 +144,6 @@ const watchlistProductTemplate = ({
 									</div>
 								</div>
 							</div>
-							<div class="d-flex flex-column gap-3 justify-content-center align-items-center align-self-center ms-auto">
-								<button class="btn btn-sm px-3 btn-primary rounded-5 w-100" type="button">
-									Buy it now
-								</button>
-								<button class="btn btn-sm px-3 btn-outline-primary rounded-5 w-100" type="button">
-									View seller's other items
-								</button>
-
-								<div class="dropdown w-100">
-									<button class="btn btn-sm btn-outline-primary dropdown-toggle rounded-5 w-100 px-3" type="button" id="dropdownStatus" data-bs-toggle="dropdown" aria-expanded="false">
-										More Action
-									</button>
-									<ul class="dropdown-menu dropdown-menu-end absolute p-0 fs-7" style="">
-										<li>
-											<a class="dropdown-item" href="#">View similar items</a>
-											<a class="dropdown-item" href="#">Contact seller</a>
-										</li>
-									</ul>
-								</div>
-							</div>
 						</div>
 `;
 };
@@ -220,4 +151,3 @@ const watchlistProductTemplate = ({
 // ------------------- Event Listeners ---------------------
 
 // ------------------- Export ---------------------
-export { displayProducts, displayCategoryBtns };
