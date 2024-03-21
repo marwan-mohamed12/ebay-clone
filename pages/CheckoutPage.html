@@ -44,7 +44,7 @@
         <!-- the other row for the content for both left and right side -->
         <!-- the begining of the payment options -->
         <div class="row">
-            <div class="col-8">
+            <div class="col-7">
                 <div class="row pay-with" id="pay-with">
                     <div class="row">
                         <h3>Pay with</h3>
@@ -89,27 +89,47 @@
                     <h3>Enter your new card info</h3>
                     <p>Your payment is secure. Your card details will not be shared with sellers.</p>
                     <form>
-                        <label for="cardNumber">Card number:</label>
-                        <input type="text" id="cardNumber" name="cardNumber"><br>
-    
-                        <label for="expirationDate">Expiration date:</label>
-                        <input type="text" id="expirationDate" name="expirationDate">
-    
-                        <label for="securityCode">Security code:</label>
-                        <input type="text" id="securityCode" name="securityCode"><br>
-    
-                        <label for="firstName">First name:</label>
-                        <input type="text" id="firstName" name="firstName">
-    
-                        <label for="lastName">Last name:</label>
-                        <input type="text" id="lastName" name="lastName"><br>
+                        <div class="row">
+                            <div class="col-5">
+                                <label for="cardNumber">Card number:</label>
+                                <input type="text" id="cardNumber" name="cardNumber"><br>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-5">
+                                <label for="expirationDate">Expiration date:</label>
+                                <input type="text" id="expirationDate" name="expirationDate">
+                            </div>
+                            <div class="col-5">
+                                <label for="securityCode">Security code:</label>
+                                <input type="text" id="securityCode" name="securityCode"><br>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-5">
+                                <label for="firstName">First name:</label>
+                                <input type="text" id="firstName" name="firstName">
+                            </div>
+                            <div class="col-5">
+                                <label for="lastName">Last name:</label>
+                                <input type="text" id="lastName" name="lastName"><br>
+                            </div>
+                        </div>
     
                         <input type="checkbox" id="rememberCard" name="rememberCard">
                         <label for="rememberCard">Remember this card for future orders</label><br>
+
+                        <div class="row">
+                            <div class="col-5">
+                                <label for="billingAddress">Billing address:</label>
+                                <input type="text" id="billingAddress" name="billingAddress"><br>
+            
+                            </div>
+                        </div>
     
-                        <label for="billingAddress">Billing address:</label>
-                        <input type="text" id="billingAddress" name="billingAddress"><br>
-    
+      
                         <input class="btn btn-primary rounded-pill" type="submit" value="Save">
                         <input class="btn rounded-pill" id="cancelButton" type="button" value="Cancel">
                         
@@ -204,39 +224,44 @@
             <div class="reviewCart">
                 <h3>
                     Review items and shipping
-                    <!-- the data will be reviewed here -->
                 </h3>
-            </div>
+                <br>
+                <div id="reviewCart">
+                    <div id="review">
+                        <!-- Here, the data will be displayed -->
+                    </div>
+                </div>
+                </div>
         </div>
         <!-- the end of the review part -->
 
     </div>
     <!-- this is the start of the right side -->
-    <div class="col-4">
+    <div class="col-5">
         <div class="confrimCheckout" >
             <div class="row">
                 <div class="col-8">
-                    <p>Items (<span id="realQty"></span>)</p>
+                    <h5>Items (<span id="realQty"></span>)</h5>
                   </div>
                   <div class="col-4 text-right">
-                    <p id="realP"></p>
+                    <h5 id="realP"></h5>
                   </div>
             </div>
             <div class="row shipping">
                 <div class="col-8">
-                  <p>Shipping</p>
+                  <h5>Shipping</h5>
                 </div>
                 <div class="col-4 text-right">
-                  <p id="shipCharge"></p>
+                  <h5 id="shipCharge"></h5>
                 </div>
               </div>
               <hr>
               <div class="row subTotal">
                 <div class="col-8">
-                  <h3>Order Toatal</h3>
+                  <h3>Order Total</h3>
                 </div>
                 <div class="col-4 text-right">
-                  <p id="totalAmount"></p>
+                  <h3 id="totalAmount"></h3>
                 </div>
               </div>
               <div class="row contain">
@@ -253,9 +278,10 @@
                 <div class="col-12">
                     <p>Purchase protected by <a href="#">eBay Money Back Guarantee</a></p>
                 </div>
-4              </div>
+        </div>
         </div>
         <!-- the end of the right side -->
     </div>
+    <script src="../js/checkout.js"></script>
 </body>
 </html>
