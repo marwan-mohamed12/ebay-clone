@@ -155,7 +155,7 @@ const createProductElement = (id, name, price, shipping, watching, isSponsored, 
 	productElement.id = id;
 
 	productElement.innerHTML = `
-		<a href="../pages/Product.html?id=${id}" class="text-decoration-none text-reset">
+		<a href="../pages/ProductDetails.html?id=${id}" class="text-decoration-none text-reset">
 			<article class="card h-100">
 				<img src="${imageUrl[0]}" class="card-img-top img-thumbnail" alt="${name}">
 				<div class="card-body">
