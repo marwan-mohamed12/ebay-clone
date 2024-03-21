@@ -1,18 +1,17 @@
-
-const params = new URLSearchParams(window.location.search);     
-const id = params.get('id');
-
 // Function to fetch product data from JSON file
 async function fetchData() {
-  try {
-      const response = await fetch('../products.json');
-      const data = await response.json();
-      const products = data.products;
-      console.log(products);
+    try {
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get('id');
+        //fatching json data
+        const response = await fetch('../data.json');
+        const data = await response.json();
+        const products = data.products;
+        console.log(products);
 
       // Function to fetch product by ID
       function fetchProductById(id) {
-          const product = products.find(prod => prod.id === id);
+          const product = products.find(prod => prod.id == id);
           if (product) {
               updateProductDetails(product);
               addEventListeners(); // Adding event listeners after updating details
@@ -81,7 +80,7 @@ function updateProductDetails(product) {
           <p class="text-success">Buy It Now+$37.56 shipping <br> from United States</p>
       </div>
       <div class="price-section">
-          <h4 class="price fs-3 fw-bold mt-2">${product.price}</h4>
+          <h4 class="price fs-3 fw-bold mt-2">US $${product.price}/ea</h4>
           <p class="pt-2 fs-6">Condition: <span class="fw-bolder">${product.condition}</span></p>
           <div class="quantity-box">
               <label for="quantity">Quantity:</label>
