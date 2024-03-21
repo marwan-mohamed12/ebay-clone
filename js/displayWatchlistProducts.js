@@ -2,14 +2,12 @@
 import fetchProducts from './fetch.js';
 
 // ------------------- Variables & Nodes -------------------
-const categoryBtnsContainer = document.querySelector('[data-category-btns]');
 
 // ------------------- Functions ---------------------------
 
 export default async function displayPage() {
 	const products = await fetchProducts();
 	const returnedData = watchlistTemplate(products);
-	// addCategoryBtnsFunctionality(products);
 	return returnedData;
 }
 const watchlistTemplate = function (products) {
@@ -219,8 +217,7 @@ const watchlistProductTemplate = ({
 `;
 };
 
-displayPage();
 // ------------------- Event Listeners ---------------------
 
 // ------------------- Export ---------------------
-export { displayProducts };
+export { displayProducts, displayCategoryBtns };

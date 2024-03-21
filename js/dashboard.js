@@ -7,11 +7,10 @@ import fetchProducts from './fetch.js';
 const bookmarkBtn = document.querySelector('[data-bookmark-btn]');
 const bookmarkIcon = document.querySelector('[data-bookmark-icon]');
 const naviBtns = document.querySelectorAll('[data-navi-btns] > li > a');
-const sidebarBtns = document.querySelectorAll('[data-sidebar]  li > a');
+const sidebarBtns = document.querySelectorAll('[data-sidebar]  li > button');
 const mainBody = document.querySelector('[data-main-body]');
-const watchlistBtn = document.querySelector('[data-watchlist]');
-
-console.log(bookmarkBtn, bookmarkIcon, naviBtns, sidebarBtns, mainBody);
+const watchlistBtn = document.querySelector('[data-sidebarShow="watchlist"]');
+const purchaseBtn = document.querySelector('[data-sidebarShow="purchase"]');
 
 // ---------------- Functions ------------------
 
@@ -30,9 +29,9 @@ async function loadPage() {
 	mainBody.innerHTML = page;
 	addCategoryBtnsFunctionality();
 }
+
 const addCategoryBtnsFunctionality = () => {
 	const categoriesBtns = document.querySelectorAll('[data-category]');
-	console.log(categoriesBtns);
 	categoriesBtns.forEach((btn) => {
 		btn.addEventListener('click', async (e) => {
 			const category = e.target.dataset.category;
@@ -47,7 +46,7 @@ const addCategoryBtnsFunctionality = () => {
 	});
 };
 
-// loadPage();
+loadPage();
 // ---------------- Event Listeners ------------------
 
 bookmarkBtn.addEventListener('click', changeIconColor);
@@ -56,8 +55,9 @@ naviBtns.forEach((btn) => btn.addEventListener('click', (e) => changeActiveLink(
 sidebarBtns.forEach((btn) =>
 	btn.addEventListener('click', (e) => {
 		changeActiveLink(e, sidebarBtns);
-		mainBody.innerHTML = ``;
+		e.target.dataset.sidebarShow === 'watchlist' ? loadPage() : (mainBody.innerHTML = `log`);
+		// TODO: Add functionality to load the purchase page
 	}),
 );
 
-watchlistBtn.addEventListener('click', loadPage);
+// watchlistBtn.addEventListener('click', loadPage);
