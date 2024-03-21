@@ -1,5 +1,5 @@
 // ---------------- Imports ------------------
-import fetchProducts from './fetch.js';
+import { fetchPurchaseProducts, fetchWatchlistProducts } from './fetch.js';
 import displayPage, { displayProducts } from './displayWatchlistProducts.js';
 import displayPurchasePage from './displayPurchaseProducts.js';
 
@@ -29,23 +29,27 @@ async function loadPage(isWatchlistActive = true) {
 	let page;
 
 	if (isWatchlistActive) {
-		page = await displayPage();
+		const products = await fetchWatchlistProducts();
+		page = products ? await displayPage(products) : '';
 	} else {
-		page = await displayPurchasePage();
+		const products = await fetchPurchaseProducts();
+		page = products ? await displayPurchasePage(products) : '';
 	}
-	mainBody.innerHTML = page;
-	if (mainBody.childElementCount < 2) {
+
+	if (page === '') {
 		mainBody.innerHTML = `<h1 class="text-center">No products in your ${isWatchlistActive ? 'Watchlist' : 'Purchase'}</h1>`;
+	} else {
+		mainBody.innerHTML = page;
+		addCategoryBtnsFunctionality();
 	}
-	addCategoryBtnsFunctionality();
 }
 
-const addCategoryBtnsFunctionality = () => {
+const addCategoryBtnsFunctionality = async () => {
 	const categoriesBtns = document.querySelectorAll('[data-category]');
 	categoriesBtns.forEach((btn) => {
 		btn.addEventListener('click', async (e) => {
 			const category = e.target.dataset.category;
-			const products = await fetchProducts();
+			const products = await fetchWatchlistProducts();
 			const filteredProducts =
 				category === 'all categories'
 					? products
@@ -67,10 +71,7 @@ sidebarBtns.forEach((btn) =>
 		changeActiveLink(e, sidebarBtns);
 		const isWatchlistActive = e.target.dataset.sidebarShow === 'watchlist' ? true : false;
 		loadPage(isWatchlistActive);
-
-		// TODO: Add functionality to load the purchase page
 	}),
 );
 
 // watchlistBtn.addEventListener('click', loadPage);
-// TODO: Add empty watchlist page

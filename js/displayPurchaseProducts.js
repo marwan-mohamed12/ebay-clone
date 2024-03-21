@@ -1,12 +1,10 @@
 // ------------------- Imports -------------------
-import fetchProducts from './fetch.js';
 
 // ------------------- Variables & Nodes -------------------
 
 // ------------------- Functions ---------------------------
 
-export default async function displayPurchasePage() {
-	const products = await fetchProducts();
+export default async function displayPurchasePage(products) {
 	const returnedData = purchaseTemplate(products);
 	return returnedData;
 }
@@ -83,9 +81,9 @@ function displayProducts(products) {
 }
 
 const watchlistProductTemplate = ({
-	title,
+	name,
 	condition = 'Pre-owned',
-	thumbnail,
+	imageUrl: [thumbnail],
 	price,
 	discountPercentage,
 	shippingPrice = 10.0,
@@ -93,7 +91,7 @@ const watchlistProductTemplate = ({
 	seller = 'thewatchoutlet- user ID (3272)',
 	sellerFeedback = '100% positive feedback',
 }) => {
-	const oldPrice = Math.round(price * discountPercentage);
+	const oldPrice = Math.round(price * (discountPercentage / 100) + price);
 	const timeEnds = new Date(time).toLocaleDateString('en-US', {
 		month: 'short',
 		day: '2-digit',
@@ -108,7 +106,7 @@ const watchlistProductTemplate = ({
 							</div>
 							<div class="">
 								<div class="">
-                  <h3 class="fs-5 text-secondary mb-1">${title}</h3>
+                  <h3 class="fs-5 text-secondary mb-1">${name}</h3>
                   <p class="fs-8 text-secondary-emphasis">Condition: <span>${condition}</span></p>
 								</div>
 								<div class="d-flex justify-content-between align-items-center mt-3">
