@@ -1,3 +1,7 @@
+
+const params = new URLSearchParams(window.location.search);     
+const id = params.get('id');
+
 // Function to fetch product data from JSON file
 async function fetchData() {
   try {
@@ -18,7 +22,7 @@ async function fetchData() {
       }
 
       // Fetch product with ID 8 initially
-      fetchProductById(9);
+      fetchProductById(id);
   } catch (error) {
       console.error('Error fetching data:', error);
   }
