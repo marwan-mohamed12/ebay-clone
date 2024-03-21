@@ -10,15 +10,17 @@ async function fetchProducts() {
 		const unfilteredProducts = [...products];
 		getFiltersData();
 		renderProducts();
-		document.querySelectorAll("#brandFilter").forEach(element => {
+		document.querySelectorAll("#brandFilter li").forEach(element => {
 			element.addEventListener('click', (e) => {
+				console.log(element);
 				const brandValue = element.querySelector("input").value;
 				products = products.filter(prod => prod.brand === brandValue);
+				console.log(brandValue);
 				renderProducts();
 			})
 		});
 
-		document.querySelectorAll("#colorFilter").forEach(element => {
+		document.querySelectorAll("#colorFilter li").forEach(element => {
 			element.addEventListener('click', (e) => {
 				const colorValue = element.querySelector("input").value;
 				products = products.filter(prod => prod.color === colorValue);
@@ -242,11 +244,12 @@ const getFiltersData = () => {
 const createFilterElement = (item, isColor) => {
 
 	const listItemFilter = document.createElement('li');
+	item = item.replace(/ /g, '');
 	if (isColor) {
 		listItemFilter.innerHTML = `
 		<a class="dropdown-item" href="#">
 			<div class="form-check">
-				<input class="form-check-input" type="checkbox" value="${item}" id="flexCheckDefault${item}">
+				<input class="form-check-input" type="checkbox" value="${item}" id="${item}">
 				<label class="form-check-label" for="flexCheckDefault${item}">
 				<span class="rounded-circle d-inline-block colorOptions" style="background-color: ${item};"></span>
 				</label>
@@ -255,10 +258,10 @@ const createFilterElement = (item, isColor) => {
 `;
 	} else {
 		listItemFilter.innerHTML = `
-		<a class="dropdown-item" href="#" for="flexCheckDefault${item}">
+		<a class="dropdown-item" href="#" for="${item}">
 			<div class="form-check">
-				<input class="form-check-input" type="checkbox" name="${item}" value="${item}" id="flexCheckDefault${item}">
-				<label class="form-check-label" for="flexCheckDefault${item}">
+				<input class="form-check-input" type="checkbox" name="${item}" value="${item}" id="${item}">
+				<label class="form-check-label" for="${item}">
 					${item}
 				</label>
 			</div>
