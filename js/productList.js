@@ -5,7 +5,7 @@ async function fetchProducts() {
 		const response = await fetch('../utils/products.json');
 		const data = await response.json();
 		products = data.products;
-		const unfilteredProducts = products;
+		const unfilteredProducts = [...products];
 		getFiltersData();
 		renderProducts();
 		document.querySelectorAll("#brandFilter").forEach(element => {
@@ -130,14 +130,12 @@ async function fetchProducts() {
 
 		const clearBtn = document.querySelector(".clearBtn button");
 		clearBtn.addEventListener('click', () => {
-			products = unfilteredProducts;
+			products = [...unfilteredProducts];
 			document.querySelectorAll(".filter-section div").forEach(elem => {
 				elem.querySelectorAll("input").forEach(inp => inp.checked = false);
 			});
 			document.querySelector(".productsContainer").classList.remove("d-none");
 			document.querySelector(".horizontalContainer").classList.add("d-none");
-			console.log(unfilteredProducts);
-			console.log(products);
 			renderProducts();
 		})
 	} catch (error) {
