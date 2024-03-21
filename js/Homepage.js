@@ -295,7 +295,7 @@ function fetchFeaturedProductData(productId) {
             if (product) {
                 // console.log(product);
 
-                window.location.href = `Product.html?id=${productId}`;
+                window.location.href = `/pages/Product.html?id=${productId}`;
             } else {
                 console.error('Product not found');
             }
@@ -312,7 +312,7 @@ function fetchCategory(categoryId) {
             if (category) {
                 // console.log(category.name);
 
-                window.location.href = `productList.html?category=${category.name}`;
+                window.location.href = `/pages/productList.html?category=${category.name}`;
             } else {
                 console.error('Category not found');
             }
