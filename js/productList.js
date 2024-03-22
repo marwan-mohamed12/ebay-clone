@@ -1,5 +1,15 @@
-let products = [];
+if (JSON.parse(localStorage.getItem("isAuthenticated"))) {
+	const username = localStorage.getItem("userName");
+	const signBtn = document.querySelector(".sign-btn");
+	signBtn.innerHTML = '';
+	signBtn.innerHTML = `
+	
+		Hi! ${username}
+	
+	`;
+}
 
+let products = [];
 async function fetchProducts() {
 	try {
 		const params = new URLSearchParams(window.location.search);
@@ -159,7 +169,7 @@ const createProductElement = (id, name, price, shipping, watching, isSponsored, 
 	productElement.innerHTML = `
 		<a href="../pages/ProductDetails.html?id=${id}" class="text-decoration-none text-reset">
 			<article class="card h-100">
-				<img src="${imageUrl[0]}" class="card-img-top img-thumbnail" alt="${name}">
+				<img src="${imageUrl[0]}" class="card-img-top img-thumbnail verticalImg" alt="${name}">
 				<div class="card-body">
 					<h5 class="card-title">${name}</h5>
 					<div class="card-text">
@@ -209,7 +219,7 @@ const renderProducts = () => {
 	const productsContainer = document.querySelector(".productsContainer");
 	const horizontalProductsContainer = document.querySelector(".horizontalContainer");
 	if (!productsContainer) {
-		console.error('Products container not found');
+		productsContainer.appendChild(`<h2 class="text-center">No products Found!</h2>`)
 		return;
 	}
 
@@ -241,17 +251,17 @@ const getFiltersData = () => {
 	renderFilterData(brandSet, colorSet, conditionSet);
 }
 
-const createFilterElement = (item, isColor) => {
+const createFilterElement = (item, isColor, isCondition) => {
 
 	const listItemFilter = document.createElement('li');
-	item = item.replace(/ /g, '');
+	let trimmedItem = item.replace(/ /g, '');
 	if (isColor) {
 		listItemFilter.innerHTML = `
 		<a class="dropdown-item" href="#">
 			<div class="form-check">
-				<input class="form-check-input" type="checkbox" value="${item}" id="${item}">
-				<label class="form-check-label" for="flexCheckDefault${item}">
-				<span class="rounded-circle d-inline-block colorOptions" style="background-color: ${item};"></span>
+				<input class="form-check-input" type="radio" value="${item}" id="${trimmedItem}" name="color">
+				<label class="form-check-label" for="flexCheckDefault${trimmedItem}">
+				<span class="rounded-circle d-inline-block colorOptions" style="background-color: ${trimmedItem};"></span>
 				</label>
 			</div>
 		</a>
@@ -260,7 +270,7 @@ const createFilterElement = (item, isColor) => {
 		listItemFilter.innerHTML = `
 		<a class="dropdown-item" href="#" for="${item}">
 			<div class="form-check">
-				<input class="form-check-input" type="checkbox" name="${item}" value="${item}" id="${item}">
+				<input class="form-check-input" type="radio" name="${isCondition ? "condition" : "brand"}" value="${item}" id="${item}">
 				<label class="form-check-label" for="${item}">
 					${item}
 				</label>
@@ -273,13 +283,13 @@ const createFilterElement = (item, isColor) => {
 
 const renderFilterData = (brandSet, colorSet, conditionSet) => {
 	const brandFilter = document.querySelector(".brand ul");
-	brandSet.forEach((brand) => brandFilter.appendChild(createFilterElement(brand, false)));
+	brandSet.forEach((brand) => brandFilter.appendChild(createFilterElement(brand, false, false)));
 
 	const conditionFilter = document.querySelector(".condition ul");
-	conditionSet.forEach((condition) => conditionFilter.appendChild(createFilterElement(condition, false)));
+	conditionSet.forEach((condition) => conditionFilter.appendChild(createFilterElement(condition, false, true)));
 
 	const colorFilter = document.querySelector(".color ul");
-	colorSet.forEach((color) => colorFilter.appendChild(createFilterElement(color, true)));
+	colorSet.forEach((color) => colorFilter.appendChild(createFilterElement(color, true, false)));
 }
 
 const filterProducts = () => {
