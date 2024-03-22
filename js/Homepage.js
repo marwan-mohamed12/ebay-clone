@@ -287,7 +287,7 @@ function heartFunction(elementId, elementImgId, elementInfoId) {
 // }
 
 function fetchFeaturedProductData(productId) {
-    fetch('../data.json')
+    fetch('data.json')
     .then(response => response.json())
     .then(data => {
         
@@ -304,7 +304,7 @@ function fetchFeaturedProductData(productId) {
 }
 
 function fetchCategory(categoryId) {
-    fetch('../data.json')
+    fetch('data.json')
     .then(response => response.json())
     .then(data => {
         
@@ -318,4 +318,12 @@ function fetchCategory(categoryId) {
         }
     })
     .catch(error => console.error('Error fetching Category data:', error));
+}
+
+function signin(){
+    window.location.href = `signin.html?signin`
+}
+
+function registiation(){
+    window.location.href = `registration.html?register`
 }
