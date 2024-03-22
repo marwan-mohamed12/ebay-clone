@@ -16,7 +16,7 @@ async function fetchProducts() {
 		const category = params.get('category');
 		const response = await fetch('../data.json');
 		const data = await response.json();
-		products = data.products.filter((prod) => prod.category == category);
+		products = category === 'seeall' ? products = data.products : products = data.products.filter((prod) => prod.category == category);
 		const unfilteredProducts = [...products];
 		getFiltersData();
 		renderProducts();
