@@ -5,6 +5,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const loginButton = document.getElementById("login-button");
   const emailError = document.getElementById("email-error");
 
+  // Check if isAuthenticated exists in local storage, if not, set it to false
+  if (!localStorage.getItem("isAuthenticated")) {
+    localStorage.setItem("isAuthenticated", JSON.stringify(false));
+  }
+
   // Add event listener to login button
   loginButton.addEventListener("click", function (event) {
     // Prevent default form submission behavior
@@ -19,8 +24,13 @@ document.addEventListener("DOMContentLoaded", function () {
     // Find user with matching email
     const user = users.find((user) => user.email === email);
 
-    // If user is found, store email in session storage and redirect
+    // If user is found store email in session storage and redirect
     if (user) {
+      //Save user name in local storage
+      const firstName = user.firstName;
+      localStorage.setItem("userName", JSON.stringify(firstName));
+
+      //Store email in session storage and redirect
       sessionStorage.setItem("email", email);
       window.location.href = "../pages/password-entry.html";
     } else {

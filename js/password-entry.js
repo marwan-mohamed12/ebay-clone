@@ -21,6 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const user = users.find((user) => user.email === email);
 
     if (user && user.password === password) {
+      // Set isAuthenticated to true upon successful login
+      localStorage.setItem("isAuthenticated", JSON.stringify(true));
       // Redirect to home page if user exists and password matches
       window.location.href = "../pages/Homepage.html";
     } else {
