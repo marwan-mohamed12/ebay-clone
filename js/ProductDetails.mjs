@@ -1,5 +1,6 @@
 import { Cart } from "./cart.js";
 // Function to fetch product data from JSON file
+import { Cart } from "../js/cart.js";
 
 document.addEventListener("DOMContentLoaded", function () {
     const cartInstance = new Cart();
@@ -93,21 +94,23 @@ function updateProductDetails(product) {
           </div>
       </div>
       <div class="actions">
-          <a href="https://signin.ebay.com/ws/eBayISAPI.dll?SignIn&ru=https%3A%2F%2Fcart.payments.ebay.com%2F">
+          <a href="./login.html">
               <button class="btn btn-primary active my-2 p-5 rounded-pill py-2" type="button"><span class="fw-bold">Buy It Now</span></button>
           </a>
-          <button id="add-to-cart" class="btn btn-primary my-2 py- rounded-pill py-2">Add to cart</button>
-          
+          <a href="https://signin.ebay.com/ws/eBayISAPI.dll?SignIn&ru=https%3A%2F%2Fcart.payments.ebay.com%2F">
+              <button class="btn btn-primary my-2 py- rounded-pill py-2">Add to cart</button>
+          </a>
           <button class="btn btn-outline-primary p-5 rounded-pill py-2"><i class="fa-regular fa-heart"></i> Add to watchlist</button>
       </div>
   `;
-     
-    var addToCartBtn = document.getElementById('add-to-cart');
+  var addToCartBtn = document.createElement('button');
+    addToCartBtn.textContent = 'Add to Cart';
+    addToCartBtn.className = 'add-to-cart';
+
     addToCartBtn.addEventListener("click", function (event) {
         event.preventDefault();
-        window.location.href = "/pages/CartPage.html";
+        window.location.href = "./CartPage.html";
         cartInstance.addItem(product);
-        // localStorage("cartItems",product);
     });
 
 

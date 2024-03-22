@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "products": [
         {
             "id": 1,
@@ -517,5 +518,1058 @@
                 "details": "✈️2 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥"
             }
         ]
+=======
+  "products": [
+    {
+      "id": 1,
+      "name": "Nike Air Max 95",
+      "category": "Partsaccessories",
+      "brand": "Nike",
+      "price": 40,
+      "shipping": 27,
+      "watching": 50,
+      "isSponsored": true,
+      "imageUrl": [
+        "https://i.ebayimg.com/images/g/raoAAOSwJcFkSs3t/s-l1600.jpg",
+        "https://i.ebayimg.com/images/g/S3wAAOSwWVlkSs3u/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/e80AAOSwjaNkSs3t/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/HfsAAOSw0tNkSs3t/s-l960.jpg"
+      ],
+      "color": "#FF5733",
+      "condition": "new with box",
+      "quantity": 0,
+      "details": "✈️2 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥",
+      "discountPercentage": 12.96
+    },
+    {
+      "id": 2,
+      "name": "Adidas Ultraboost",
+      "category": "Partsaccessories",
+      "brand": "Adidas",
+      "price": 55,
+      "shipping": 20,
+      "watching": 35,
+      "isSponsored": false,
+      "imageUrl": [
+        "https://i.ebayimg.com/images/g/Tx4AAOSw~QBl-Y-8/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/qEEAAOSwEmNl-Y-s/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/JCAAAOSwixJl-Y-w/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/cycAAOSw9apl-Y-y/s-l960.jpg"
+      ],
+      "color": "#33FF57",
+      "condition": "new without box",
+      "quantity": 0,
+      "details": "✈️6 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥",
+      "discountPercentage": 10.23
+    },
+    {
+      "id": 3,
+      "name": "Puma RS-X",
+      "brand": "Puma",
+      "price": 32,
+      "shipping": 25,
+      "watching": 28,
+      "isSponsored": true,
+      "imageUrl": [
+        "https://i.ebayimg.com/images/g/dfIAAOSwAhxlusUu/s-l1600.jpg",
+        "https://i.ebayimg.com/images/g/w1IAAOSwPBZlusUv/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/ldIAAOSwTchlusUv/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/ZbEAAOSwr0VlusUv/s-l960.jpg"
+      ],
+      "color": "#3366FF",
+      "condition": "new with defects",
+      "category": "shoes",
+      "quantity": 0,
+      "details": "✈️3 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥",
+      "discountPercentage": 17.94
+    },
+    {
+      "id": 4,
+      "name": "New Balance 990v5",
+      "brand": "New Balance",
+      "price": 48,
+      "shipping": 30,
+      "watching": 42,
+      "isSponsored": false,
+      "imageUrl": [
+        "https://i.ebayimg.com/images/g/axoAAOSwfCZl9aC1/s-l1600.jpg",
+        "https://i.ebayimg.com/images/g/iEIAAOSw-E9l9aCx/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/USkAAOSwYsJl9aC1/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/PRwAAOSwpgRl9aCx/s-l960.jpg"
+      ],
+      "color": "#FFFF33",
+      "condition": "pre-owned",
+      "category": "shoes",
+      "quantity": 0,
+      "details": "✈️4 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥",
+      "discountPercentage": 10.23
+    },
+    {
+      "id": 5,
+      "name": "Reebok Classic Leather",
+      "brand": "Reebok",
+      "price": 290,
+      "shipping": 22,
+      "watching": 18,
+      "isSponsored": true,
+      "imageUrl": [
+        "https://i.ebayimg.com/images/g/uVUAAOSwmyRl8tzg/s-l1600.jpg",
+        "https://i.ebayimg.com/images/g/O-UAAOSwsPBl8tzj/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/fpkAAOSwc0hl8tzn/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/iY4AAOSwQf9l8tzq/s-l960.jpg"
+      ],
+      "color": "#FF3366",
+      "condition": "new with box",
+      "category": "shoes",
+      "quantity": 0,
+      "details": "✈️7 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥",
+      "discountPercentage": 15.46
+    },
+    {
+      "id": 6,
+      "name": "Vans Old Skool Pro Skate Shoes - Blackout",
+      "brand": "Vans",
+      "price": 60.00,
+      "shipping": 10.00,
+      "watching": 75,
+      "isSponsored": false,
+      "imageUrl": [
+        "https://i.ebayimg.com/images/g/54oAAOSwreZl8yWo/s-l1600.jpg",
+        "https://i.ebayimg.com/images/g/xvUAAOSwUo9l8yWp/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/~-0AAOSwrZtl8yWq/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/haoAAOSwL5Zl8yWo/s-l960.jpg"
+      ],
+      "color": "#66FF33",
+      "condition": "pre-owned",
+      "category": "shoes",
+      "quantity": 0,
+      "details": "✈️2 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥",
+      "discountPercentage": 10.23
+    },
+    {
+      "id": 7,
+      "name": "Asics Gel-Lyte III - White/Purple",
+      "brand": "Asics",
+      "price": 70.00,
+      "shipping": 15.00,
+      "watching": 40,
+      "isSponsored": true,
+      "imageUrl": [
+        "https://i.ebayimg.com/images/g/4QYAAOSwShxl6J0C/s-l1600.jpg",
+        "https://i.ebayimg.com/images/g/AAgAAOSwb0Jl6J0c/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/M6oAAOSwS45l6J0y/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/HPkAAOSwj7pl6J0Y/s-l960.jpg"
+      ],
+      "color": "#33FFFF",
+      "condition": "new without box",
+      "category": "shoes",
+      "quantity": 0,
+      "details": "✈️4 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥",
+      "discountPercentage": 15.46
+    },
+    {
+      "id": 8,
+      "name": "Nike Air Max 95",
+      "brand": "Nike",
+      "price": 240,
+      "shipping": 27,
+      "watching": 50,
+      "isSponsored": true,
+      "imageUrl": [
+        "https://i.ebayimg.com/images/g/oPYAAOSwo4FltApD/s-l1600.jpg",
+        "https://i.ebayimg.com/images/g/-S0AAOSw5OxltApF/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/kNUAAOSwC1lltApG/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/N9oAAOSwOcVltApH/s-l960.jpg"
+      ],
+      "color": "#33FFFF",
+      "condition": "new with box",
+      "category": "shoes",
+      "quantity": 0,
+      "details": "✈️9 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥",
+      "discountPercentage": 10.23
+    },
+    {
+      "id": 9,
+      "name": "Asics Gel-Lyte III - White/Purple",
+      "brand": "Asics",
+      "price": 170,
+      "shipping": 15,
+      "watching": 40,
+      "isSponsored": true,
+      "imageUrl": [
+        "https://i.ebayimg.com/images/g/gwkAAOSwGG5l0O7R/s-l1600.jpg",
+        "https://i.ebayimg.com/images/g/k1gAAOSwsqVl0O7J/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/aNUAAOSw8FZl0O7a/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/rNUAAOSw1rtl0O7q/s-l960.jpg"
+      ],
+      "color": "#33FFFF",
+      "condition": "new without box",
+      "category": "shoes",
+      "quantity": 0,
+      "details": "✈️7 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥",
+      "discountPercentage": 17.91
+    },
+    {
+      "id": 10,
+      "name": "Vans Old Skool Pro Skate Shoes - Blackout",
+      "brand": "Vans",
+      "price": 160.00,
+      "shipping": 10.00,
+      "watching": 75,
+      "isSponsored": false,
+      "imageUrl": [
+        "https://i.ebayimg.com/images/g/m5YAAOSwf-hl-1VU/s-l1600.jpg",
+        "https://i.ebayimg.com/images/g/1ZEAAOSwsVtl-1VU/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/KgUAAOSwaBtl-1VU/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/urcAAOSwAhpl-1VU/s-l960.jpg"
+      ],
+      "color": "#66FF33",
+      "condition": "pre-owned",
+      "category": "shoes",
+      "quantity": 0,
+      "details": "✈️2 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥",
+      "discountPercentage": 10.23
+    },
+    {
+    "id": 11,
+    "name": "Louis Vuitton Monogram Verreur W Tote BB",
+    "category": "Prelovedluxury",
+    "brand": "Louis Vuitton",
+    "price": "1560",
+    "shipping": "$37",
+    "watching": 50,
+    "isSponsored": true,
+    "imageUrl": [
+        
+        "https://i.ebayimg.com/images/g/FQQAAOSwiE5khMxj/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/cyQAAOSwHL1khMxm/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/-yQAAOSwEy5khMxn/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/J6EAAOSw-ppkhMxp/s-l960.jpg"
+    ],
+    "color": "#ffb3d7",
+    "condition": "Pre-loved",
+    "quantity": 0,
+    "details": "✈️6 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥"
+},
+{
+    "id": 12,
+    "name": "Celine Nano Belt Bag Grained Calfskin Leather",
+    "category": "Prelovedluxury",
+    "brand": "Celine",
+    "price": "1360",
+    "shipping": "$27",
+    "watching": 50,
+    "isSponsored": true,
+    "imageUrl": [
+        "https://i.ebayimg.com/images/g/w3gAAOSw825l6lUT/s-l1600.jpg",
+        "https://i.ebayimg.com/images/g/p6IAAOSwUaVl6lUV/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/gQcAAOSwscRl6lUV/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/TZoAAOSwlWhl6lUT/s-l960.jpg"
+    ],
+    "color": "#000000",
+    "condition": "Pre-loved",
+    "quantity": 0,
+    "details": "✈️6 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥"
+},
+{
+    "id": 13,
+    "name": "Bottega Veneta Women Green Envelope Leather Purse",
+    "category": "Prelovedluxury",
+    "brand": "Bottega",
+    "price": "3260",
+    "shipping": "$47",
+    "watching": 50,
+    "isSponsored": true,
+    "imageUrl": [
+        "https://i.ebayimg.com/images/g/uC4AAOSwODNjvI77/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/zeoAAOSwryVjvI79/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/pMQAAOSwNt5jvI8D/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/yloAAOSwjUtjvI8H/s-l960.jpg"
+    ],
+    "color": "#FF5733",
+    "condition": "Pre-loved",
+    "quantity": 0,
+    "details": "✈️6 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥"
+},
+{
+    "id": 14,
+    "name": "Salvatore Ferragamo Men Black Pebble Leather Travel Briefcase",
+    "category": "Prelovedluxury",
+    "brand": "Salvatore Ferragamo",
+    "price": "1760",
+    "shipping": "$27",
+    "watching": 50,
+    "isSponsored": true,
+    "imageUrl": [
+        "https://i.ebayimg.com/images/g/psEAAOSwHndiKSQo/s-l1600.jpg",
+        "https://i.ebayimg.com/images/g/PMoAAOSwgDViKSQq/s-l960.png",
+        "https://i.ebayimg.com/images/g/3dAAAOSwoyJiKSQs/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/SzUAAOSwkEViKSQw/s-l960.jpg"
+    ],
+    "color": "#000000",
+    "condition": "Pre-loved",
+    "quantity": 0,
+    "details": "✈️6 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥"
+},
+{
+    "id": 15,
+    "name": "Dolgabas Cage Bag",
+    "category": "Prelovedluxury",
+    "brand": "DOLCE&GABBANA",
+    "price": "560",
+    "shipping": "$27",
+    "watching": 50,
+    "isSponsored": true,
+    "imageUrl": [
+        "https://i.ebayimg.com/images/g/smgAAOSwZKxlzhOl/s-l1600.jpg",
+        "https://i.ebayimg.com/images/g/3GUAAOSw53JlzhOn/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/QJgAAOSw8RNlzhOo/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/P8gAAOSw9i5lzhOp/s-l960.jpg"
+    ],
+    "color": "#eac389",
+    "condition": "Pre-loved",
+    "quantity": 0,
+    "details": "✈️6 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥"
+},
+{
+    "id": 16,
+    "name": "Tom Ford Women's Brown Fur",
+    "category": "Prelovedluxury",
+    "brand": "Tom Ford",
+    "price": "460",
+    "shipping": "$27",
+    "watching": 50,
+    "isSponsored": true,
+    "imageUrl": [
+        "https://i.ebayimg.com/images/g/iVQAAOSwPcNlnXqW/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/k94AAOSwblRlnXqY/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/XToAAOSwvUxlnXqc/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/d9UAAOSwkZBlnFpI/s-l1600.jpg"
+    ],
+    "color": "#69502a",
+    "condition": "Pre-loved",
+    "quantity": 0,
+    "details": "✈️6 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥"
+},
+{
+    "id": 17,
+    "name": "HERMES Belt Reversible Epsom",
+    "category": "Prelovedluxury",
+    "brand": "HERMES",
+    "price": "1860",
+    "shipping": "$27",
+    "watching": 50,
+    "isSponsored": true,
+    "imageUrl": [
+        "https://i.ebayimg.com/images/g/-PcAAOSwsd5iycMk/s-l1600.jpg",
+        "https://i.ebayimg.com/images/g/DrkAAOSwKMFhQoPv/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/vEwAAOSwVIJhX7Xr/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/uqUAAOSwjVthX7W7/s-l960.jpg"
+    ],
+    "color": "#d82e72",
+    "condition": "Pre-loved",
+    "quantity": 0,
+    "details": "✈️6 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥"
+},
+{
+    "id": 18,
+    "name": "Louis Vuitton Pallas Shopper Chain Shoulder Bag",
+    "category": "Prelovedluxury",
+    "brand": "Louis Vuitton",
+    "price": "1660",
+    "shipping": "$27",
+    "watching": 50,
+    "isSponsored": true,
+    "imageUrl": [
+        "https://i.ebayimg.com/images/g/eMoAAOSwKsFlS7x2/s-l1600.jpg",
+        "https://i.ebayimg.com/images/g/de8AAOSwnZxlS6td/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/pggAAOSwcWZlS6te/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/p~QAAOSw5ydlS6th/s-l960.jpg"
+    ],
+    "color": "#452c2c",
+    "condition": "Pre-loved",
+    "quantity": 0,
+    "details": "✈️6 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥"
+},
+{
+    "id": 19,
+    "name": "L'Afshar Women Clear Leon Translucent Box Chain Shoulder Clutch Bag",
+    "category": "Prelovedluxury",
+    "brand": "L'Afshar",
+    "price": "1227",
+    "shipping": "$27",
+    "watching": 50,
+    "isSponsored": true,
+    "imageUrl": [
+        "https://i.ebayimg.com/images/g/b7AAAOSwr41i8Xle/s-l1600.jpg",
+        "https://i.ebayimg.com/images/g/LGgAAOSwntNi8Xlk/s-l960.png",
+        "https://i.ebayimg.com/images/g/Yh0AAOSw5udi8Xlm/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/AoUAAOSwI2pi8Xlp/s-l960.jpg"
+    ],
+    "color": "#ffffff",
+    "condition": "Pre-loved",
+    "quantity": 0,
+    "details": "✈️6 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥"
+},
+{
+    "id": 20,
+    "name": "Louis Vuitton Teddy Muffle Calfskin Monogram Black Handwarmer Shoulder Bag",
+    "category": "Prelovedluxury",
+    "brand": "Louis Vuitton",
+    "price": "2560",
+    "shipping": "$27",
+    "watching": 50,
+    "isSponsored": true,
+    "imageUrl": [
+        "https://i.ebayimg.com/images/g/SBYAAOSwQq9jm01j/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/VkoAAOSwjmhjm01k/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/XVoAAOSwxrdjm01k/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/jo8AAOSwkaRjm01g/s-l960.jpg"
+    ],
+    "color": "#000000",
+    "condition": "Pre-loved",
+    "quantity": 0,
+    "details": "✈️6 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥"
+},
+    {
+    "id": 21,
+    "name": "Gucci GG MARMONT MINI",
+    "category": "Handbags",
+    "brand": "Gucci",
+    "price": "960",
+    "shipping": "$20",
+    "watching": 50,
+    "isSponsored": true,
+    "imageUrl": [
+        "https://i.ebayimg.com/images/g/xmgAAOSwoC9lmLLe/s-l960.png",
+        "https://i.ebayimg.com/images/g/fzMAAOSwcQVlmLLl/s-l960.png",
+        "https://i.ebayimg.com/images/g/fKsAAOSw64ZlmLLr/s-l960.png",
+        "https://i.ebayimg.com/images/g/pJAAAOSw5pdlmLK3/s-l960.jpg"
+    ],
+    "color": "#000000",
+    "condition": "New with the box",
+    "quantity": 0,
+    "details": "✈️6 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥"
+},
+{
+    "id": 22,
+    "name": "Gucci Jackie 1961 Mini",
+    "category": "Handbags",
+    "brand": "Gucci",
+    "price": "1760",
+    "shipping": "$40",
+    "watching": 50,
+    "isSponsored": true,
+    "imageUrl": [
+        "https://i.ebayimg.com/images/g/VbkAAOSwOcVlui2C/s-l1600.jpg",
+        "https://i.ebayimg.com/images/g/ET4AAOSwg1Blui2C/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/87MAAOSwoRllui2C/s-l1600.jpg",
+        "https://i.ebayimg.com/images/g/f4sAAOSw0ttlui2C/s-l960.jpg"
+    ],
+    "color": "#81774f",
+    "condition": "New with the box",
+    "quantity": 0,
+    "details": "✈️6 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥"
+},
+{
+    "id": 23,
+    "name": "Christian Dior Leather Shoulder Bag Black",
+    "category": "Handbags",
+    "brand": "Christian Dior",
+    "price": "1560",
+    "shipping": "$40",
+    "watching": 50,
+    "isSponsored": true,
+    "imageUrl": [
+        "https://i.ebayimg.com/images/g/e~sAAOSwsd5l9UDf/s-l1600.jpg",
+        "https://i.ebayimg.com/images/g/UFgAAOSwgCJl9UDg/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/L0sAAOSw7U1l9UDi/s-l140.jpg",
+        "https://i.ebayimg.com/images/g/il4AAOSwhtRl9UDd/s-l1600.jpg"
+    ],
+    "color": "#81774f",
+    "condition": "Pre-loved",
+    "quantity": 0,
+    "details": "✈️6 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥"
+},
+{
+    "id": 24,
+    "name": "Christian Dior Shoulder Bag Trotter",
+    "category": "Handbags",
+    "brand": "Christian Dior",
+    "price": "1160",
+    "shipping": "$40",
+    "watching": 50,
+    "isSponsored": true,
+    "imageUrl": [
+        "https://i.ebayimg.com/images/g/4SAAAOSwHmVl6xGh/s-l960.png",
+        "https://i.ebayimg.com/images/g/cdkAAOSwmFNl6xGj/s-l960.png",
+        "https://i.ebayimg.com/images/g/kEEAAOSwrNxl6xGj/s-l960.png",
+        "https://i.ebayimg.com/images/g/evwAAOSwSNll6xGm/s-l960.png"
+    ],
+    "color": "#ae192d",
+    "condition": "Pre-loved",
+    "quantity": 0,
+    "details": "✈️6 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥"
+},
+{
+    "id": 25,
+    "name": "PRADA Women's Shoulder Bag Hobo Bag Handbag",
+    "category": "Handbags",
+    "brand": "PRADA",
+    "price": "5260",
+    "shipping": "$40",
+    "watching": 50,
+    "isSponsored": true,
+    "imageUrl": [
+        "https://i.ebayimg.com/images/g/h98AAOSwZQ5l9mEy/s-l1600.jpg",
+        "https://i.ebayimg.com/images/g/SEEAAOSwsrpl9mEy/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/H~kAAOSw7vNl9mEy/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/8f4AAOSw5TZl9mEy/s-l960.jpg"
+    ],
+    "color": "#000000",
+    "condition": "New with the box",
+    "quantity": 0,
+    "details": "✈️6 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥"
+},
+{
+    "id": 26,
+    "name": "Auth PRADA Logo Canapa Mini Canvasr",
+    "category": "Handbags",
+    "brand": "PRADA",
+    "price": "3160",
+    "shipping": "$40",
+    "watching": 50,
+    "isSponsored": true,
+    "imageUrl": [
+        "https://i.ebayimg.com/images/g/RXwAAOSwOHtl3aIQ/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/np4AAOSw7uRl3aIT/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/c64AAOSwab1l3aIY/s-l1600.jpg",
+        "https://i.ebayimg.com/images/g/30gAAOSwoAtl3aIc/s-l960.jpg"
+    ],
+    "color": "#c18f45",
+    "condition": "New with the box",
+    "quantity": 0,
+    "details": "✈️6 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥"
+},
+{
+    "id": 27,
+    "name": "Chloe Drew Mini",
+    "category": "Handbags",
+    "brand": "Chloe",
+    "price": "360",
+    "shipping": "$40",
+    "watching": 50,
+    "isSponsored": true,
+    "imageUrl": [
+        "https://i.ebayimg.com/images/g/6XgAAOSwZXJlnVei/s-l960.png",
+        "https://i.ebayimg.com/images/g/Ds0AAOSw8YdlnVey/s-l960.png",
+        "https://i.ebayimg.com/images/g/~ZAAAOSwykNlnVe3/s-l960.png",
+        "https://i.ebayimg.com/images/g/6QoAAOSw79xlnVfC/s-l960.png"
+    ],
+    "color": "#ffffff",
+    "condition": "New with the box",
+    "quantity": 0,
+    "details": "✈️6 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥"
+},
+{
+    "id": 28,
+    "name": "Auth Chloe Marcie Large Shoulder Bag",
+    "category": "Handbags",
+    "brand": "Chloe",
+    "price": "370",
+    "shipping": "$20",
+    "watching": 50,
+    "isSponsored": true,
+    "imageUrl": [
+        "https://i.ebayimg.com/images/g/8gUAAOSwgCJl-Q23/s-l1600.jpg",
+        "https://i.ebayimg.com/images/g/DYAAAOSwHd9l-Q23/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/WbQAAOSwDl9l-Q23/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/YnEAAOSwKK9l-Q23/s-l960.jpg"
+    ],
+    "color": "#c18f45",
+    "condition": "Pre-loved",
+    "quantity": 0,
+    "details": "✈️6 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥"
+},
+{
+    "id": 29,
+    "name": "GIVENCHY Lucrezia Leather 2way",
+    "category": "Handbags",
+    "brand": "GIVENCHY",
+    "price": "1860",
+    "shipping": "$40",
+    "watching": 50,
+    "isSponsored": true,
+    "imageUrl": [
+        "https://i.ebayimg.com/images/g/AzMAAOSw~QBl9-Zq/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/EiIAAOSwd1Vl9-Zq/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/9WEAAOSwfsVl9-Zq/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/oMkAAOSwmTtl9-Zs/s-l960.jpg"
+    ],
+    "color": "#000000",
+    "condition": "New with the box",
+    "quantity": 0,
+    "details": "✈️6 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥"
+},
+{
+    "id": 30,
+    "name": "Auth GIVENCHY G Tote Vertical Mini",
+    "category": "Handbags",
+    "brand": "GIVENCHY",
+    "price": "1250",
+    "shipping": "$40",
+    "watching": 50,
+    "isSponsored": true,
+    "imageUrl": [
+        "https://i.ebayimg.com/images/g/sx0AAOSw~QBl-Rdi/s-l1600.jpg",
+        "https://i.ebayimg.com/images/g/ZA8AAOSwJKRl-Rdi/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/P6UAAOSwq41l-Rdi/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/StAAAOSwvkBl-Rdj/s-l960.jpg"
+    ],
+    "color": "#faecd7",
+    "condition": "New with the box",
+    "quantity": 0,
+    "details": "✈️6 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥"
+},
+    {
+      "id": 101,
+      "name": "Campus 80s Shoes",
+      "category": "Shoes",
+      "brand": "Nike",
+      "price": 80,
+      "shipping": 27,
+      "watching": 50,
+      "isSponsored": true,
+      "imageUrl": [
+        "https://i.ebayimg.com/images/g/kVUAAOSw4zhl8-p1/s-l1600.jpg",
+        "https://i.ebayimg.com/images/g/QqUAAOSw7U1l8-p2/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/DC8AAOSw~QBl8-p2/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/~6MAAOSw2~Fl8-p3/s-l960.jpg"
+      ],
+      "color": "#000000",
+      "condition": "new with box",
+      "quantity": 0,
+      "details": "✈️2 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥",
+      "discountPercentage": 10.58
+    },
+    {
+      "id": 102,
+      "name": "Dyson V11 Vacuum Cleaner",
+      "category": "Home & Garden",
+      "brand": "Dyson",
+      "price": "120",
+      "shipping": "$27",
+      "watching": 50,
+      "isSponsored": true,
+      "imageUrl": [
+        "https://i.ebayimg.com/images/g/tLUAAOSwIX1lahsX/s-l1600.jpg",
+        "https://i.ebayimg.com/images/g/qzkAAOSwWAhlahsX/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/PDcAAOSw~9tlahsW/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/wAkAAOSwf8xlahsW/s-l960.jpg"
+      ],
+      "color": "#FF5733",
+      "condition": "new with box",
+      "quantity": 0,
+      "details": "✈️2 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥",
+      "discountPercentage": 10.23
+    },
+    {
+      "id": 103,
+      "name": "EcoFlow DELTA Portable Power Station",
+      "category": "Industrial equipment",
+      "brand": "DELTA",
+      "price": "30",
+      "shipping": "$20",
+      "watching": 50,
+      "isSponsored": true,
+      "imageUrl": [
+        "https://i.ebayimg.com/images/g/ZL8AAOSwM8JjJBvs/s-l960.png",
+        "https://i.ebayimg.com/images/g/FzkAAOSwF4BjJBvw/s-l960.png",
+        "https://i.ebayimg.com/images/g/sZkAAOSwaIVjJBvz/s-l960.png",
+        "https://i.ebayimg.com/images/g/a6QAAOSw1QRjJBv~/s-l960.png"
+      ],
+      "color": "#000000",
+      "condition": "new with box",
+      "quantity": 0,
+      "details": "✈️3 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥",
+      "discountPercentage": 10.58
+    },
+    {
+      "id": 104,
+      "name": "Lenovo IdeaPad Gaming 3 AMD Laptop",
+      "category": "Electronics",
+      "brand": "Lenovo",
+      "price": "250",
+      "shipping": "$30",
+      "watching": 50,
+      "isSponsored": true,
+      "imageUrl": [
+       "https://i.ebayimg.com/images/g/OZAAAOSwEfJl1L3q/s-l960.jpg",
+       "https://i.ebayimg.com/images/g/hhAAAOSw4eZl1L3r/s-l960.jpg",
+       "https://i.ebayimg.com/images/g/PPYAAOSw7eFl1L3r/s-l960.jpg",
+       "https://i.ebayimg.com/images/g/0bkAAOSwaKVl1L3r/s-l960.jpg"
+      ],
+      "color": "#000000",
+      "condition": "new with box",
+      "quantity": 0,
+      "details": "✈️2 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥",
+      "discountPercentage": 4.15
+    },
+    {
+      "id": 105,
+      "name": "Crocs Men's and Women Shoes",
+      "category": "Shoes",
+      "brand": "Crocs",
+      "price": "50",
+      "shipping": "$20",
+      "watching": 50,
+      "isSponsored": true,
+      "imageUrl": [
+        "https://i.ebayimg.com/images/g/0v4AAOSwEyBlg7GN/s-l1600.png",
+        "https://i.ebayimg.com/images/g/vigAAOSwRe9lg7GN/s-l960.png",
+        "https://i.ebayimg.com/images/g/bNUAAOSwFmFlg7GN/s-l960.png",
+        "https://i.ebayimg.com/images/g/QFsAAOSwv45lg7GN/s-l960.png"
+      ],
+      "color": "#FF5733",
+      "condition": "new with box",
+      "quantity": 0,
+      "details": "✈️2 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥",
+      "discountPercentage": 11.02
+    },
+    {
+      "id": 106,
+      "name": "Apple iPhone 15 128GB",
+      "category": "Electronics",
+      "brand": "Apple",
+      "price": "860",
+      "shipping": "$27",
+      "watching": 50,
+      "isSponsored": true,
+      "imageUrl": [
+        "https://i.ebayimg.com/images/g/VJUAAOSwwWZl2PI8/s-l1600.jpg",
+        "https://i.ebayimg.com/images/g/t4gAAOSw4eRl3jdG/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/OsIAAOSwL6Bl2PI5/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/LggAAOSwpgBl2PI6/s-l960.jpg"
+      ],
+      "color": "#FF5733",
+      "condition": "new with box",
+      "quantity": 0,
+      "details": "✈️2 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥",
+      "discountPercentage": 4.15
+>>>>>>> 5973c7e7ba11a59489d8bbdafbdf8d49ba23d33d
     }
+  ],
+  "categories": {
+    "category": [
+      {
+        "id": 1,
+        "name": "Partsaccessories"
+      },
+      {
+        "id": 2,
+        "name": "Tradingcards"
+      },
+      {
+        "id": 3,
+        "name": "Pre-lovedluxury"
+      },
+      {
+        "id": 4,
+        "name": "shoes"
+      },
+      {
+        "id": 5,
+        "name": "Watches"
+      },
+      {
+        "id": 6,
+        "name": "Handbags"
+      },
+      {
+        "id": 7,
+        "name": "Startselling"
+      },
+      {
+        "id": 8,
+        "name": "Electronics"
+      },
+      {
+        "id": 9,
+        "name": "Motors"
+      },
+      {
+        "id": 10,
+        "name": "Fashion"
+      },
+      {
+        "id": 11,
+        "name": "CollectiblesandArt"
+      },
+      {
+        "id": 12,
+        "name": "Sports"
+      },
+      {
+        "id": 13,
+        "name": "HealthBeauty"
+      },
+      {
+        "id": 14,
+        "name": "Industrialequipment"
+      },
+      {
+        "id": 15,
+        "name": "HomeGarden"
+      },
+      {
+        "id": 16,
+        "name": "Deals"
+      },
+      {
+        "id": 17,
+        "name": "Sell"
+      },
+      {
+        "id": 18,
+        "name": "seeall"
+      }
+    ]
+  },
+  "featured products": {
+    "product": [
+      {
+        "id": 101,
+        "name": "Campus 80s Shoes",
+        "category": "Shoes",
+        "brand": "Nike",
+        "price": "80",
+        "shipping": "$27",
+        "watching": 50,
+        "isSponsored": true,
+        "imageUrl": [
+          "https://i.ebayimg.com/images/g/raoAAOSwJcFkSs3t/s-l1600.jpg",
+          "https://i.ebayimg.com/images/g/S3wAAOSwWVlkSs3u/s-l960.jpg",
+          "https://i.ebayimg.com/images/g/e80AAOSwjaNkSs3t/s-l960.jpg",
+          "https://i.ebayimg.com/images/g/HfsAAOSw0tNkSs3t/s-l960.jpg"
+        ],
+        "color": "#000000",
+        "condition": "new with box",
+        "quantity": 0,
+        "details": "✈️2 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥",
+        "discountPercentage": 4.15
+      },
+      {
+        "id": 102,
+        "name": "Dyson V11 Vacuum Cleaner",
+        "category": "Home & Garden",
+        "brand": "Dyson",
+        "price": "120",
+        "shipping": "$27",
+        "watching": 50,
+        "isSponsored": true,
+        "imageUrl": [
+          "https://i.ebayimg.com/images/g/raoAAOSwJcFkSs3t/s-l1600.jpg",
+          "https://i.ebayimg.com/images/g/S3wAAOSwWVlkSs3u/s-l960.jpg",
+          "https://i.ebayimg.com/images/g/e80AAOSwjaNkSs3t/s-l960.jpg",
+          "https://i.ebayimg.com/images/g/HfsAAOSw0tNkSs3t/s-l960.jpg"
+        ],
+        "color": "#FF5733",
+        "condition": "new with box",
+        "quantity": 0,
+        "details": "✈️2 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥",
+        "discountPercentage": 4.15
+      },
+      {
+        "id": 103,
+        "name": "EcoFlow DELTA Portable Power Station",
+        "category": "Industrial equipment",
+        "brand": "DELTA",
+        "price": "30",
+        "shipping": "$20",
+        "watching": 50,
+        "isSponsored": true,
+        "imageUrl": [
+          "https://i.ebayimg.com/images/g/raoAAOSwJcFkSs3t/s-l1600.jpg",
+          "https://i.ebayimg.com/images/g/S3wAAOSwWVlkSs3u/s-l960.jpg",
+          "https://i.ebayimg.com/images/g/e80AAOSwjaNkSs3t/s-l960.jpg",
+          "https://i.ebayimg.com/images/g/HfsAAOSw0tNkSs3t/s-l960.jpg"
+        ],
+        "color": "#000000",
+        "condition": "new with box",
+        "quantity": 0,
+        "details": "✈️3 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥",
+        "discountPercentage": 4.15
+      },
+      {
+        "id": 104,
+        "name": "Lenovo IdeaPad Gaming 3 AMD Laptop",
+        "category": "Electronics",
+        "brand": "Lenovo",
+        "price": "250",
+        "shipping": "$30",
+        "watching": 50,
+        "isSponsored": true,
+        "imageUrl": [
+          "https://i.ebayimg.com/images/g/raoAAOSwJcFkSs3t/s-l1600.jpg",
+          "https://i.ebayimg.com/images/g/S3wAAOSwWVlkSs3u/s-l960.jpg",
+          "https://i.ebayimg.com/images/g/e80AAOSwjaNkSs3t/s-l960.jpg",
+          "https://i.ebayimg.com/images/g/HfsAAOSw0tNkSs3t/s-l960.jpg"
+        ],
+        "color": "#000000",
+        "condition": "new with box",
+        "quantity": 0,
+        "details": "✈️2 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥",
+        "discountPercentage": 10.23
+      },
+      {
+        "id": 105,
+        "name": "Crocs Men's and Women Shoes",
+        "category": "Shoes",
+        "brand": "Crocs",
+        "price": "50",
+        "shipping": "$20",
+        "watching": 50,
+        "isSponsored": true,
+        "imageUrl": [
+          "https://i.ebayimg.com/images/g/raoAAOSwJcFkSs3t/s-l1600.jpg",
+          "https://i.ebayimg.com/images/g/S3wAAOSwWVlkSs3u/s-l960.jpg",
+          "https://i.ebayimg.com/images/g/e80AAOSwjaNkSs3t/s-l960.jpg",
+          "https://i.ebayimg.com/images/g/HfsAAOSw0tNkSs3t/s-l960.jpg"
+        ],
+        "color": "#FF5733",
+        "condition": "new with box",
+        "quantity": 0,
+        "details": "✈️2 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥",
+        "discountPercentage": 10.23
+      },
+      {
+        "id": 106,
+        "name": "Apple iPhone 15 128GB",
+        "category": "Electronics",
+        "brand": "Apple",
+        "price": "860",
+        "shipping": "$27",
+        "watching": 50,
+        "isSponsored": true,
+        "imageUrl": [
+          "https://i.ebayimg.com/images/g/raoAAOSwJcFkSs3t/s-l1600.jpg",
+          "https://i.ebayimg.com/images/g/S3wAAOSwWVlkSs3u/s-l960.jpg",
+          "https://i.ebayimg.com/images/g/e80AAOSwjaNkSs3t/s-l960.jpg",
+          "https://i.ebayimg.com/images/g/HfsAAOSw0tNkSs3t/s-l960.jpg"
+        ],
+        "color": "#FF5733",
+        "condition": "new with box",
+        "quantity": 0,
+        "details": "✈️2 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥",
+        "discountPercentage": 10.23
+      }
+    ]
+  },
+  "purchaseProducts": [
+    {
+      "id": 1,
+      "name": "Nike Air Max 95",
+      "category": "payment failed",
+      "brand": "Nike",
+      "price": 40,
+      "shipping": 27,
+      "watching": 50,
+      "isSponsored": true,
+      "imageUrl": [
+        "https://i.ebayimg.com/images/g/raoAAOSwJcFkSs3t/s-l1600.jpg",
+        "https://i.ebayimg.com/images/g/S3wAAOSwWVlkSs3u/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/e80AAOSwjaNkSs3t/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/HfsAAOSw0tNkSs3t/s-l960.jpg"
+      ],
+      "color": "#FF5733",
+      "condition": "new with box",
+      "quantity": 0,
+      "details": "✈️2 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥",
+      "discountPercentage": 12.96
+    },
+    {
+      "id": 2,
+      "name": "Adidas Ultraboost",
+      "category": "processing",
+      "brand": "Adidas",
+      "price": 55,
+      "shipping": 20,
+      "watching": 35,
+      "isSponsored": false,
+      "imageUrl": [
+        "https://i.ebayimg.com/images/g/Tx4AAOSw~QBl-Y-8/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/qEEAAOSwEmNl-Y-s/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/JCAAAOSwixJl-Y-w/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/cycAAOSw9apl-Y-y/s-l960.jpg"
+      ],
+      "color": "#33FF57",
+      "condition": "new without box",
+      "quantity": 0,
+      "details": "✈️6 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥",
+      "discountPercentage": 10.23
+    },
+    {
+      "id": 3,
+      "name": "Puma RS-X",
+      "brand": "Puma",
+      "price": 32,
+      "shipping": 25,
+      "watching": 28,
+      "isSponsored": true,
+      "imageUrl": [
+        "https://i.ebayimg.com/images/g/dfIAAOSwAhxlusUu/s-l1600.jpg",
+        "https://i.ebayimg.com/images/g/w1IAAOSwPBZlusUv/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/ldIAAOSwTchlusUv/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/ZbEAAOSwr0VlusUv/s-l960.jpg"
+      ],
+      "color": "#3366FF",
+      "condition": "new with defects",
+      "category": "unpaid",
+      "quantity": 0,
+      "details": "✈️3 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥",
+      "discountPercentage": 17.94
+    },
+    {
+      "id": 4,
+      "name": "New Balance 990v5",
+      "brand": "New Balance",
+      "price": 48,
+      "shipping": 30,
+      "watching": 42,
+      "isSponsored": false,
+      "imageUrl": [
+        "https://i.ebayimg.com/images/g/axoAAOSwfCZl9aC1/s-l1600.jpg",
+        "https://i.ebayimg.com/images/g/iEIAAOSw-E9l9aCx/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/USkAAOSwYsJl9aC1/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/PRwAAOSwpgRl9aCx/s-l960.jpg"
+      ],
+      "color": "#FFFF33",
+      "condition": "pre-owned",
+      "category": "hidden",
+      "quantity": 0,
+      "details": "✈️4 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥",
+      "discountPercentage": 10.23
+    },
+    {
+      "id": 5,
+      "name": "Reebok Classic Leather",
+      "brand": "Reebok",
+      "price": 290,
+      "shipping": 22,
+      "watching": 18,
+      "isSponsored": true,
+      "imageUrl": [
+        "https://i.ebayimg.com/images/g/uVUAAOSwmyRl8tzg/s-l1600.jpg",
+        "https://i.ebayimg.com/images/g/O-UAAOSwsPBl8tzj/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/fpkAAOSwc0hl8tzn/s-l960.jpg",
+        "https://i.ebayimg.com/images/g/iY4AAOSwQf9l8tzq/s-l960.jpg"
+      ],
+      "color": "#FF3366",
+      "condition": "new with box",
+      "category": "ready for feedback",
+      "quantity": 0,
+      "details": "✈️7 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥",
+      "discountPercentage": 15.46
+    }
+  ]
 }

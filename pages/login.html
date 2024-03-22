@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Metadata -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title -->
+    <title>Sign in or Register | eBay</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/login-styles.css" />
+  </head>
+  <body>
+    <!-- Container -->
+    <div class="container-fluid">
+      <!-- Header -->
+      <div class="row">
+        <div class="col text-end">
+          <!-- Tell us what you think link -->
+          <p>
+            <a href="#" style="text-decoration: none; color: #3665f3"
+              >Tell us what you think</a
+            >
+          </p>
+        </div>
+      </div>
+      <!-- Logo -->
+      <div class="row">
+        <div class="col-md-2">
+          <img
+            onclick="window.location.href='login.html'"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/EBay_logo.svg/1200px-EBay_logo.svg.png"
+            class="img-fluid"
+            width="110"
+            alt="" />
+        </div>
+      </div>
+
+      <!-- Welcome message -->
+      <div class="row">
+        <div class="col text-center">
+          <h2>Hello</h2>
+        </div>
+      </div>
+
+      <!-- Sign in message and registration link -->
+      <div class="row">
+        <div class="col text-center">
+          <h6>
+            Sign in to eBay or
+            <a href="../pages/register.html">create an account</a>
+          </h6>
+        </div>
+      </div>
+
+      <!-- Sign in form -->
+      <div class="row text-center">
+        <div class="col-md-6 offset-md-3">
+          <div class="signin-form">
+            <!-- Error message container -->
+            <div>
+              <div id="email-error" class="error-message"></div>
+              <br />
+              <!-- Email input field -->
+              <input
+                type="text"
+                id="login-email"
+                class="form-control mb-3 email-input"
+                placeholder="Email or Username" />
+              <!-- Continue button -->
+              <button id="login-button" class="btn btn-primary btn-lg mb-3">
+                Continue
+              </button>
+            </div>
+
+            <!-- Horizontal line -->
+            <div class="hr-wrapper">
+              <hr />
+            </div>
+
+            <!-- Social login buttons -->
+            <button
+              class="btn btn-lg mb-3 btn-facebook d-flex justify-content-between align-items-center">
+              <i class="fab fa-facebook-square"></i>
+              <span class="flex-grow-1">Continue with Facebook</span>
+            </button>
+            <button
+              class="btn btn-lg mb-3 btn-google d-flex justify-content-between align-items-center">
+              <i class="fab fa-google"></i>
+              <span class="flex-grow-1">Continue with Google</span>
+            </button>
+            <button
+              class="btn btn-lg mb-3 btn-apple d-flex justify-content-between align-items-center">
+              <i class="fab fa-apple"></i>
+              <span class="flex-grow-1">Continue with Apple</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stay signed in checkbox -->
+      <div class="row">
+        <div class="col text-center">
+          <input type="checkbox" id="stay-signed-in" />
+          <label for="stay-signed-in">Stay signed in</label>
+        </div>
+      </div>
+
+      <!-- Using a public or shared device message -->
+      <div class="row">
+        <div class="col text-center">
+          <p style="margin: 0">Using a public or shared device?</p>
+          <p style="margin: 0">Uncheck to protect your account.</p>
+        </div>
+      </div>
+
+      <!-- Learn more link -->
+      <div class="row">
+        <div class="col text-center">
+          <a href="#" id="learn-more"
+            >Learn more <i class="fas fa-chevron-down"></i
+          ></a>
+          <!-- Information container -->
+          <div id="info-container" class="info-container">
+            <div id="info-box" class="info" style="display: none">
+              <p>
+                With this box checked, we'll keep you signed in, making it
+                easier to bid and buy. You'll also be all set to pay if you've
+                saved your payment info. You can always turn off this feature in
+                My eBay. We may ask you to sign in again for some activities,
+                such as making changes to your account.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="mt-5 small border-top pt-3 bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col text-center">
+              <!-- Footer links -->
+              <p>
+                Copyright © 1995-2024 eBay Inc. All Rights Reserved.
+                <a href="#" class="text-muted">Accessibility</a>,
+                <a href="#" class="text-muted">User Agreement</a>,
+                <a href="#" class="text-muted">Privacy</a>,
+                <a href="#" class="text-muted">Payments Terms of Use</a>,
+                <a href="#" class="text-muted">Cookies</a>,
+                <a href="#" class="text-muted">CA Privacy Notice</a>,
+                <a href="#" class="text-muted">Your Privacy Choices</a>, and
+                <a href="#" class="text-muted">AdChoice</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/1cb0bb75dc.js"
+      crossorigin="anonymous"></script>
+    <!-- Custom JavaScript -->
+    <script src="../js/login.js"></script>
+    <!-- Learn more script -->
+    <script>
+      const learnMoreLink = document.getElementById("learn-more");
+      const infoBox = document.getElementById("info-box");
+
+      learnMoreLink.addEventListener("click", function (event) {
+        event.preventDefault();
+        if (infoBox.style.display === "none") {
+          infoBox.style.display = "block";
+        } else {
+          infoBox.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -13,30 +13,37 @@
 <div class="container">
     <div class="row custom-nav">
 
-        <span class="col-auto">Hi! <a href="" class="">Sign in</a> or <a href="" class="">register</a></span>
-        <a class="col-auto link" href="">Daily Deals</a>
-        <a class="col-auto link" href="">Help & Contact</a>
+        <span id="logorreg" class="col-auto">Hi! <a onclick="login()" class="logorreg">Sign in</a> or <a onclick="register()" class="logorreg">register</a></span>
+        <a class="col-auto custom-link" onclick="fetchCategory(16)">Daily Deals</a>
+        <a class="col-auto custom-link" href="">Help & Contact</a>
 
-        <a class="nav-spacing col-auto link" href="">Ship to</a>
-        <a class="col-auto link" href="">Sell</a>
+        <a class="nav-spacing col-auto custom-link" href="">Ship to</a>
+        <a class="col-auto custom-link" onclick="fetchCategory(17)">Sell</a>
         <div class="dropdown col-auto">
-            <button class="btn dropdown-toggle custom-nav" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <button href="" class="btn dropdown-toggle custom-nav" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Watchlist
             </button>
-            <ul class="dropdown-menu">
+            <!-- <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Action</a></li>
                 <li><a class="dropdown-item" href="#">Another action</a></li>
                 <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
+            </ul> -->
         </div>
         <div class="dropdown col-auto">
             <button class="btn dropdown-toggle custom-nav" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 My eBay
             </button>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li><a class="dropdown-item" href="#">Summary</a></li>
+                <li><a class="dropdown-item" href="#">Recently Viewed</a></li>
+                <li><a class="dropdown-item" href="#">Bids/Offers</a></li>
+                <li><a class="dropdown-item" href="#">Watchlist</a></li>
+                <li><a class="dropdown-item" href="#">Purchase History</a></li>
+                <li><a class="dropdown-item" href="#">Buy Again</a></li>
+                <li><a class="dropdown-item" href="#">Selling</a></li>
+                <li><a class="dropdown-item" href="#">Saved Searches</a></li>
+                <li><a class="dropdown-item" href="#">Saved Sellers</a></li>
+                <li><a class="dropdown-item" href="#">Messages</a></li>
             </ul>
         </div>
 
@@ -72,48 +79,48 @@
                         <div class=" col-lg-4" >
                             <h6>Collectibles & art</h6>
                             <hr>
-                            <p><a href="https://example.com" class="link">Collectibles</a></p>
-                            <p><a href="https://example.com" class="link">Antiques</a></p>
-                            <p><a href="https://example.com" class="link">Sports memorabilia</a></p>
-                            <p><a href="https://example.com" class="link">Art</a></p>
+                            <p><a href="" class="custom-link">Collectibles</a></p>
+                            <p><a href="" class="custom-link">Antiques</a></p>
+                            <p><a href="" class="custom-link">Sports memorabilia</a></p>
+                            <p><a href="" class="custom-link">Art</a></p>
                             
                             <h6>Electronics</h6>
                             <hr>
-                            <p><a href="https://example.com" class="link">Computers & tablets</a></p>
-                            <p><a href="https://example.com" class="link">Cameras & photo</a></p>
-                            <p><a href="https://example.com" class="link">TV, audio & surveillance</a></p>
-                            <p><a href="https://example.com" class="link">Cell phones & accessories</a></p>
+                            <p><a href="" class="custom-link">Computers & tablets</a></p>
+                            <p><a href="" class="custom-link">Cameras & photo</a></p>
+                            <p><a href="" class="custom-link">TV, audio & surveillance</a></p>
+                            <p><a href="" class="custom-link">Cell phones & accessories</a></p>
                             
                             <h6>Fashion</h6>
                             <hr>
-                            <p><a href="https://example.com" class="link">Women</a></p>
-                            <p><a href="https://example.com" class="link">Men</a></p>
-                            <p><a href="https://example.com" class="link">Jewelry & watches</a></p>
-                            <p><a href="https://example.com" class="link">Shoes</a></p>
+                            <p><a href="" class="custom-link">Women</a></p>
+                            <p><a href="" class="custom-link">Men</a></p>
+                            <p><a href="" class="custom-link">Jewelry & watches</a></p>
+                            <p><a href="" class="custom-link">Shoes</a></p>
                             
                         </div>
                         
                         <div class=" col-lg-4">
                         <h6>Home & garden</h6>
                         <hr>
-                        <p><a href="https://example.com" class="link">Yard, garden & outdoor</a></p>
-                        <p><a href="https://example.com" class="link">Crafts</a></p>
-                        <p><a href="https://example.com" class="link">Home improvement</a></p>
-                        <p><a href="https://example.com" class="link">Pet supplies</a></p>
+                        <p><a href="" class="custom-link">Yard, garden & outdoor</a></p>
+                        <p><a href="" class="custom-link">Crafts</a></p>
+                        <p><a href="" class="custom-link">Home improvement</a></p>
+                        <p><a href="" class="custom-link">Pet supplies</a></p>
                         
                         <h6>Auto Parts & Accessories</h6>
                         <hr>
-                        <p><a href="https://example.com" class="link">GPS & Security Devices</a></p>
-                        <p><a href="https://example.com" class="link">Radar & Laser Detectors</a></p>
-                        <p><a href="https://example.com" class="link">Care & Detailing</a></p>
-                        <p><a href="https://example.com" class="link">Scooter Parts & Accessories</a></p>
+                        <p><a href="" class="custom-link">GPS & Security Devices</a></p>
+                        <p><a href="" class="custom-link">Radar & Laser Detectors</a></p>
+                        <p><a href="" class="custom-link">Care & Detailing</a></p>
+                        <p><a href="" class="custom-link">Scooter Parts & Accessories</a></p>
                     
                         <h6>Musical instruments & gear</h6>
                         <hr>
-                        <p><a href="https://example.com" class="link">Guitar</a></p>
-                        <p><a href="https://example.com" class="link">Pro audio equipment</a></p>
-                        <p><a href="https://example.com" class="link">String</a></p>
-                        <p><a href="https://example.com" class="link">Stage lighting & effects</a></p>
+                        <p><a href="" class="custom-link">Guitar</a></p>
+                        <p><a href="" class="custom-link">Pro audio equipment</a></p>
+                        <p><a href="" class="custom-link">String</a></p>
+                        <p><a href="" class="custom-link">Stage lighting & effects</a></p>
                     
 
                         </div>
@@ -121,24 +128,24 @@
                     <div class=" col-lg-4">
                         <h6>Sporting goods</h6>
                         <hr>
-                        <p><a href="https://example.com" class="link">Outdoor sports</a></p>
-                        <p><a href="https://example.com" class="link">Team sports</a></p>
-                        <p><a href="https://example.com" class="link">Exercise & fitness</a></p>
-                        <p><a href="https://example.com" class="link">Golf</a></p>
+                        <p><a href="" class="custom-link">Outdoor sports</a></p>
+                        <p><a href="" class="custom-link">Team sports</a></p>
+                        <p><a href="" class="custom-link">Exercise & fitness</a></p>
+                        <p><a href="" class="custom-link">Golf</a></p>
                     
                         <h6>Toys & hobbies</h6>
                         <hr>
-                        <p><a href="https://example.com" class="link">Radio control</a></p>
-                        <p><a href="https://example.com" class="link">Kids toys</a></p>
-                        <p><a href="https://example.com" class="link">Action figures</a></p>
-                        <p><a href="https://example.com" class="link">Dolls & bears</a></p>
+                        <p><a href="" class="custom-link">Radio control</a></p>
+                        <p><a href="" class="custom-link">Kids toys</a></p>
+                        <p><a href="" class="custom-link">Action figures</a></p>
+                        <p><a href="" class="custom-link">Dolls & bears</a></p>
                     
                         <h6>Other categories</h6>
                         <hr>
-                        <p><a href="https://example.com" class="link">Video games & consoles</a></p>
-                        <p><a href="https://example.com" class="link">Health & beauty</a></p>
-                        <p><a href="https://example.com" class="link">Baby</a></p>
-                        <p><a href="https://example.com" class="link">Business & industrial</a></p>
+                        <p><a href="" class="custom-link">Video games & consoles</a></p>
+                        <p><a href="" class="custom-link">Health & beauty</a></p>
+                        <p><a href="" class="custom-link">Baby</a></p>
+                        <p><a href="" class="custom-link">Business & industrial</a></p>
                     
                     
                     </div>
@@ -196,7 +203,7 @@
 
                 <div class="innerdropdown" onmouseover="showDropdownLinks('savedIcon' , true)" onmouseout="showDropdownLinks('savedIcon' , false)">
                     
-                    <button class="btn link" aria-expanded="false">
+                    <button class="btn custom-link" aria-expanded="false">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="25" height="25">
                             <path fill="pink" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
                         </svg>
@@ -210,7 +217,7 @@
                 </div>
 
                 <div class="innerdropdown" onmouseover="showDropdownLinks('electronicsIcon' , true)" onmouseleave="showDropdownLinks('electronicsIcon' , false)">
-                    <button  class="btn link"   aria-expanded="false" onclick="fetchCategory(8)">
+                    <button  class="btn custom-link"   aria-expanded="false" onclick="fetchCategory(8)">
                         Electronics
                     </button>
                     <ul class="dropdown-menu custom-dropdown-menu" id="electronicsIcon">
@@ -219,25 +226,25 @@
                                 <div class=" col-lg-3" >
                                     <h6>Most popular categories</h6>
                                     <hr>
-                                    <p><a href="https://example.com" class="link">Smartphones</a></p>
-                                    <p><a href="https://example.com" class="link">Video games and consoles</a></p>
-                                    <p><a href="https://example.com" class="link">Computers and tables</a></p>
-                                    <p><a href="https://example.com" class="link">Cameras and photos</a></p>
-                                    <p><a href="https://example.com" class="link">Camera drones</a></p>
-                                    <p><a href="https://example.com" class="link">Refurbished</a></p>
-                                    <p><a href="https://example.com" class="link">Smart home</a></p>
+                                    <p><a href="" class="custom-link">Smartphones</a></p>
+                                    <p><a href="" class="custom-link">Video games and consoles</a></p>
+                                    <p><a href="" class="custom-link">Computers and tables</a></p>
+                                    <p><a href="" class="custom-link">Cameras and photos</a></p>
+                                    <p><a href="" class="custom-link">Camera drones</a></p>
+                                    <p><a href="" class="custom-link">Refurbished</a></p>
+                                    <p><a href="" class="custom-link">Smart home</a></p>
                                 </div>
                                 
                                 <div class=" col-lg-3">
                                     <h6>More categories</h6>
                                     <hr>
-                                    <p><a href="https://example.com" class="link">Apple</a></p>
-                                    <p><a href="https://example.com" class="link">Samsung</a></p>
-                                    <p><a href="https://example.com" class="link">Portable audio and headphones</a></p>
-                                    <p><a href="https://example.com" class="link">Emerging brands</a></p>
-                                    <p><a href="https://example.com" class="link">Smart watches</a></p>
-                                    <p><a href="https://example.com" class="link">Deals</a></p>
-                                    <p><a href="https://example.com" class="link">Sell on eBay</a></p>
+                                    <p><a href="" class="custom-link">Apple</a></p>
+                                    <p><a href="" class="custom-link">Samsung</a></p>
+                                    <p><a href="" class="custom-link">Portable audio and headphones</a></p>
+                                    <p><a href="" class="custom-link">Emerging brands</a></p>
+                                    <p><a href="" class="custom-link">Smart watches</a></p>
+                                    <p><a href="" class="custom-link">Deals</a></p>
+                                    <p><a href="" class="custom-link">Sell on eBay</a></p>
                                 </div>
 
                                 <img class="col-lg-6" src="Assets/images/electro.png"  alt="...">
@@ -248,7 +255,7 @@
                 </div>
 
                 <div class="innerdropdown" onmouseover="showDropdownLinks('motorIcon' , true)" onmouseleave="showDropdownLinks('motorIcon' , false)">
-                    <button class="btn link"   aria-expanded="false" onclick="fetchCategory(9)">
+                    <button class="btn custom-link"   aria-expanded="false" onclick="fetchCategory(9)">
                         Motors
                     </button>
                     <ul class="dropdown-menu custom-dropdown-menu" id="motorIcon">
@@ -257,25 +264,25 @@
                                 <div class=" col-lg-3" >
                                     <h6>Car</h6>
                                     <hr>
-                                    <p><a href="https://example.com" class="link">Auto and truck parts</a></p>
-                                    <p><a href="https://example.com" class="link">Tools and supplies</a></p>
-                                    <p><a href="https://example.com" class="link">Turbo chargers</a></p>
-                                    <p><a href="https://example.com" class="link">Clothing and merchandise</a></p>
-                                    <p><a href="https://example.com" class="link">Electronic and GPS</a></p>
-                                    <p><a href="https://example.com" class="link">Air intake</a></p>
-                                    <p><a href="https://example.com" class="link">Vintage pieces</a></p>
+                                    <p><a href="" class="custom-link">Auto and truck parts</a></p>
+                                    <p><a href="" class="custom-link">Tools and supplies</a></p>
+                                    <p><a href="" class="custom-link">Turbo chargers</a></p>
+                                    <p><a href="" class="custom-link">Clothing and merchandise</a></p>
+                                    <p><a href="" class="custom-link">Electronic and GPS</a></p>
+                                    <p><a href="" class="custom-link">Air intake</a></p>
+                                    <p><a href="" class="custom-link">Vintage pieces</a></p>
                                 </div>
                                 
                                 <div class=" col-lg-3">
                                     <h6>Motorcycle and more</h6>
                                     <hr>
-                                    <p><a href="https://example.com" class="link">Motorcycle parts</a></p>
-                                    <p><a href="https://example.com" class="link">Body and frame</a></p>
-                                    <p><a href="https://example.com" class="link">Engines and parts</a></p>
-                                    <p><a href="https://example.com" class="link">Accessories</a></p>
-                                    <p><a href="https://example.com" class="link">Rims</a></p>
-                                    <p><a href="https://example.com" class="link">Exhausts and systems</a></p>
-                                    <p><a href="https://example.com" class="link">Deals</a></p>
+                                    <p><a href="" class="custom-link">Motorcycle parts</a></p>
+                                    <p><a href="" class="custom-link">Body and frame</a></p>
+                                    <p><a href="" class="custom-link">Engines and parts</a></p>
+                                    <p><a href="" class="custom-link">Accessories</a></p>
+                                    <p><a href="" class="custom-link">Rims</a></p>
+                                    <p><a href="" class="custom-link">Exhausts and systems</a></p>
+                                    <p><a href="" class="custom-link">Deals</a></p>
                                 </div>
                                 <img class="col-lg-6" src="Assets/images/motors.png"  alt="...">
                             </div>
@@ -284,7 +291,7 @@
                 </div>
 
                 <div class="innerdropdown" onmouseover="showDropdownLinks('fashionIcon' , true)" onmouseout="showDropdownLinks('fashionIcon' , false)">
-                    <button class="btn link" aria-expanded="false" onclick="fetchCategory(10)">
+                    <button class="btn custom-link" aria-expanded="false" onclick="fetchCategory(10)">
                         Fashion
                     </button>
                     <ul class="dropdown-menu custom-dropdown-menu" id="fashionIcon">
@@ -293,25 +300,25 @@
                                 <div class=" col-lg-3" >
                                 <h6>Most popular categories</h6>
                                 <hr>
-                                <p><a href="https://example.com" class="link">Footwear</a></p>
-                                <p><a href="https://example.com" class="link">Women's clothing</a></p>
-                                <p><a href="https://example.com" class="link">Footwear for women</a></p>
-                                <p><a href="https://example.com" class="link">Men's clothing</a></p>
-                                <p><a href="https://example.com" class="link">Men's footwear</a></p>
-                                <p><a href="https://example.com" class="link">Watches</a></p>
-                                <p><a href="https://example.com" class="link">Jewelry</a></p>
+                                <p><a href="" class="custom-link">Footwear</a></p>
+                                <p><a href="" class="custom-link">Women's clothing</a></p>
+                                <p><a href="" class="custom-link">Footwear for women</a></p>
+                                <p><a href="" class="custom-link">Men's clothing</a></p>
+                                <p><a href="" class="custom-link">Men's footwear</a></p>
+                                <p><a href="" class="custom-link">Watches</a></p>
+                                <p><a href="" class="custom-link">Jewelry</a></p>
                             </div>
 
                             <div class=" col-lg-3">
                                 <h6>More categories</h6>
                                 <hr>
-                                <p><a href="https://example.com" class="link">Accessories for men</a></p>
-                                <p><a href="https://example.com" class="link">Accessories for women</a></p>
-                                <p><a href="https://example.com" class="link">Bags and wallets for women</a></p>
-                                <p><a href="https://example.com" class="link">Mens sunglasses</a></p>
-                                <p><a href="https://example.com" class="link">Womens sunglasess</a></p>
-                                <p><a href="https://example.com" class="link">Deals</a></p>
-                                <p><a href="https://example.com" class="link">Sell on eBay</a></p>
+                                <p><a href="" class="custom-link">Accessories for men</a></p>
+                                <p><a href="" class="custom-link">Accessories for women</a></p>
+                                <p><a href="" class="custom-link">Bags and wallets for women</a></p>
+                                <p><a href="" class="custom-link">Mens sunglasses</a></p>
+                                <p><a href="" class="custom-link">Womens sunglasess</a></p>
+                                <p><a href="" class="custom-link">Deals</a></p>
+                                <p><a href="" class="custom-link">Sell on eBay</a></p>
                             </div>
                             <img class="col-lg-6" src="Assets/images/fashion.png"  alt="...">
                         </div>
@@ -320,7 +327,7 @@
                 </div>
 
                 <div class="innerdropdown" onmouseover="showDropdownLinks('collectiblesIcon' , true)" onmouseout="showDropdownLinks('collectiblesIcon' , false)">
-                    <button  class="btn link" aria-expanded="false" onclick="fetchCategory(11)">
+                    <button  class="btn custom-link" aria-expanded="false" onclick="fetchCategory(11)">
                         Collectibles and Art
                     </button>
                     <ul class="dropdown-menu custom-dropdown-menu" id="collectiblesIcon">
@@ -329,25 +336,25 @@
                                 <div class=" col-lg-3" >
                                     <h6>Most popular categories</h6>
                                     <hr>
-                                    <p><a href="https://example.com" class="link">Collectibles</a></p>
-                                    <p><a href="https://example.com" class="link">Art</a></p>
-                                    <p><a href="https://example.com" class="link">Action figures</a></p>
-                                    <p><a href="https://example.com" class="link">Cartoon characters</a></p>
-                                    <p><a href="https://example.com" class="link">Movie and TV characters</a></p>
-                                    <p><a href="https://example.com" class="link">Diecast</a></p>
-                                    <p><a href="https://example.com" class="link">Musical memorabilia</a></p>
+                                    <p><a href="" class="custom-link">Collectibles</a></p>
+                                    <p><a href="" class="custom-link">Art</a></p>
+                                    <p><a href="" class="custom-link">Action figures</a></p>
+                                    <p><a href="" class="custom-link">Cartoon characters</a></p>
+                                    <p><a href="" class="custom-link">Movie and TV characters</a></p>
+                                    <p><a href="" class="custom-link">Diecast</a></p>
+                                    <p><a href="" class="custom-link">Musical memorabilia</a></p>
                                 </div>
                                 
                                 <div class=" col-lg-3">
                                     <h6>More categories</h6>
                                     <hr>
-                                    <p><a href="https://example.com" class="link">Sports memorabilia</a></p>
-                                    <p><a href="https://example.com" class="link">Trading card games</a></p>
-                                    <p><a href="https://example.com" class="link">Antiques</a></p>
-                                    <p><a href="https://example.com" class="link">Comics</a></p>
-                                    <p><a href="https://example.com" class="link">Funko pop</a></p>
-                                    <p><a href="https://example.com" class="link">Star Wars</a></p>
-                                    <p><a href="https://example.com" class="link">Sell on eBay</a></p>
+                                    <p><a href="" class="custom-link">Sports memorabilia</a></p>
+                                    <p><a href="" class="custom-link">Trading card games</a></p>
+                                    <p><a href="" class="custom-link">Antiques</a></p>
+                                    <p><a href="" class="custom-link">Comics</a></p>
+                                    <p><a href="" class="custom-link">Funko pop</a></p>
+                                    <p><a href="" class="custom-link">Star Wars</a></p>
+                                    <p><a href="" class="custom-link">Sell on eBay</a></p>
                                 </div>
                                 <img class="col-lg-6" src="Assets/images/collections.png"  alt="...">
                             </div>
@@ -356,7 +363,7 @@
                 </div>
 
                 <div class="innerdropdown" onmouseover="showDropdownLinks('sportsIcon' , true)" onmouseout="showDropdownLinks('sportsIcon' , false)">
-                    <button class="btn link" aria-expanded="false" onclick="fetchCategory(12)">
+                    <button class="btn custom-link" aria-expanded="false" onclick="fetchCategory(12)">
                         Sports
                     </button>
                     <ul class="dropdown-menu custom-dropdown-menu" id="sportsIcon">
@@ -366,25 +373,25 @@
                                 <div class=" col-lg-3" >
                                 <h6>Most popular categories</h6>
                                 <hr>
-                                <p><a href="https://example.com" class="link">Cycling</a></p>
-                                <p><a href="https://example.com" class="link">Fitness, running and yoga</a></p>
-                                <p><a href="https://example.com" class="link">Fitness Tech</a></p>
-                                <p><a href="https://example.com" class="link">Fishing</a></p>
-                                <p><a href="https://example.com" class="link">Camping</a></p>
-                                <p><a href="https://example.com" class="link">Scooters</a></p>
-                                <p><a href="https://example.com" class="link">Team sports</a></p>
+                                <p><a href="" class="custom-link">Cycling</a></p>
+                                <p><a href="" class="custom-link">Fitness, running and yoga</a></p>
+                                <p><a href="" class="custom-link">Fitness Tech</a></p>
+                                <p><a href="" class="custom-link">Fishing</a></p>
+                                <p><a href="" class="custom-link">Camping</a></p>
+                                <p><a href="" class="custom-link">Scooters</a></p>
+                                <p><a href="" class="custom-link">Team sports</a></p>
                             </div>
 
                             <div class=" col-lg-3">
                                 <h6>More categories</h6>
                                 <hr>
-                                <p><a href="https://example.com" class="link">Watersports</a></p>
-                                <p><a href="https://example.com" class="link">Winter sports</a></p>
-                                <p><a href="https://example.com" class="link">Box and MMA</a></p>
-                                <p><a href="https://example.com" class="link">Swimming</a></p>
-                                <p><a href="https://example.com" class="link">GPS & Running Watches</a></p>
-                                <p><a href="https://example.com" class="link">Deals</a></p>
-                                <p><a href="https://example.com" class="link">Sell on eBay</a></p>
+                                <p><a href="" class="custom-link">Watersports</a></p>
+                                <p><a href="" class="custom-link">Winter sports</a></p>
+                                <p><a href="" class="custom-link">Box and MMA</a></p>
+                                <p><a href="" class="custom-link">Swimming</a></p>
+                                <p><a href="" class="custom-link">GPS & Running Watches</a></p>
+                                <p><a href="" class="custom-link">Deals</a></p>
+                                <p><a href="" class="custom-link">Sell on eBay</a></p>
                             </div>
                             <img class="col-lg-6" src="Assets/images/sports.png"  alt="...">
                         </div>
@@ -393,7 +400,7 @@
                 </div>
 
                 <div class="innerdropdown" onmouseover="showDropdownLinks('healthIcon' , true)" onmouseout="showDropdownLinks('healthIcon' , false)">
-                    <button class="btn link" aria-expanded="false" onclick="fetchCategory(13)">
+                    <button class="btn custom-link" aria-expanded="false" onclick="fetchCategory(13)">
                         Health & Beauty
                     </button>
                     <ul class="dropdown-menu custom-dropdown-menu" id="healthIcon">
@@ -402,25 +409,25 @@
                                 <div class=" col-lg-3" >
                                     <h6>Most popular categories</h6>
                                     <hr>
-                                    <p><a href="https://example.com" class="link">Beauty</a></p>
-                                    <p><a href="https://example.com" class="link">Makeup</a></p>
-                                    <p><a href="https://example.com" class="link">Health</a></p>
-                                    <p><a href="https://example.com" class="link">K-Beauty</a></p>
-                                    <p><a href="https://example.com" class="link">Manicure and pedicure</a></p>
-                                    <p><a href="https://example.com" class="link">Hair products</a></p>
-                                    <p><a href="https://example.com" class="link">Skin products</a></p>
+                                    <p><a href="" class="custom-link">Beauty</a></p>
+                                    <p><a href="" class="custom-link">Makeup</a></p>
+                                    <p><a href="" class="custom-link">Health</a></p>
+                                    <p><a href="" class="custom-link">K-Beauty</a></p>
+                                    <p><a href="" class="custom-link">Manicure and pedicure</a></p>
+                                    <p><a href="" class="custom-link">Hair products</a></p>
+                                    <p><a href="" class="custom-link">Skin products</a></p>
                                 </div>
                                 
                                 <div class=" col-lg-3">
                                     <h6>More categories</h6>
                                     <hr>
-                                    <p><a href="https://example.com" class="link">Vitamins and food supplements</a></p>
-                                    <p><a href="https://example.com" class="link">Shaving and waxing</a></p>
-                                    <p><a href="https://example.com" class="link">Bath and personal hygiene</a></p>
-                                    <p><a href="https://example.com" class="link">Oral hygiene</a></p>
-                                    <p><a href="https://example.com" class="link">Massagers</a></p>
-                                    <p><a href="https://example.com" class="link">Deals</a></p>
-                                    <p><a href="https://example.com" class="link">Sell on eBay</a></p>
+                                    <p><a href="" class="custom-link">Vitamins and food supplements</a></p>
+                                    <p><a href="" class="custom-link">Shaving and waxing</a></p>
+                                    <p><a href="" class="custom-link">Bath and personal hygiene</a></p>
+                                    <p><a href="" class="custom-link">Oral hygiene</a></p>
+                                    <p><a href="" class="custom-link">Massagers</a></p>
+                                    <p><a href="" class="custom-link">Deals</a></p>
+                                    <p><a href="" class="custom-link">Sell on eBay</a></p>
                                 </div>
                                 <img class="col-lg-6" src="Assets/images/health.png"  alt="...">
                             </div>
@@ -429,7 +436,7 @@
                 </div>
 
                 <div class="innerdropdown" onmouseover="showDropdownLinks('industrialIcon' , true)" onmouseout="showDropdownLinks('industrialIcon' , false)">
-                    <button class="btn link" aria-expanded="false"  onclick="fetchCategory(14)">
+                    <button class="btn custom-link" aria-expanded="false"  onclick="fetchCategory(14)">
                         Industrial equipment
                     </button>
                     <ul class="dropdown-menu custom-dropdown-menu" id="industrialIcon">
@@ -439,25 +446,25 @@
                                 <div class=" col-lg-3" >
                                     <h6>Most popular categories</h6>
                                     <hr>
-                                    <p><a href="https://example.com" class="link">Dental healthcare</a></p>
-                                    <p><a href="https://example.com" class="link">Electronic equipment and supplies</a></p>
-                                    <p><a href="https://example.com" class="link">Metallurgy and manufacturing</a></p>
-                                    <p><a href="https://example.com" class="link">Motors and industrial automation</a></p>
-                                    <p><a href="https://example.com" class="link">Heavy equipment parts</a></p>
-                                    <p><a href="https://example.com" class="link">Light industrial tools</a></p>
-                                    <p><a href="https://example.com" class="link">Packing and shipping</a></p>
+                                    <p><a href="" class="custom-link">Dental healthcare</a></p>
+                                    <p><a href="" class="custom-link">Electronic equipment and supplies</a></p>
+                                    <p><a href="" class="custom-link">Metallurgy and manufacturing</a></p>
+                                    <p><a href="" class="custom-link">Motors and industrial automation</a></p>
+                                    <p><a href="" class="custom-link">Heavy equipment parts</a></p>
+                                    <p><a href="" class="custom-link">Light industrial tools</a></p>
+                                    <p><a href="" class="custom-link">Packing and shipping</a></p>
                                 </div>
                                 
                                 <div class=" col-lg-3">
                                     <h6>More categories</h6>
                                     <hr>
-                                    <p><a href="https://example.com" class="link">Office supplies and equipment</a></p>
-                                    <p><a href="https://example.com" class="link">Printing and graphic arts</a></p>
-                                    <p><a href="https://example.com" class="link">Restaurants and food service</a></p>
-                                    <p><a href="https://example.com" class="link">Maintenance and safety</a></p>
-                                    <p><a href="https://example.com" class="link">Retail and services</a></p>
-                                    <p><a href="https://example.com" class="link">Deals</a></p>
-                                    <p><a href="https://example.com" class="link">Sell on eBay</a></p>
+                                    <p><a href="" class="custom-link">Office supplies and equipment</a></p>
+                                    <p><a href="" class="custom-link">Printing and graphic arts</a></p>
+                                    <p><a href="" class="custom-link">Restaurants and food service</a></p>
+                                    <p><a href="" class="custom-link">Maintenance and safety</a></p>
+                                    <p><a href="" class="custom-link">Retail and services</a></p>
+                                    <p><a href="" class="custom-link">Deals</a></p>
+                                    <p><a href="" class="custom-link">Sell on eBay</a></p>
                                 </div>
                                 <img class="col-lg-6" src="Assets/images/industrial.png"  alt="...">
                             </div>
@@ -466,7 +473,7 @@
                 </div>
 
                 <div class="innerdropdown" onmouseover="showDropdownLinks('homeGardenIcon' , true)" onmouseout="showDropdownLinks('homeGardenIcon' , false)">
-                    <button class="btn link" aria-expanded="false" onclick="fetchCategory(15)">
+                    <button class="btn custom-link" aria-expanded="false" onclick="fetchCategory(15)">
                         Home & Garden
                     </button>
                     <ul class="dropdown-menu custom-dropdown-menu" id="homeGardenIcon">
@@ -476,25 +483,25 @@
                                 <div class=" col-lg-3" >
                                 <h6>Most popular categories</h6>
                                 <hr>
-                                <p><a href="https://example.com" class="link">Workshop Tools and Equipment</a></p>
-                                <p><a href="https://example.com" class="link">Patio, garden and outdoors</a></p>
-                                <p><a href="https://example.com" class="link">Home improvement</a></p>
-                                <p><a href="https://example.com" class="link">Kitchen, dining and bar</a></p>
-                                <p><a href="https://example.com" class="link">Lamps, lights and fans</a></p>
-                                <p><a href="https://example.com" class="link">Interior decoration</a></p>
-                                <p><a href="https://example.com" class="link">Home organization</a></p>
+                                <p><a href="" class="custom-link">Workshop Tools and Equipment</a></p>
+                                <p><a href="" class="custom-link">Patio, garden and outdoors</a></p>
+                                <p><a href="" class="custom-link">Home improvement</a></p>
+                                <p><a href="" class="custom-link">Kitchen, dining and bar</a></p>
+                                <p><a href="" class="custom-link">Lamps, lights and fans</a></p>
+                                <p><a href="" class="custom-link">Interior decoration</a></p>
+                                <p><a href="" class="custom-link">Home organization</a></p>
                             </div>
 
                             <div class=" col-lg-3">
                                 <h6>More categories</h6>
                                 <hr>
-                                <p><a href="https://example.com" class="link">Toys</a></p>
-                                <p><a href="https://example.com" class="link">Pets</a></p>
-                                <p><a href="https://example.com" class="link">Crafts</a></p>
-                                <p><a href="https://example.com" class="link">Art supplies</a></p>
-                                <p><a href="https://example.com" class="link">Musical instruments</a></p>
-                                <p><a href="https://example.com" class="link">Deals</a></p>
-                                <p><a href="https://example.com" class="link">Sell on eBay</a></p>
+                                <p><a href="" class="custom-link">Toys</a></p>
+                                <p><a href="" class="custom-link">Pets</a></p>
+                                <p><a href="" class="custom-link">Crafts</a></p>
+                                <p><a href="" class="custom-link">Art supplies</a></p>
+                                <p><a href="" class="custom-link">Musical instruments</a></p>
+                                <p><a href="" class="custom-link">Deals</a></p>
+                                <p><a href="" class="custom-link">Sell on eBay</a></p>
                             </div>
                             <img class="col-lg-6" src="Assets/images/home.png"  alt="...">
                         </div>
@@ -503,7 +510,7 @@
                 </div>
 
                 <div class="innerdropdown" onmouseover="showDropdownLinks('dealsIcon' , true)" onmouseout="showDropdownLinks('dealsIcon' , false)">
-                    <button class="btn link" aria-expanded="false"  onclick="fetchCategory(16)">
+                    <button class="btn custom-link" aria-expanded="false"  onclick="fetchCategory(16)">
                         Deals
                     </button>
                     <ul class="dropdown-menu custom-dropdown-menu" id="dealsIcon">
@@ -513,25 +520,25 @@
                                 <div class=" col-lg-3" >
                                 <h6>Most popular categories</h6>
                                 <hr>
-                                <p><a href="https://example.com" class="link">Smartphones</a></p>
-                                <p><a href="https://example.com" class="link">Video games and consoles</a></p>
-                                <p><a href="https://example.com" class="link">Computers and tables</a></p>
-                                <p><a href="https://example.com" class="link">Cameras and photos</a></p>
-                                <p><a href="https://example.com" class="link">Camera drones</a></p>
-                                <p><a href="https://example.com" class="link">Refurbished</a></p>
-                                <p><a href="https://example.com" class="link">Smart home</a></p>
+                                <p><a href="" class="custom-link">Smartphones</a></p>
+                                <p><a href="" class="custom-link">Video games and consoles</a></p>
+                                <p><a href="" class="custom-link">Computers and tables</a></p>
+                                <p><a href="" class="custom-link">Cameras and photos</a></p>
+                                <p><a href="" class="custom-link">Camera drones</a></p>
+                                <p><a href="" class="custom-link">Refurbished</a></p>
+                                <p><a href="" class="custom-link">Smart home</a></p>
                             </div>
 
                             <div class=" col-lg-3">
                                 <h6>More categories</h6>
                                 <hr>
-                                <p><a href="https://example.com" class="link">Apple</a></p>
-                                <p><a href="https://example.com" class="link">Samsung</a></p>
-                                <p><a href="https://example.com" class="link">Portable audio and headphones</a></p>
-                                <p><a href="https://example.com" class="link">Emerging brands</a></p>
-                                <p><a href="https://example.com" class="link">Smart watches</a></p>
-                                <p><a href="https://example.com" class="link">Deals</a></p>
-                                <p><a href="https://example.com" class="link">Sell on eBay</a></p>
+                                <p><a href="" class="custom-link">Apple</a></p>
+                                <p><a href="" class="custom-link">Samsung</a></p>
+                                <p><a href="" class="custom-link">Portable audio and headphones</a></p>
+                                <p><a href="" class="custom-link">Emerging brands</a></p>
+                                <p><a href="" class="custom-link">Smart watches</a></p>
+                                <p><a href="" class="custom-link">Deals</a></p>
+                                <p><a href="" class="custom-link">Sell on eBay</a></p>
                             </div>
                         </div>
                     </div>
@@ -539,7 +546,7 @@
                 </div>
 
                 <div class="innerdropdown" onmouseover="showDropdownLinks('sellIcon' , true)" onmouseout="showDropdownLinks('sellIcon' , false)">
-                    <button class="btn link" aria-expanded="false"  onclick="fetchCategory(17)">
+                    <button class="btn custom-link" aria-expanded="false"  onclick="fetchCategory(17)">
                         Sell
                     </button>
                     <ul class="dropdown-menu custom-dropdown-menu" id="sellIcon">
@@ -549,22 +556,22 @@
                                 <div class=" col-lg-3" >
                                     
                                 <hr>
-                                <p><a href="https://example.com" class="link">How to create a listing</a></p>
-                                <p><a href="https://example.com" class="link">Join our growth program</a></p>
-                                <p><a href="https://example.com" class="link">Seller center</a></p>
-                                <p><a href="https://example.com" class="link">Seller updates</a></p>
-                                <p><a href="https://example.com" class="link">Seller customer service</a></p>
-                                <p><a href="https://example.com" class="link">eBay managed payments</a></p>
+                                <p><a href="" class="custom-link">How to create a listing</a></p>
+                                <p><a href="" class="custom-link">Join our growth program</a></p>
+                                <p><a href="" class="custom-link">Seller center</a></p>
+                                <p><a href="" class="custom-link">Seller updates</a></p>
+                                <p><a href="" class="custom-link">Seller customer service</a></p>
+                                <p><a href="" class="custom-link">eBay managed payments</a></p>
                                 
                             </div>
 
                             <div class=" col-lg-3">
                                 
                                 <hr>
-                                <p><a href="https://example.com" class="link">Learn to sell</a></p>
-                                <p><a href="https://example.com" class="link">eBay stores</a></p>
-                                <p><a href="https://example.com" class="link">eBay fees</a></p>
-                                <p><a href="https://example.com" class="link">Selling limits</a></p>
+                                <p><a href="" class="custom-link">Learn to sell</a></p>
+                                <p><a href="" class="custom-link">eBay stores</a></p>
+                                <p><a href="" class="custom-link">eBay fees</a></p>
+                                <p><a href="" class="custom-link">Selling limits</a></p>
                             </div>
                             <img class="col-lg-6" src="Assets/images/sale.png"  alt="...">
                         </div>
@@ -629,8 +636,8 @@
     
     
     <div>
-        <h3 href="https://example.com" class="link custom-header">Explore Popular Categories</h3>
-        <h6 href="https://example.com" class="link custom-see-all">see all</h6>
+        <h3 onclick="fetchCategory(18)" class="custom-link custom-header">Explore Popular Categories</h3>
+        <h6 onclick="fetchCategory(18)" class="custom-link custom-see-all">see all</h6>
     </div>
 
     <div class="row">
@@ -638,58 +645,58 @@
         <div class="custom-categories custom-column">
             
             <div class="card-body" onclick="fetchCategory(1)">
-            <a class="link"><img src="Assets/images/tire.jpg" class="card-img-top" alt="...">Parts & accessories</a>
+            <a class="custom-link"><img src="Assets/images/tire.jpg" class="card-img-top" alt="...">Parts & accessories</a>
             </div>
         </div>
         <div class="custom-categories custom-column" >
             
             <div class="card-body" onclick="fetchCategory(2)">
-            <a class="link"><img src="Assets/images/cards.jpg" class="card-img-top" alt="...">Trading cards</a>
+            <a class="custom-link"><img src="Assets/images/cards.jpg" class="card-img-top" alt="...">Trading cards</a>
             </div>
         </div>
         <div class="custom-categories custom-column">
             
             <div class="card-body" onclick="fetchCategory(3)">
-            <a class="link"><img src="Assets/images/hermasbag.jpg" class="card-img-top" alt="...">Pre-loved luxury</a>
+            <a class="custom-link"><img src="Assets/images/hermasbag.jpg" class="card-img-top" alt="...">Pre-loved luxury</a>
             </div>
         </div>
         <div class="custom-categories custom-column">
             
             <div class="card-body" onclick="fetchCategory(4)">
-            <a class="link"><img src="Assets/images/sneaker.jpg" class="card-img-top" alt="...">Sneakers</a>
+            <a class="custom-link"><img src="Assets/images/sneaker.jpg" class="card-img-top" alt="...">Sneakers</a>
             </div>
         </div>
         <div class="custom-categories custom-column">
             
             <div class="card-body" onclick="fetchCategory(5)">
-            <a class="link"><img src="Assets/images/watch.jpg" class="card-img-top" alt="...">Watches</a>
+            <a class="custom-link"><img src="Assets/images/watch.jpg" class="card-img-top" alt="...">Watches</a>
             </div>
         </div>
         <div class="custom-categories custom-column">
             
             <div class="card-body" onclick="fetchCategory(6)">
-            <a class="link"><img src="Assets/images/bags.jpg" class="card-img-top" alt="...">Handbags</a>
+            <a class="custom-link"><img src="Assets/images/bags.jpg" class="card-img-top" alt="...">Handbags</a>
             </div>
         </div>
         <div class="custom-categories custom-column">
             
             <div class="card-body" onclick="fetchCategory(7)">
-            <a class="link"><img src="Assets/images/box.jpg" class="card-img-top" alt="...">Start selling</a>
+            <a class="custom-link"><img src="Assets/images/box.jpg" class="card-img-top" alt="...">Start selling</a>
             </div>
         </div>
     </div>
 
     
     <div>
-        <h3 href="https://example.com" class="link custom-header">Today's Deals-All With Frees Shipping</h3>
-        <h6 href="https://example.com" class="link custom-see-all">see all</h6>
+        <h3 onclick="fetchCategory(18)" class="custom-link custom-header">Today's Deals-All With Frees Shipping</h3>
+        <h6 onclick="fetchCategory(18)" class="custom-link custom-see-all">see all</h6>
     </div>
 
     
         
         <div class=" cards-container">
             <div class="row" style="width: 1800px;" id="cardGroup">
-                    <div class="card">         <!-- onclick="sendProductDetails()"  -->
+                    <div class="card card-dimensions">         <!-- onclick="sendProductDetails()"  -->
                         <div class="custom-image-background">
                             <div style="position: relative;">
 
@@ -708,13 +715,13 @@
                             </div>
                         </div>
                     <div class="card-body">
-                    <h6 id="campusinfo" href="https://example.com" class="link">Campus 80s Shoes</h6>
+                    <h6 id="campusinfo" href="" class="custom-link">Campus 80s Shoes</h6>
                     
                         <h6 href="#" class="card-link">150$</h6>
                     </div>
                     </div>
 
-                    <div class="card">
+                    <div class="card card-dimensions">
                         <div class="custom-image-background">
                             <div style="position: relative;">
 
@@ -734,13 +741,13 @@
                             </div>
                         </div>
                     <div class="card-body">
-                    <h6 id="dysoninfo" href="https://example.com" class="link">Dyson V11 Vacuum Cleaner</h6>
+                    <h6 id="dysoninfo" href="" class="custom-link">Dyson V11 Vacuum Cleaner</h6>
                     
                         <h6 href="#" class="card-link">150$</h6>
                     </div>
                     </div>
 
-                    <div class="card">
+                    <div class="card card-dimensions">
                         <div class="custom-image-background">
                             <div style="position: relative;">
                                 
@@ -761,13 +768,13 @@
                             
                         </div>
                         <div class="card-body">
-                            <h6 id="ecoflowinfo" href="https://example.com" class="link">EcoFlow DELTA Portable Power Station</h6>
+                            <h6 id="ecoflowinfo" href="" class="custom-link">EcoFlow DELTA Portable Power Station</h6>
                             <h6 href="#" class="card-link">150$</h6>
                         </div>
                     </div>
                     
                     
-                    <div class="card">
+                    <div class="card card-dimensions">
                         <div class="custom-image-background">
                             <div style="position: relative;">
 
@@ -787,12 +794,12 @@
                         </div>
                         </div>
                         <div class="card-body">
-                            <h6 id="laptopinfo" href="https://example.com" class="link">Lenovo IdeaPad Gaming 3 AMD Laptop, 15.6"FHD</h6>
+                            <h6 id="laptopinfo" href="" class="custom-link">Lenovo IdeaPad Gaming 3 AMD Laptop, 15.6"FHD</h6>
                         <h6 href="#" class="card-link">150$</h6>
                     </div>
                 </div>
                 
-                <div class="card">
+                <div class="card card-dimensions">
                     <div class="custom-image-background">
                         <div style="position: relative;">
 
@@ -812,12 +819,12 @@
                         </div>
                     </div>
                     <div class="card-body">
-                            <h6 id="crocsinfo" href="https://example.com" class="link">Crocs Men's and Women Shoes - Bayaband Chevron Clogs</h6>
+                            <h6 id="crocsinfo" href="" class="custom-link">Crocs Men's and Women Shoes - Bayaband Chevron Clogs</h6>
                         <h6 href="#" class="card-link">150$</h6>
                     </div>
                 </div>
                 
-                <div class="card">
+                <div class="card card-dimensions">
                     <div class="custom-image-background">
                         <div style="position: relative;">
 
@@ -836,7 +843,7 @@
                         </div>
                     </div>
                     <div class="card-body">
-                    <h6 id="iphoneinfo" href="https://example.com" class="link">Apple iPhone 15 128GB Factory Unlocked</h6>
+                    <h6 id="iphoneinfo" href="" class="custom-link">Apple iPhone 15 128GB Factory Unlocked</h6>
                         
                     <h6 href="#" class="card-link">150$</h6>
                     </div>
@@ -867,57 +874,57 @@
         <div class="custom-footer container">
             <div class=" row">
                 <div class="custom-footer-column">
-                    <h6 href="https://example.com" class="footer-heads link">Buy</h6>
-                    <p><a href="https://example.com" class="link">Registration</a></p>
-                    <p><a href="https://example.com" class="link">eBay Money Back Guarantee</a></p>
-                    <p><a href="https://example.com" class="link">Bidding & buying help</a></p>
-                    <p><a href="https://example.com" class="link">Stores</a></p>
+                    <h6 href="" class="footer-heads custom-link">Buy</h6>
+                    <p><a href="" class="custom-link">Registration</a></p>
+                    <p><a href="" class="custom-link">eBay Money Back Guarantee</a></p>
+                    <p><a href="" class="custom-link">Bidding & buying help</a></p>
+                    <p><a href="" class="custom-link">Stores</a></p>
                 </div>
                 <div class="custom-footer-column">
                     <div>
-                        <h6 href="https://example.com" class="footer-heads link">Sell</h6>
-                        <p><a href="https://example.com" class="link">Start selling</a></p>
-                        <p><a href="https://example.com" class="link">Learn to sell</a></p>
-                        <p><a href="https://example.com" class="link">Affiliates</a></p>
+                        <h6 href="" onclick="fetchCategory(17)" class="footer-heads link">Sell</h6>
+                        <p><a href="" onclick="fetchCategory(17)" class="link">Start selling</a></p>
+                        <p><a href="" class="custom-link">Learn to sell</a></p>
+                        <p><a href="" class="custom-link">Affiliates</a></p>
                     </div>
                     <div>
-                        <h6 href="https://example.com" class="footer-heads link">Tools & apps</h6>
-                        <p><a href="https://example.com" class="link">Developers</a></p>
-                        <p><a href="https://example.com" class="link">Security center</a></p>
-                        <p><a href="https://example.com" class="link">Site map</a></p>
+                        <h6 href="" class="footer-heads custom-link">Tools & apps</h6>
+                        <p><a href="" class="custom-link">Developers</a></p>
+                        <p><a href="" class="custom-link">Security center</a></p>
+                        <p><a href="" class="custom-link">Site map</a></p>
                     </div>
                 </div>
                 <div class="custom-footer-column">
-                    <h6 href="https://example.com" class="footer-heads link">Stay connected</h6>
-                    <p><a href="https://example.com" class="link">eBay's Blogs</a></p>
-                    <p><a href="https://example.com" class="link">Facebook</a></p>
-                    <p><a href="https://example.com" class="link">Twitter</a></p>
+                    <h6 href="" class="footer-heads custom-link">Stay connected</h6>
+                    <p><a href="" class="custom-link">eBay's Blogs</a></p>
+                    <p><a href="" class="custom-link">Facebook</a></p>
+                    <p><a href="" class="custom-link">Twitter</a></p>
                 </div>
                 <div class="custom-footer-column">
-                    <h6 href="https://example.com" class="footer-heads link">About eBay</h6>
-                    <p><a href="https://example.com" class="link">Company info</a></p>
-                    <p><a href="https://example.com" class="link">News</a></p>
-                    <p><a href="https://example.com" class="link">Investors</a></p>
-                    <p><a href="https://example.com" class="link">Careers</a></p>
-                    <p><a href="https://example.com" class="link">Government relations</a></p>
-                    <p><a href="https://example.com" class="link">Advertise with us</a></p>
-                    <p><a href="https://example.com" class="link">Policies</a></p>
-                    <p><a href="https://example.com" class="link">Verified Rights Owner (VeRO) Program</a></p>
+                    <h6 href="" class="footer-heads custom-link">About eBay</h6>
+                    <p><a href="" class="custom-link">Company info</a></p>
+                    <p><a href="" class="custom-link">News</a></p>
+                    <p><a href="" class="custom-link">Investors</a></p>
+                    <p><a href="" class="custom-link">Careers</a></p>
+                    <p><a href="" class="custom-link">Government relations</a></p>
+                    <p><a href="" class="custom-link">Advertise with us</a></p>
+                    <p><a href="" class="custom-link">Policies</a></p>
+                    <p><a href="" class="custom-link">Verified Rights Owner (VeRO) Program</a></p>
                 </div>
                 <div class="custom-footer-column">
                     <div>
-                        <h6 href="https://example.com" class="footer-heads link">Help & Contact</h6>
-                        <p><a href="https://example.com" class="link">Seller Information Center</a></p>
-                        <p><a href="https://example.com" class="link">Contact us</a></p>
+                        <h6 href="" class="footer-heads custom-link">Help & Contact</h6>
+                        <p><a href="" class="custom-link">Seller Information Center</a></p>
+                        <p><a href="" class="custom-link">Contact us</a></p>
                     </div>
                     <div>
-                        <h6 href="https://example.com" class="footer-heads link">Community</h6>
-                        <p><a href="https://example.com" class="link">Announcements</a></p>
-                        <p><a href="https://example.com" class="link">Discussion boards</a></p>
-                        <p><a href="https://example.com" class="link">eBay Giving Works</a></p>
+                        <h6 href="" class="footer-heads custom-link">Community</h6>
+                        <p><a href="" class="custom-link">Announcements</a></p>
+                        <p><a href="" class="custom-link">Discussion boards</a></p>
+                        <p><a href="" class="custom-link">eBay Giving Works</a></p>
                     </div>
                     <div>
-                        <h6 class="footer-heads link ">eBay Sites</h6>
+                        <h6 class="footer-heads custom-link ">eBay Sites</h6>
 
                         <div class="" onmouseover="languages('countryDropdown', true)" onmouseout="languages('countryDropdown', false)">
                             <button type="button" class="btn" >Language..</button>

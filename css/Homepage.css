@@ -2,8 +2,12 @@
     font-size: 12px;
 }
 
+.logorreg {
+    color: rgb(63, 63, 255);
+    text-decoration: underline; 
+}
 .nav-spacing{
-    margin-left: 540px;
+    margin-left: 500px;
 }
 .custom-nav a,span {
     padding-top: 7px;
@@ -112,12 +116,12 @@
 
 
 
-.link {
+.custom-link {
     color: black; 
     text-decoration: none; 
 }
 
-.link:hover {
+.custom-link:hover {
     color: black; 
     text-decoration: underline; 
     cursor: pointer; 
@@ -269,7 +273,7 @@
 
 
 
-.card {
+.card-dimensions {
     width: 275px;
     height: 380px; 
     margin-left: 20px;
