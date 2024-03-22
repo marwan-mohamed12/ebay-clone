@@ -110,7 +110,6 @@ document.addEventListener("DOMContentLoaded", function() {
 // Retrieve cart items from local storage
 const items = JSON.parse(localStorage.getItem('cartItems'));
 console.log(items);
-
 // Select the cart container where you want to display the items
 const cartContainer = document.getElementById('reviewCart');
 console.log(cartContainer);
@@ -128,7 +127,7 @@ if (items && cartContainer) {
         card.innerHTML = `
             <div class="row">
                 <div class="col-3">
-                    <img src="${item.image}" class="img-fluid" alt="${item.name}">
+                    <img style="margin-bottom: 10px;"src="${item.image}" class="img-fluid" alt="${item.name}">
                 </div>
                 <div class="col-3">
                     <h6 class="card-title">${item.name}</h6>
@@ -136,9 +135,10 @@ if (items && cartContainer) {
                 <div class="col-2">
                     <h5>Qty: ${item.quantity || 1}</h5> <!-- Display quantity as a span -->
                 </div>    
-                <div class="col-1">
-                    <h5>${item.price}</h5>
+                <div class="col-3">
+                    <h5>Price: $${item.price}</h5>
                 </div>
+                <h6>Authorities may apply duties, fees, and taxes upon delivery</h6>
                 <hr>
             </div>`;
         
@@ -203,3 +203,5 @@ document.addEventListener('DOMContentLoaded', function() {
         confirmButton.disabled = true;
     });
 });
+
+

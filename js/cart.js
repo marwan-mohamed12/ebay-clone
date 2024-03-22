@@ -43,7 +43,7 @@ export class Cart {
     
     removeItem(productId) {
         // Remove the item with the given productId from the cart
-        this.items = this.items.filter(item => item.id !== productId);
+        this.items = this.items.filter(item => item.id != productId);
     
         // Save the updated cart to local storage
         this.saveToLocalStorage();
@@ -64,17 +64,20 @@ export class Cart {
     calculateNumOfItems() {
         let totalItems = 0;
         this.items.forEach(item => {
-            totalItems += item.quantity || 1;
+            totalItems += parseInt(item.quantity) || 0; // Parse quantity as integer
         });
         document.getElementById('realQty').innerHTML = totalItems;
         localStorage.setItem('totalItems', totalItems);
     }
+    
 
     calculateSubTotal() {
         let subTotal = 0;
     
         this.items.forEach(item => {
-            subTotal += parseFloat(item.price.replace('$', '')) * (item.quantity || 1);
+            // Ensure item.price is a string before attempting to replace
+            const price = typeof item.price === 'string' ? item.price : item.price.toString();
+            subTotal += parseFloat(price.replace('$', '')) * (item.quantity || 1);
         });
     
         localStorage.setItem('subTotal', subTotal);
@@ -83,6 +86,7 @@ export class Cart {
     
         return subTotal;
     }
+    
     
     calculateShipping() {
         const shipping = this.calculateSubTotal() * 0.15;
@@ -111,21 +115,35 @@ export class Cart {
         });
     }
 
-    updateQuantity(itemId, newQuantity) {
+    increaseQuantity(itemId) {
         const quantityInput = document.getElementById('quantity-' + itemId);
-        newQuantity = Math.max(1, newQuantity); // Ensure quantity doesn't go below 1
-        quantityInput.value = newQuantity;
-        const existingItemIndex = this.items.findIndex(item => item.id === itemId);
-        if (existingItemIndex !== -1) {
-            this.items[existingItemIndex].quantity = newQuantity;
+        const currentQuantity = parseInt(quantityInput.value) || 0; // Parse the value as an integer, default to 0 if parsing fails
+        quantityInput.value = currentQuantity + 1;
+        this.updateCartItemQuantity(itemId, quantityInput.value);
+    }
+    
+    decreaseQuantity(itemId) {
+        const quantityInput = document.getElementById('quantity-' + itemId);
+        const currentQuantity = parseInt(quantityInput.value) || 0; // Parse the value as an integer, default to 0 if parsing fails
+        quantityInput.value = Math.max(currentQuantity - 1, 1); // Ensure quantity doesn't go below 1
+        this.updateCartItemQuantity(itemId, quantityInput.value);
+    }
+    
+
+    updateCartItemQuantity(itemId, quantity) {
+        const existingItem = this.items.find(item => item.id == itemId);
+        if (existingItem) {
+            existingItem.quantity = quantity;
             this.saveToLocalStorage();
             this.calculateNumOfItems();
             this.calculateSubTotal();
-            // this.calculateShipping();
+            this.calculateShipping();
             this.calculateTotal();
         }
     }
+    
 
+    
     displayCart() {
         const cartContainer = document.getElementById('cartData');
         
@@ -140,31 +158,47 @@ export class Cart {
                 const card = document.createElement('div');
                 card.classList.add('productDetails');
                 card.innerHTML = `
-                    <div class="row">
-                        <div class="col-3">
-                            <img src="${item.image}" class="img-fluid" alt="${item.name}">
+                <div class="row">
+                <div class="row">
+                    <div class="col">
+                        <div>
+                            <a href="#">Find similar items</a>
                         </div>
-                        <div class="col-3">
-                            <p class="card-title">${item.name}</p>
-                        </div>    
-                        <div class="col-2">
-                            <span>Qty</span>
-                            <input type="text" class="form-control quantity" id="quantity-${item.id}" value="${item.quantity || 1}">
-                            <div class="row">
-                                <div class="col-6">
-                                    <button class="btn btn-outline-primary decrease" data-item-id="${item.id}" type="button">-</button>
-                                </div>
-                                <div class="col-4">
-                                    <button class="btn btn-outline-primary increase" data-item-id="${item.id}" type="button">+</button>
-                                </div>
-                            </div>
-                            </div>    
-                        <div class="col-1">
-                            <p>${item.price}</p>
-                            <button class="btn btn-outline-primary remove" data-item-id="${item.id}" type="button">remove</button>
-                        </div>
-                        <hr>
-                    </div>`;
+                    </div>
+                    <div class="col"></div>
+                    <div class="col">
+                        <p>Request combined shipping</p>
+                    </div>
+                </div>
+                <br><br>
+                <div class="row">
+                    <div class="col">
+                        <img src="${item.image}" class="img-fluid" alt="${item.name}" style="margin-bottom: 10px;">
+                    </div>
+                    <div class="col">
+                        <h3 class="card-title">${item.name}</h3>
+                    </div>
+                    <div class="col">
+    <h3>Qty</h3>
+    <div class="input-group">
+        <button class="btn btn-outline-primary decrease" data-item-id="${item.id}" type="button">-</button>
+        <input type="text" class="form-control form-control-sm quantity" id="quantity-${item.id}" value="${item.quantity || 1}" style="width: 30px; font-size: 30px; text-align: center;">
+        <button class="btn btn-outline-primary increase" data-item-id="${item.id}" type="button">+</button>
+    </div>
+</div>
+
+                    <div class="col-3">
+                        <h3>Price:</h3>
+                        <h4>$${item.price}</h4>
+                        <button class="btn btn-outline-primary remove" data-item-id="${item.id}" type"button" style="background: none; border: none; color: blue; text-decoration: underline; cursor: pointer;">remove</button>
+                        <br>
+                        <button type"button" style="background: none; border: none; color: blue; text-decoration: underline; cursor: pointer;">Save for later</button>
+                        <button type"button" style="background: none; border: none; color: blue; text-decoration: underline; cursor: pointer;">Pay only this seller</button>
+                    </div>
+                </div>
+                <hr>
+            </div>`
+            ;
                 
                 // Append the card to the cart container
                 cartContainer.appendChild(card);
@@ -185,7 +219,7 @@ export class Cart {
                     const itemId = event.target.dataset.itemId;
                     const quantityInput = document.getElementById('quantity-' + itemId);
                     const newQuantity = parseInt(quantityInput.value) + 1;
-                    this.updateQuantity(itemId, newQuantity);
+                    this.increaseQuantity(itemId, newQuantity);
                 });
             });
             
@@ -193,20 +227,19 @@ export class Cart {
             decreaseButtons.forEach(button => {
                 button.addEventListener('click', event => {
                     const itemId = event.target.dataset.itemId;
-                    const quantityInput = document.getElementById('quantity-' + itemId);
-                    const newQuantity = parseInt(quantityInput.value) - 1;
-                    this.updateQuantity(itemId, newQuantity);
+                    this.decreaseQuantity(itemId); // Corrected function call
                 });
             });
             
             const quantityInputs = document.querySelectorAll('.quantity');
-            quantityInputs.forEach(input => {
-                input.addEventListener('input', event => {
-                    const itemId = event.target.id.split('-')[1];
-                    const newQuantity = parseInt(event.target.value);
-                    this.updateQuantity(itemId, newQuantity);
-                });
-            });
+quantityInputs.forEach(input => {
+    input.addEventListener('input', event => {
+        const itemId = event.target.id.split('-')[1];
+        const newQuantity = parseInt(event.target.value);
+        this.updateCartItemQuantity(itemId, newQuantity); 
+    });
+});
+
             
         } else {
             console.error('Cart container element not found');
@@ -216,3 +249,4 @@ export class Cart {
 
 // Create an instance of the Cart class
 const cart = new Cart();
+

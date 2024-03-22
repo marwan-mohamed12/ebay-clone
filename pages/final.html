@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You</title>
     <link rel="stylesheet" href="../css/final.css" />
+    <link rel="stylesheet" href="../css/Homepage.css" />
+
     <link rel="icon" href="https://pages.ebay.com/favicon.ico"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"/>
 </head>
 <body>
-    <!-- The header of the page -->
-    <header></header>
-
-    <hr>
+   
 
     <div class="containerFinal">
         <div class="container">
@@ -20,7 +19,7 @@
             <div class="col-9">
                 <div class="row">
                     <img src="../Assets/shopping-cart.png" alt="Shopping Cart">
-                    <h3>Thank you for your precious time, your order is ready!</h3> <!-- Centered -->
+                    <h3 style="text-align: center;">Thank you for your precious time, your order is ready!</h3>
                     <div class="row subTotal">
                         <div class="col-8">
                             <h3>Order Total:</h3>
@@ -30,7 +29,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <button id="confirm" type="button" class="btn btn-primary rounded-pill center-button" onclick="clearLocalStorage()">Continue Shopping</button>
+                        <a id="confirm" href="#" class="btn btn-primary rounded-pill center-button" onclick="clearLocalStorage()" style="font-size: 14px; padding: 10px 20px; background-color: white; color: black;">Continue Shopping</a>
                     </div>
                     <div class="row">
                         <div class="col-12">
@@ -43,9 +42,9 @@
         </div>
     </div>
 
-    <footer></footer>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/final.js"></script>
+    <script src="../js/Homepage.js"></script>
 </body>
 </html>
