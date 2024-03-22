@@ -40,18 +40,20 @@ async function loadPage(isWatchlistActive = true) {
 		mainBody.innerHTML = `<h1 class="text-center">No products in your ${isWatchlistActive ? 'Watchlist' : 'Purchase'}</h1>`;
 	} else {
 		mainBody.innerHTML = page;
-		addCategoryBtnsFunctionality();
+		addCategoryBtnsFunctionality(isWatchlistActive);
 	}
 }
 
-const addCategoryBtnsFunctionality = async () => {
+const addCategoryBtnsFunctionality = async (isWatchlistActive) => {
 	const categoriesBtns = document.querySelectorAll('[data-category]');
 	categoriesBtns.forEach((btn) => {
 		btn.addEventListener('click', async (e) => {
 			const category = e.target.dataset.category;
-			const products = await fetchWatchlistProducts();
+			const products = isWatchlistActive
+				? await fetchWatchlistProducts()
+				: await fetchPurchaseProducts();
 			const filteredProducts =
-				category === 'all categories'
+				category === 'all categories' || category === 'all purchases'
 					? products
 					: products.filter((product) => product.category === category);
 			const productContainer = document.querySelector('[data-products-container]');

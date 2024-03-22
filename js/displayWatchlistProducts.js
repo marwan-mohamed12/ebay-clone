@@ -114,7 +114,7 @@ function displayCategoryBtns(products) {
 const watchlistCategoryBtn = (category, count) => {
 	return `
 		<button class="btn btn-sm px-3 btn-outline-secondary rounded-5 fs-8 text-capitalize" type="button" data-category="${category}">
-        ${category} <span>(${count})</span>
+        ${category} <span class="pe-none">(${count})</span>
 		</button>
 	`;
 };
