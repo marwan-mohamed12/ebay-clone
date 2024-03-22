@@ -37,7 +37,7 @@ const purchaseTemplate = function (products) {
               ${displayCategoryBtns(products)}
             </div>
 
-						<div data-products-container>
+						<div class="" data-products-container style="min-height: 200px">
               ${displayProducts(products)}
             </div>
 					

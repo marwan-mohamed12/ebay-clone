@@ -14,6 +14,16 @@ const mainBody = document.querySelector('[data-main-body]');
 // const purchaseBtn = document.querySelector('[data-sidebarShow="purchase"]');
 
 // ---------------- Functions ------------------
+if (JSON.parse(localStorage.getItem('isAuthenticated'))) {
+	const username = localStorage.getItem('userName');
+	const signBtn = document.querySelector('.sign-btn');
+	signBtn.innerHTML = '';
+	signBtn.innerHTML = `
+	
+		Hi! ${username}
+	
+	`;
+}
 
 function changeIconColor() {
 	bookmarkIcon.classList.toggle('bi-bookmark');
