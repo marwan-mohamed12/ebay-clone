@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Nike Air Max 95",
-      "category": "Partsaccessories",
+      "category": "shoes",
       "brand": "Nike",
       "price": 40,
       "shipping": 27,
@@ -24,7 +24,7 @@
     {
       "id": 2,
       "name": "Adidas Ultraboost",
-      "category": "Partsaccessories",
+      "category": "shoes",
       "brand": "Adidas",
       "price": 55,
       "shipping": 20,
@@ -45,6 +45,7 @@
     {
       "id": 3,
       "name": "Puma RS-X",
+      "category": "Partsaccessories",
       "brand": "Puma",
       "price": 32,
       "shipping": 25,
@@ -58,7 +59,6 @@
       ],
       "color": "#3366FF",
       "condition": "new with defects",
-      "category": "shoes",
       "quantity": 0,
       "details": "✈️3 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥",
       "discountPercentage": 17.94
@@ -66,6 +66,7 @@
     {
       "id": 4,
       "name": "New Balance 990v5",
+      "category": "shoes",
       "brand": "New Balance",
       "price": 48,
       "shipping": 30,
@@ -79,7 +80,6 @@
       ],
       "color": "#FFFF33",
       "condition": "pre-owned",
-      "category": "shoes",
       "quantity": 0,
       "details": "✈️4 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥",
       "discountPercentage": 10.23
@@ -87,6 +87,7 @@
     {
       "id": 5,
       "name": "Reebok Classic Leather",
+      "category": "shoes",
       "brand": "Reebok",
       "price": 290,
       "shipping": 22,
@@ -100,7 +101,6 @@
       ],
       "color": "#FF3366",
       "condition": "new with box",
-      "category": "shoes",
       "quantity": 0,
       "details": "✈️7 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥",
       "discountPercentage": 15.46
@@ -108,6 +108,7 @@
     {
       "id": 6,
       "name": "Vans Old Skool Pro Skate Shoes - Blackout",
+      "category": "shoes",
       "brand": "Vans",
       "price": 60.00,
       "shipping": 10.00,
@@ -121,7 +122,6 @@
       ],
       "color": "#66FF33",
       "condition": "pre-owned",
-      "category": "shoes",
       "quantity": 0,
       "details": "✈️2 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥",
       "discountPercentage": 10.23
@@ -129,6 +129,7 @@
     {
       "id": 7,
       "name": "Asics Gel-Lyte III - White/Purple",
+      "category": "shoes",
       "brand": "Asics",
       "price": 70.00,
       "shipping": 15.00,
@@ -142,7 +143,6 @@
       ],
       "color": "#33FFFF",
       "condition": "new without box",
-      "category": "shoes",
       "quantity": 0,
       "details": "✈️4 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥",
       "discountPercentage": 15.46
@@ -150,6 +150,7 @@
     {
       "id": 8,
       "name": "Nike Air Max 95",
+      "category": "shoes",
       "brand": "Nike",
       "price": 240,
       "shipping": 27,
@@ -163,7 +164,6 @@
       ],
       "color": "#33FFFF",
       "condition": "new with box",
-      "category": "shoes",
       "quantity": 0,
       "details": "✈️9 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥",
       "discountPercentage": 10.23
@@ -171,6 +171,7 @@
     {
       "id": 9,
       "name": "Asics Gel-Lyte III - White/Purple",
+      "category": "shoes",
       "brand": "Asics",
       "price": 170,
       "shipping": 15,
@@ -184,7 +185,6 @@
       ],
       "color": "#33FFFF",
       "condition": "new without box",
-      "category": "shoes",
       "quantity": 0,
       "details": "✈️7 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥",
       "discountPercentage": 17.91
@@ -192,6 +192,7 @@
     {
       "id": 10,
       "name": "Vans Old Skool Pro Skate Shoes - Blackout",
+      "category": "shoes",
       "brand": "Vans",
       "price": 160.00,
       "shipping": 10.00,
@@ -205,7 +206,6 @@
       ],
       "color": "#66FF33",
       "condition": "pre-owned",
-      "category": "shoes",
       "quantity": 0,
       "details": "✈️2 DAY✈️│✔️ 1 YEAR WARRANTY✔️│🔥GREAT LOW PRICE🔥",
       "discountPercentage": 10.23
@@ -213,7 +213,7 @@
     {
     "id": 11,
     "name": "Louis Vuitton Monogram Verreur W Tote BB",
-    "category": "Prelovedluxury",
+    "category": "Pre-lovedluxury",
     "brand": "Louis Vuitton",
     "price": "1560",
     "shipping": "$37",
@@ -234,7 +234,7 @@
 {
     "id": 12,
     "name": "Celine Nano Belt Bag Grained Calfskin Leather",
-    "category": "Prelovedluxury",
+    "category": "Pre-lovedluxury",
     "brand": "Celine",
     "price": "1360",
     "shipping": "$27",
@@ -254,7 +254,7 @@
 {
     "id": 13,
     "name": "Bottega Veneta Women Green Envelope Leather Purse",
-    "category": "Prelovedluxury",
+    "category": "Pre-lovedluxury",
     "brand": "Bottega",
     "price": "3260",
     "shipping": "$47",
@@ -274,7 +274,7 @@
 {
     "id": 14,
     "name": "Salvatore Ferragamo Men Black Pebble Leather Travel Briefcase",
-    "category": "Prelovedluxury",
+    "category": "Pre-lovedluxury",
     "brand": "Salvatore Ferragamo",
     "price": "1760",
     "shipping": "$27",
@@ -294,7 +294,7 @@
 {
     "id": 15,
     "name": "Dolgabas Cage Bag",
-    "category": "Prelovedluxury",
+    "category": "Pre-lovedluxury",
     "brand": "DOLCE&GABBANA",
     "price": "560",
     "shipping": "$27",
@@ -314,7 +314,7 @@
 {
     "id": 16,
     "name": "Tom Ford Women's Brown Fur",
-    "category": "Prelovedluxury",
+    "category": "Pre-lovedluxury",
     "brand": "Tom Ford",
     "price": "460",
     "shipping": "$27",
@@ -334,7 +334,7 @@
 {
     "id": 17,
     "name": "HERMES Belt Reversible Epsom",
-    "category": "Prelovedluxury",
+    "category": "Pre-lovedluxury",
     "brand": "HERMES",
     "price": "1860",
     "shipping": "$27",
@@ -354,7 +354,7 @@
 {
     "id": 18,
     "name": "Louis Vuitton Pallas Shopper Chain Shoulder Bag",
-    "category": "Prelovedluxury",
+    "category": "Pre-lovedluxury",
     "brand": "Louis Vuitton",
     "price": "1660",
     "shipping": "$27",
@@ -374,7 +374,7 @@
 {
     "id": 19,
     "name": "L'Afshar Women Clear Leon Translucent Box Chain Shoulder Clutch Bag",
-    "category": "Prelovedluxury",
+    "category": "Pre-lovedluxury",
     "brand": "L'Afshar",
     "price": "1227",
     "shipping": "$27",
@@ -394,7 +394,7 @@
 {
     "id": 20,
     "name": "Louis Vuitton Teddy Muffle Calfskin Monogram Black Handwarmer Shoulder Bag",
-    "category": "Prelovedluxury",
+    "category": "Pre-lovedluxury",
     "brand": "Louis Vuitton",
     "price": "2560",
     "shipping": "$27",
@@ -684,10 +684,10 @@
       "watching": 50,
       "isSponsored": true,
       "imageUrl": [
-       "https://i.ebayimg.com/images/g/OZAAAOSwEfJl1L3q/s-l960.jpg",
-       "https://i.ebayimg.com/images/g/hhAAAOSw4eZl1L3r/s-l960.jpg",
-       "https://i.ebayimg.com/images/g/PPYAAOSw7eFl1L3r/s-l960.jpg",
-       "https://i.ebayimg.com/images/g/0bkAAOSwaKVl1L3r/s-l960.jpg"
+      "https://i.ebayimg.com/images/g/OZAAAOSwEfJl1L3q/s-l960.jpg",
+      "https://i.ebayimg.com/images/g/hhAAAOSw4eZl1L3r/s-l960.jpg",
+      "https://i.ebayimg.com/images/g/PPYAAOSw7eFl1L3r/s-l960.jpg",
+      "https://i.ebayimg.com/images/g/0bkAAOSwaKVl1L3r/s-l960.jpg"
       ],
       "color": "#000000",
       "condition": "new with box",

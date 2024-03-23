@@ -321,7 +321,7 @@ function fetchFeaturedProductData(productId) {
         if (product) {
         // console.log(product);
         
-        window.location.href = `Product.html?id=${productId}`;
+        window.location.href = `pages/ProductDetails.html?id=${productId}`;
         } else {
         console.error('Product not found');
         }
@@ -338,7 +338,7 @@ function fetchCategory(categoryId) {
         if (category) {
         // console.log(category.name);
         
-        window.location.href = `productList.html?category=${category.name}`;
+        window.location.href = `pages/productList.html?category=${category.name}`;
         } else {
         console.error('Category not found');
         }
@@ -347,7 +347,7 @@ function fetchCategory(categoryId) {
 }
 
 function login(){
-    window.location.href = `login.html`
+    window.location.href = `pages/login.html`
 }
 
 function logout(){
@@ -357,5 +357,5 @@ function logout(){
 }
 
 function register(){
-    window.location.href = `register.html`
+    window.location.href = `pages/register.html`
 }
