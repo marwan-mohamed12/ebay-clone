@@ -1,3 +1,12 @@
+if (JSON.parse(localStorage.getItem('isAuthenticated'))) {
+	const username = localStorage.getItem('userName');
+	const signBtn = document.querySelector('.sign-btn');
+	signBtn.innerHTML = '';
+	signBtn.innerHTML = `
+        Hi! ''${username}''
+    `;
+}
+
 export class Cart {
 	constructor() {
 		this.items = JSON.parse(localStorage.getItem('cartItems')) || [];
