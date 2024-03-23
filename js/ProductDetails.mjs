@@ -110,8 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
               <button class="btn btn-primary active my-2 p-5 rounded-pill py-2" type="button"><span class="fw-bold">Buy It Now</span></button>
           </a>
           <button id="add-to-cart" class="btn btn-primary my-2 py- rounded-pill py-2">Add to cart</button>
-          
-+          <button id="addToWatchlistBtn" class="btn btn-outline-primary p-5 rounded-pill py-2"><i class="fa-regular fa-heart"></i> Add to watchlist</button>
+         <button id="addToWatchlistBtn" class="btn btn-outline-primary p-5 rounded-pill py-2"><i class="fa-regular fa-heart"></i> Add to watchlist</button>
       </div>
   `;
 

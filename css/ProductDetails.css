@@ -30,9 +30,7 @@
     
 }
 
-.search-input {
-        padding-left: 30px; 
-        background-image: url('../Assets/images/search.svg');
+.search-input {     
         background-repeat: no-repeat;
         background-position: 5px center;
         background-size: 20px 20px; 
@@ -215,13 +213,14 @@
 
 
 .carousel-inner{
-    background-color: rgb(9, 9, 18);
+    background-color: rgb(245, 245, 255);
     height: 600px;
     border-radius: 2%;
 }
 .carousel-item{
     width: 100%;
     height: 100%;
+    object-fit: contain;
 }
 
 .carousel-control-prev-icon,
@@ -252,7 +251,7 @@
 
 .carousel-item img{
     max-width: 100% !important;
-    max-height: 100% !important;
+    max-height: 600px !important;
     object-fit: contain;
  
 }
