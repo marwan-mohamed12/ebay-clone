@@ -64,16 +64,11 @@
 }
 
 .search-input {
-        padding-left: 30px; /* Adjust according to the width of your SVG */
+        padding-left: 30px !important; 
         background-repeat: no-repeat;
-        background-position: 5px center; /* Adjust according to your icon's alignment */
-        background-size: 20px 20px; /* Adjust according to your icon's size */
+        background-position: 5px center; 
+        background-size: 20px 20px; 
     }
-
-    .search-input::placeholder {
-        padding-left: 30px;
-    }
-
 
 .home-link{
     text-underline-offset: 8px;
