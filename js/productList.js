@@ -191,7 +191,7 @@ const createProductElement = (
 					<h5 class="card-title">${name}</h5>
 					<div class="card-text">
 						<span class="d-block mb-1 fw-bold">$${price}</span>
-						<span class="d-block mb-1 text-muted d-block">${shipping ? "$" + shipping : "Free shipping"
+						<span class="d-block mb-1 text-muted d-block">${shipping ? "$" + shipping + " shipping" : "Free shipping"
 		}</span>
 						<span class="d-block mb-1 text-danger">${watching} watching</span>
 						<p class="mt-2 mb-0 text-muted">${isSponsored ? "SPONSORED" : ""}</p>
