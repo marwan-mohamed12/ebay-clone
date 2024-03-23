@@ -103,22 +103,22 @@
                             </div>
                             <div class="col-5">
                                 <label for="securityCode">Security code:</label>
-                                <input type="text" id="securityCode" name="securityCode"><br>
+                                <input type="text" id="securityCode" pattern="\d{4}" name="securityCode"><br>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-5">
                                 <label for="firstName">First name:</label>
-                                <input type="text" id="firstName" name="firstName">
+                                <input type="text" id="firstName" pattern="[A-Za-z]+" name="firstName">
                             </div>
                             <div class="col-5">
                                 <label for="lastName">Last name:</label>
-                                <input type="text" id="lastName" name="lastName"><br>
+                                <input type="text" id="lastName" pattern="[A-Za-z]+" name="lastName"><br>
                             </div>
                         </div>
     
-                        <input type="checkbox" id="rememberCard" name="rememberCard">
+                        <input type="checkbox" pattern="[0-9]+" id="rememberCard" name="rememberCard">
                         <label for="rememberCard">Remember this card for future orders</label><br>
 
                         <div class="row">
@@ -138,15 +138,15 @@
         <!-- the end of the payment options -->
         <br>
         <!-- the start of the form -->
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="form-container">
                 <div class="col-4">
-                    <h3>Ship To</h3>
+                    <h2>Ship To</h2>
                 </div>
                 <form id="checkoutForm">
                     <div class="row">
                         <div class="col-8">
-                            <div class="form-group">
+                            <div class="form-group" style="width: 350px;">
                                 <label for="country">Country or region</label>
                                 <select id="country" name="country">
                                 <option value="Egypt">Egypt</option>
@@ -160,52 +160,52 @@
                         
                     </div>
                     <div class="row">
-                        <div class="col-4">
+                        <div class="col-6">
                             <label for="firstName">First name</label>
-                            <input type="text" id="firstName" name="firstName">
+                            <input style="width: 350px;" pattern="[A-Za-z]+" type="text" id="firstName" name="firstName">
                         </div>
-                        <div class="col-4">
+                        <div class="col-6">
                             <label for="lastName">Last name</label>
-                            <input type="text" id="lastName" name="lastName">
+                            <input style="width: 350px;" pattern="[A-Za-z]+" type="text" id="lastName" name="lastName">
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-4">
+                        <div class="col-6">
                             <label for="streetAddress">Street address</label>
-                            <input type="text" id="streetAddress" name="streetAddress">
+                            <input style="width: 350px;" type="text" id="streetAddress" name="streetAddress">
                         </div>
-                        <div class="col-4">
+                        <div class="col-6">
                             <label for="streetAddress2">Street address 2 (optional)</label>
-                            <input type="text" id="streetAddress2" name="streetAddress2">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-2">
-                            <label for="city">City</label>
-                            <input type="text" id="city" name="city">
-                        </div>
-                        <div class="col-2">
-                            <label for="state">State/Province/Region</label>
-                            <input type="text" id="state" name="state">
-                        </div>
-                        <div class="col-2">
-                            <label for="zipCode">ZIP code</label>
-                            <input type="text" id="zipCode" name="zipCode">
+                            <input style="width: 350px;" type="text" id="streetAddress2" name="streetAddress2">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-4">
+                            <label for="city">City</label>
+                            <input  type="text" id="city" name="city">
+                        </div>
+                        <div class="col-4">
+                            <label for="state">State/Province/Region</label>
+                            <input style="width: 140;" type="text" id="state" name="state">
+                        </div>
+                        <div class="col-4">
+                            <label for="zipCode">ZIP code</label>
+                            <input type="text" id="zipCode" pattern="\d{4}" name="zipCode">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6" >
                             <label for="countryCode">Country Code</label>
-                            <select id="countryCode" name="countryCode">
+                            <select style="width: 350px;" id="countryCode" name="countryCode">
                                 <option value="+20">Egypt (+20)</option>
                                 <option value="+1">USA (+1)</option>
                                 <option value="+44">UK (+44)</option>
                                 <!-- Add more options as needed -->
                             </select>
                         </div>
-                        <div class="col-4">
+                        <div class="col-6">
                             <label for="phoneNumber">Phone number (required)</label>
-                            <input type="tel" id="phoneNumber" name="phoneNumber">
+                            <input style="width: 350px;" pattern="[0-9]+" type="tel" id="phoneNumber" name="phoneNumber">
                         </div>
                     </div>
                     <div class="form-group">
@@ -272,7 +272,7 @@
               </div>
               <br>
               <div class="row">
-                <button id="confirm" type="button" class="btn btn-primary rounded-pill center-button">Confirm and Pay</button>
+                <button id="confirm" type="button" class="btn btn-primary rounded-pill center-button" disabled>Confirm and Pay</button>
               </div>
               <div class="row">
                 <div class="col-12">
@@ -282,6 +282,19 @@
         </div>
         <!-- the end of the right side -->
     </div>
+    <script>
+        // Function to check if both forms are submitted
+        function checkForms() {
+            var checkoutFormSubmitted = document.getElementById('checkoutForm').submitted;
+            var cardFormSubmitted = document.getElementById('cardForm').submitted;
+
+            // If both forms are submitted, enable the "Confirm and Pay" button
+            if (checkoutFormSubmitted && cardFormSubmitted) {
+                document.getElementById('confirm').disabled = false;
+            }
+        }
+    </script>
     <script src="../js/checkout.js"></script>
+    
 </body>
 </html>

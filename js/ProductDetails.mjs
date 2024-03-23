@@ -1,16 +1,6 @@
+import { Cart } from "./cart.js";
 // Function to fetch product data from JSON file
 import { Cart } from "../js/cart.js";
-
-if (JSON.parse(localStorage.getItem("isAuthenticated"))) {
-    const username = localStorage.getItem("userName");
-    const signBtn = document.querySelector(".sign-btn");
-    signBtn.innerHTML = '';
-    signBtn.innerHTML = `
-    
-        Hi! ''${username}''
-    
-    `;
-}
 
 document.addEventListener("DOMContentLoaded", function () {
     const cartInstance = new Cart();
@@ -110,51 +100,17 @@ function updateProductDetails(product) {
           <a href="https://signin.ebay.com/ws/eBayISAPI.dll?SignIn&ru=https%3A%2F%2Fcart.payments.ebay.com%2F">
               <button class="btn btn-primary my-2 py- rounded-pill py-2">Add to cart</button>
           </a>
-          <button id="addToWatchlistBtn" class="btn btn-outline-primary p-5 rounded-pill py-2"><i class="fa-regular fa-heart"></i> Add to watchlist</button>
+          <button class="btn btn-outline-primary p-5 rounded-pill py-2"><i class="fa-regular fa-heart"></i> Add to watchlist</button>
       </div>
   `;
-const addToWatchlistBtn = document.getElementById('addToWatchlistBtn');
-function addToWatchlist(product) {
-    let watchlist = [];
-
-    // Check if watchlist already exists in localStorage
-    if (localStorage.getItem('watchlist')) {
-        watchlist = JSON.parse(localStorage.getItem('watchlist'));
-        
-        // Check if product already exists in the watchlist
-        const productIndex = watchlist.findIndex(item => item.id === product.id);
-        if (productIndex !== -1) {
-            console.log('Product already exists in the watchlist.');
-            return;
-        }
-       
-            // Add product to the watchlist
-        
-    }
-            watchlist.push(product);
-            localStorage.setItem('watchlist', JSON.stringify(watchlist));
-
-    }
-
-
-
-
-addToWatchlistBtn.addEventListener("click", function () {
-    // Assuming 'product' is defined somewhere in your code
-    addToWatchlist(product);
-    console.log (JSON.parse(localStorage.getItem('watchlist')));
-});
-
-  
-
-
   var addToCartBtn = document.createElement('button');
     addToCartBtn.textContent = 'Add to Cart';
     addToCartBtn.className = 'add-to-cart';
 
     addToCartBtn.addEventListener("click", function (event) {
         event.preventDefault();
-      
+        window.location.href = "./CartPage.html";
+        cartInstance.addItem(product);
     });
 
 
