@@ -23,7 +23,7 @@ This repository contains the source code for an eBay clone, developed using mode
 To get started with running the eBay Clone locally, follow these steps:
 1. Clone the repository to your local machine:
    ```
-      git clone https://github.com/your-username/ebay-clone.git
+      git clone https://github.com/marwan-mohamed12/ebay-clone.git
    ```
 2. Navigate to the project directory:
    ```
