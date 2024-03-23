@@ -2,7 +2,7 @@ const total = localStorage.getItem('total');
 document.getElementById('totalAmount').innerHTML = total;
 
 function clearLocalStorage() {
-    localStorage.clear();
+    // localStorage.clear();
     // Redirect to homepage or any other page
-    window.location.href = "../pages/Homepage.html";
+    window.location.href = "../index.html";
 }
