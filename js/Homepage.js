@@ -359,3 +359,8 @@ function logout(){
 function register(){
     window.location.href = `pages/register.html`
 }
+
+
+function homepage(){
+    window.location.href = `index.html`
+}
