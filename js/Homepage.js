@@ -180,17 +180,37 @@ $.ajax({
 let count=0; //number of items on savedIcon
 
 function saveItem(elementId, elementImgId, elementInfoId) {
-    
     let elementImage = document.getElementById(elementImgId).getAttribute('src');
     let elementInfo = document.getElementById(elementInfoId).innerText;
     let savedItems = document.getElementById('savedIcon');
+    
+    // Define itemIdVar outside the switch block
+    let itemIdVar;
 
+    switch (elementId) {
+        case 'campus':
+            itemIdVar = 101;
+            break;
+        case 'dyson':
+            itemIdVar = 102;
+            break;
+        case 'ecoflow':
+            itemIdVar = 103;
+            break;
+        case 'laptop':
+            itemIdVar = 104;
+            break;
+        case 'crocs':
+            itemIdVar = 105;
+            break;
+        case 'iphone':
+            itemIdVar = 106;
+            break;
+    }
     
     let existingItem = savedItems.querySelector(`#${elementId}-data`);
 
     if (!existingItem) {
-        
-
         let imgElement = document.createElement('img');
         imgElement.setAttribute('src', elementImage);
         imgElement.setAttribute('alt', '');
@@ -206,6 +226,9 @@ function saveItem(elementId, elementImgId, elementInfoId) {
         block.setAttribute('href', '#');
         block.setAttribute('id', `${elementId}-data`);
 
+        // Concatenate itemIdVar into the function call properly
+        block.setAttribute('onclick', `fetchFeaturedProductData(${itemIdVar})`);
+
         block.appendChild(imgElement);
         block.appendChild(infoElement);
 
@@ -213,13 +236,11 @@ function saveItem(elementId, elementImgId, elementInfoId) {
 
         count++;
     } else {
-
         existingItem.remove();
-
         count--;
     }
-    
 }
+
 
 
 function heartFunction(elementId, elementImgId, elementInfoId) {
