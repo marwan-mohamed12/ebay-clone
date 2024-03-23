@@ -1,5 +1,9 @@
 # ebay-clone
 Welcome to the eBay Clone repository! This project aims to replicate the functionality and design of the popular e-commerce platform eBay. Whether you're a developer looking to contribute, a curious individual exploring how eBay works behind the scenes, or an entrepreneur seeking inspiration for your own online marketplace, you've come to the right place.
+# Demo Video
+- Click here
+- [![thumbnail](Assets/screenshot.png)](https://drive.google.com/file/d/1RUA6OEUSeCB7TPy3R4mUC2-6vW1_I_iG/view?usp=drive_link)
+
 
 # Table of Contents
 - Introduction
