@@ -9,17 +9,17 @@ if(localStorage.getItem("isAuthenticated")=="true"){
 
     content.innerHTML = `
     <div class="dropdown">
-  <span class=" dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+<span class=" dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Hi, ${userName}!
-  </span>
+</span>
 
-  <ul class="dropdown-menu">
+<ul class="dropdown-menu">
     <li><a class="dropdown-item" href="#">Profile</a></li>
     <li><a class="dropdown-item" onclick="logout()">Sign out</a></li>
-  </ul>
+</ul>
 </div>
     `;
-       
+
 }
 
 
