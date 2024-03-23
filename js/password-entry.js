@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Set isAuthenticated to true upon successful login
       localStorage.setItem("isAuthenticated", JSON.stringify(true));
       // Redirect to home page if user exists and password matches
-      window.location.href = "../pages/Homepage.html";
+      window.location.href = "../index.html";
     } else {
       // Display error message if user does not exist or password is incorrect
       displayErrorMessage("Oops, that's not a match.");
