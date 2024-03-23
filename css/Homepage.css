@@ -5,6 +5,7 @@
 .logorreg {
     color: rgb(63, 63, 255);
     text-decoration: underline; 
+    cursor: pointer;
 }
 .nav-spacing{
     margin-left: 500px;
